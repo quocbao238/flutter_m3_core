@@ -1,0 +1,30 @@
+name: ninja_core
+description: Core package for Ninja
+authors:
+  - Ninja Team <baobondev@gmail.com>
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: '>=2.0.1 <3.0.0'
+  provider: ^6.0.5
+  dynamic_color: ^1.6.3
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^4.0.0
+  flutter_lints: ^2.0.0
+#  custom_lint: ^0.3.3
+#  my_awesome_lints:
+#    path: ./my_awesome_lints
+
+
+flutter:
