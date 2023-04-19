@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_core/src/ninja_components/nj_gap/nj_gap_enum.dart';
 
+export 'package:ninja_core/src/ninja_components/nj_gap/nj_gap_enum.dart';
+
 class NjGap extends StatelessWidget {
   final NjGapSize? width;
   final NjGapSize? height;

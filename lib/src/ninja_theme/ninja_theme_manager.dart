@@ -53,6 +53,11 @@ class NinjaThemeManager extends ChangeNotifier {
     );
   }
 
+  void changeM3Color(Color newM3BaseColor) {
+    _themeBaseColors = newM3BaseColor;
+    notifyListeners();
+  }
+
   Color get getBaseColors => _themeBaseColors;
 
 

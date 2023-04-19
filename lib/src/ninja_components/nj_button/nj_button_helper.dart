@@ -24,6 +24,15 @@ class NjButtonPalette {
         foregroundColor = Theme.of(ctx).colorScheme.onSecondaryContainer;
         elevation = ButtonStyleButton.allOrNull(0.0);
         break;
+      case NjButtonType.normal:
+        // TODO: Handle this case.
+        break;
+      case NjButtonType.outline:
+        // TODO: Handle this case.
+        break;
+      case NjButtonType.text:
+        // TODO: Handle this case.
+        break;
     }
 
     return NjButtonPalette(

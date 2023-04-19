@@ -63,7 +63,7 @@ class NjButtonWithIcon extends StatelessWidget {
         onPressed: onPressed,
         icon: Icon(icon),
         label: Text(text),
-        style: OutlinedButton.styleFrom(
+        style: ElevatedButton.styleFrom(
                 foregroundColor: njButtonPalette.foregroundColor,
                 backgroundColor: njButtonPalette.backgroundColor)
             .copyWith(elevation: njButtonPalette.elevation));

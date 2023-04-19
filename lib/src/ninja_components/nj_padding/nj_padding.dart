@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ninja_core/src/ninja_components/nj_gap/nj_gap_enum.dart';
 import 'package:ninja_core/src/ninja_components/nj_padding/nj_edge_insets.dart';
 
+export 'package:ninja_core/src/ninja_components/nj_padding/nj_edge_insets.dart';
+
 class NjPadding extends StatelessWidget {
   final NjEdgeInsets? padding;
   final Widget child;

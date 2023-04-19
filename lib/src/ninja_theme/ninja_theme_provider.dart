@@ -9,8 +9,7 @@ class NinjaThemeProvider extends StatelessWidget {
   final Widget Function(BuildContext context, ThemeData themeData,
       ThemeData darkTheme, ThemeMode themeMode) builder;
 
-  const NinjaThemeProvider(
-      {Key? key, required this.ninjaThemeManager, required this.builder})
+  const NinjaThemeProvider({Key? key, required this.ninjaThemeManager, required this.builder})
       : super(key: key);
 
   @override
@@ -23,6 +22,7 @@ class NinjaThemeProvider extends StatelessWidget {
             create: (context) => ninjaThemeManager,
             child: Consumer<NinjaThemeManager>(
               builder: (context, ninjaThemeManager, child) {
+                print("Current base Color is ${ninjaThemeManager.getBaseColors}");
                 return DynamicColorBuilder(
                   builder:
                       (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
@@ -30,11 +30,12 @@ class NinjaThemeProvider extends StatelessWidget {
                         ninjaThemeManager.getBaseColors);
                     return AnimatedBuilder(
                         animation: ninjaThemeManager,
-                        builder: (context, child) => builder(
-                            context,
-                            themes['lightTheme']!,
-                            themes['darkTheme']!,
-                            ninjaThemeManager.getThemeMode));
+                        builder: (context, child) =>
+                            builder(
+                                context,
+                                themes['lightTheme']!,
+                                themes['darkTheme']!,
+                                ninjaThemeManager.getThemeMode));
                   },
                 );
               },
@@ -45,47 +46,52 @@ class NinjaThemeProvider extends StatelessWidget {
 
   static toggleTheme(BuildContext context) {
     final ninjaThemeManager =
-        Provider.of<NinjaThemeManager>(context, listen: false);
+    Provider.of<NinjaThemeManager>(context, listen: false);
     ninjaThemeManager.toggleThemeMode();
   }
 
-  Map<String, ThemeData> loadColorBuilder(
-      ColorScheme? lightDynamic, ColorScheme? darkDynamic, Color brandColor) {
-    ColorScheme lightColorScheme;
-    ColorScheme darkColorScheme;
-
-    NinjaThemeColorExtension lightCustomColors =
-        const NinjaThemeColorExtension(danger: Colors.pink);
-    NinjaThemeColorExtension darkCustomColors =
-        const NinjaThemeColorExtension(danger: Colors.amber);
-    if (lightDynamic != null && darkDynamic != null) {
-      // On Android S+ devices, use the provided dynamic color scheme.
-      // (Recommended) Harmonize the dynamic color scheme' built-in semantic colors.
-      lightColorScheme = lightDynamic.harmonized();
-      // (Optional) Customize the scheme as desired. For example, one might
-      // want to use a brand color to override the dynamic [ColorScheme.secondary].
-      lightColorScheme = lightColorScheme.copyWith(secondary: brandColor);
-      // (Optional) If applicable, harmonize custom colors.
-      lightCustomColors = lightCustomColors.harmonized(lightColorScheme);
-      // Repeat for the dark color scheme.
-      darkColorScheme = darkDynamic.harmonized();
-      darkColorScheme = darkColorScheme.copyWith(secondary: brandColor);
-      darkCustomColors = darkCustomColors.harmonized(darkColorScheme);
-    } else {
-      // Otherwise, use fallback schemes.
-      lightColorScheme = ColorScheme.fromSeed(seedColor: brandColor);
-      darkColorScheme = ColorScheme.fromSeed(
-          seedColor: brandColor, brightness: Brightness.dark);
-    }
-
-    final lightTheme = ThemeData(
-        useMaterial3: true,
-        colorScheme: lightColorScheme,
-        extensions: [lightCustomColors]);
-    final darkTheme = ThemeData(
-        useMaterial3: true,
-        colorScheme: darkColorScheme,
-        extensions: [darkCustomColors]);
-    return {'lightTheme': lightTheme, 'darkTheme': darkTheme};
+  static changeM3Color(BuildContext context, Color newM3BaseColor) {
+    final ninjaThemeManager =
+    Provider.of<NinjaThemeManager>(context, listen: false);
+    ninjaThemeManager.changeM3Color(newM3BaseColor);
   }
+}
+
+Map<String, ThemeData> loadColorBuilder(ColorScheme? lightDynamic, ColorScheme? darkDynamic, Color brandColor) {
+  ColorScheme lightColorScheme;
+  ColorScheme darkColorScheme;
+
+  NinjaThemeColorExtension lightCustomColors =
+  const NinjaThemeColorExtension(danger: Colors.pink);
+  NinjaThemeColorExtension darkCustomColors =
+  const NinjaThemeColorExtension(danger: Colors.amber);
+  if (lightDynamic != null && darkDynamic != null) {
+    // On Android S+ devices, use the provided dynamic color scheme.
+    // (Recommended) Harmonize the dynamic color scheme' built-in semantic colors.
+    lightColorScheme = lightDynamic.harmonized();
+    // (Optional) Customize the scheme as desired. For example, one might
+    // want to use a brand color to override the dynamic [ColorScheme.secondary].
+    lightColorScheme = lightColorScheme.copyWith(secondary: brandColor);
+    // (Optional) If applicable, harmonize custom colors.
+    lightCustomColors = lightCustomColors.harmonized(lightColorScheme);
+    // Repeat for the dark color scheme.
+    darkColorScheme = darkDynamic.harmonized();
+    darkColorScheme = darkColorScheme.copyWith(secondary: brandColor);
+    darkCustomColors = darkCustomColors.harmonized(darkColorScheme);
+  } else {
+    // Otherwise, use fallback schemes.
+    lightColorScheme = ColorScheme.fromSeed(seedColor: brandColor);
+    darkColorScheme = ColorScheme.fromSeed(
+        seedColor: brandColor, brightness: Brightness.dark);
+  }
+
+  final lightTheme = ThemeData(
+      useMaterial3: true,
+      colorScheme: lightColorScheme,
+      extensions: [lightCustomColors]);
+  final darkTheme = ThemeData(
+      useMaterial3: true,
+      colorScheme: darkColorScheme,
+      extensions: [darkCustomColors]);
+  return {'lightTheme': lightTheme, 'darkTheme': darkTheme};
 }
