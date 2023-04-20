@@ -7,7 +7,7 @@ the entire height or width of a layout.
 Padding is measured in increments of 4dp.
  */
 
-enum NjGapSize{
+enum NJGapSize{
   none(0.0),
   small(8.0),
   medium(12.0),
@@ -15,5 +15,5 @@ enum NjGapSize{
   large(24.0),
   veryLarge(32.0);
   final double size;
-  const NjGapSize(this.size);
+  const NJGapSize(this.size);
 }

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/src/ninja_components/nj_text/n_text_enum.dart';
 
@@ -164,7 +165,8 @@ class NJText extends StatelessWidget {
   Widget build(BuildContext context) {
     final textStyle = NjTextHelper.getStyleByNJTextStyle(
         njTextStyle: _njTextStyle, context: context);
-    return Text(text,
+    return AutoSizeText(
+        text,
         textAlign: textAlign ?? TextAlign.center,
         overflow: overflow,
         maxLines: maxLines,

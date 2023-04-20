@@ -1,6 +1,7 @@
-import 'package:example/src/widgets/custom_app_bar.dart';
+
+
+
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
 
 Map<String, Color> listPaletteColor = {
   "Colors.red": Colors.red,
@@ -37,34 +38,3 @@ Map<String, Color> listPaletteColor = {
   "Colors.yellowAccent": Colors.yellowAccent,
   "Colors.amberAccent": Colors.amberAccent,
 };
-
-class PaletteScreen extends StatelessWidget {
-  const PaletteScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja Palette Colors'),
-      body: NjPadding.regular(
-        child: GridView(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-          ),
-          children: listPaletteColor.entries
-              .map((e) => Column(
-                    children: [
-                      NjButton(
-                          text: '',
-                          foregroundColor: e.value,
-                          onPressed: () => NinjaThemeProvider.changeM3Color(context, e.value)),
-                      NJText.titleSmall(text: e.key)
-                    ],
-                  ))
-              .toList(),
-        ),
-      ),
-    );
-  }
-}

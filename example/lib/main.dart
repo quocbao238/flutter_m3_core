@@ -6,11 +6,13 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
-    NinjaThemeProvider(
-        ninjaThemeManager: NinjaThemeManager(m3BaseColors: Colors.cyanAccent),
+    NJThemeProvider(
+        ninjaThemeManager:
+            NJThemeManager(m3BaseColors: const Color(0xFF6750A4)),
         builder: (context, themeData, darkTheme, themeMode) => MaterialApp(
             title: 'Ninja Core',
             theme: themeData,
+            debugShowCheckedModeBanner: false,
             darkTheme: darkTheme,
             themeMode: themeMode,
             home: const MyApp())),

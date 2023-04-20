@@ -1,6 +1,6 @@
-import 'package:example/src/buttons/button_screen.dart';
-import 'package:example/src/palette/palette_screen.dart';
-import 'package:example/src/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/buttons/button_screen.dart';
+import 'package:example/src/screens/typography/typography_screen.dart';
+import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/ninja_core.dart';
 
@@ -16,18 +16,19 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CustomAppBar(title: 'Ninja Core'),
-        body: NjPadding(
-          padding: const NjEdgeInsets.all(NjGapSize.regular),
+        body: NJPadding(
+          padding: const NJEdgeInsets.all(NJGapSize.regular),
           child: ListView(
             children: [
-              NjButton(
-                  onPressed: () =>
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ButtonScreen())),
+              NJButton.outline(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ButtonScreen())),
                   text: 'Ninja Buttons'),
-              NjButton(
-                  onPressed: () =>
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const PaletteScreen())),
-                  text: 'Change M3 Base Color'),
+              const NJGap.medium(),
+              NJButton.outline(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const TypographyScreen())),
+                  text: 'Ninja Typography'),
 
               // const ButtonsWithoutIcon(isDisabled: false),
               // const ButtonsWithoutIcon(isDisabled: true),
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => NinjaThemeProvider.toggleTheme(context),
+          onPressed: () => NJThemeProvider.toggleTheme(context),
           child: const Icon(Icons.add),
         ));
   }

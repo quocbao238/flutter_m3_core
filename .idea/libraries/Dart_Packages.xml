@@ -38,6 +38,13 @@
             </list>
           </value>
         </entry>
+        <entry key="auto_size_text">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="boolean_selector">
           <value>
             <list>
@@ -119,21 +126,21 @@
         <entry key="custom_lint">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="custom_lint_builder">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="custom_lint_core">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.3/lib" />
             </list>
           </value>
         </entry>
@@ -182,7 +189,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../development/flutter/packages/flutter/lib" />
+              <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -196,14 +203,14 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../development/flutter/packages/flutter_test/lib" />
+              <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../development/flutter/packages/flutter_web_plugins/lib" />
+              <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -501,7 +508,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../development/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -670,6 +677,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.4.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.2/lib" />
@@ -682,9 +690,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/coverage-1.6.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
@@ -761,10 +769,10 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-3.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../development/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$PROJECT_DIR$/../../../development/flutter/packages/flutter/lib" />
-      <root url="file://$PROJECT_DIR$/../../../development/flutter/packages/flutter_test/lib" />
-      <root url="file://$PROJECT_DIR$/../../../development/flutter/packages/flutter_web_plugins/lib" />
+      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
+      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

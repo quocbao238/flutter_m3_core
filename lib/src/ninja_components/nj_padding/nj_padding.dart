@@ -4,40 +4,40 @@ import 'package:ninja_core/src/ninja_components/nj_padding/nj_edge_insets.dart';
 
 export 'package:ninja_core/src/ninja_components/nj_padding/nj_edge_insets.dart';
 
-class NjPadding extends StatelessWidget {
-  final NjEdgeInsets? padding;
+class NJPadding extends StatelessWidget {
+  final NJEdgeInsets? padding;
   final Widget child;
 
-  const NjPadding({
+  const NJPadding({
     super.key,
-    this.padding = const NjEdgeInsets.all(NjGapSize.none),
+    this.padding = const NJEdgeInsets.all(NJGapSize.none),
     required this.child,
   });
 
-  const NjPadding.small({
+  const NJPadding.small({
     super.key,
     required this.child,
-  }) : padding = const NjEdgeInsets.all(NjGapSize.small);
+  }) : padding = const NJEdgeInsets.all(NJGapSize.small);
 
-  const NjPadding.medium({
+  const NJPadding.medium({
     super.key,
     required this.child,
-  }) : padding = const NjEdgeInsets.all(NjGapSize.medium);
+  }) : padding = const NJEdgeInsets.all(NJGapSize.medium);
 
-  const NjPadding.regular({
+  const NJPadding.regular({
     super.key,
     required this.child,
-  }) : padding = const NjEdgeInsets.all(NjGapSize.regular);
+  }) : padding = const NJEdgeInsets.all(NJGapSize.regular);
 
-  const NjPadding.large({
+  const NJPadding.large({
     super.key,
     required this.child,
-  }) : padding = const NjEdgeInsets.all(NjGapSize.large);
+  }) : padding = const NJEdgeInsets.all(NJGapSize.large);
 
-  const NjPadding.veryLarge({
+  const NJPadding.veryLarge({
     super.key,
     required this.child,
-  }) : padding = const NjEdgeInsets.all(NjGapSize.veryLarge);
+  }) : padding = const NJEdgeInsets.all(NJGapSize.veryLarge);
 
   @override
   Widget build(BuildContext context) =>

@@ -15,4 +15,5 @@ class NinjaThemePrefs {
     final currentModeName = prefs.getString(prefsKey);
     return NinjaThemeMode.fromString(currentModeName);
   }
+
 }

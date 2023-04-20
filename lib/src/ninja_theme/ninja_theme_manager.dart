@@ -7,16 +7,17 @@ import 'package:ninja_core/src/ninja_theme/ninja_theme_prefs.dart';
 
 /// NinjaThemeManager is a class that manages the theme of the application.
 /// Only supports material 3 themes.
-class NinjaThemeManager extends ChangeNotifier {
+class NJThemeManager extends ChangeNotifier {
   // Input
   late Color _themeBaseColors;
   late bool _enableAutomationDayNight;
+  late bool _usePrefsColor;
 
   // Output
   late NinjaThemeMode _currentMode = NinjaThemeMode.light;
   StreamSubscription<NinjaThemeMode>? _streamSubscription;
 
-  NinjaThemeManager({required Color m3BaseColors, bool? automationDayNight}) {
+  NJThemeManager({required Color m3BaseColors, bool? automationDayNight}) {
     _themeBaseColors = m3BaseColors;
     _enableAutomationDayNight = automationDayNight ?? false;
     _listenDayNightTime();

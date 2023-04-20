@@ -2,62 +2,62 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/src/ninja_components/nj_gap/nj_gap_enum.dart';
 
-class NjEdgeInsets extends Equatable {
-  final NjGapSize left;
-  final NjGapSize top;
-  final NjGapSize right;
-  final NjGapSize bottom;
+class NJEdgeInsets extends Equatable {
+  final NJGapSize left;
+  final NJGapSize top;
+  final NJGapSize right;
+  final NJGapSize bottom;
 
-  const NjEdgeInsets.all(NjGapSize value)
+  const NJEdgeInsets.all(NJGapSize value)
       : left = value,
         top = value,
         right = value,
         bottom = value;
 
-  const NjEdgeInsets.symmetric({
-    NjGapSize vertical = NjGapSize.none,
-    NjGapSize horizontal = NjGapSize.none,
+  const NJEdgeInsets.symmetric({
+    NJGapSize vertical = NJGapSize.none,
+    NJGapSize horizontal = NJGapSize.none,
   })  : left = horizontal,
         top = vertical,
         right = horizontal,
         bottom = vertical;
 
-  const NjEdgeInsets.only({
-    this.left = NjGapSize.none,
-    this.top = NjGapSize.none,
-    this.right = NjGapSize.none,
-    this.bottom = NjGapSize.none,
+  const NJEdgeInsets.only({
+    this.left = NJGapSize.none,
+    this.top = NJGapSize.none,
+    this.right = NJGapSize.none,
+    this.bottom = NJGapSize.none,
   });
 
-  const NjEdgeInsets.small()
-      : left = NjGapSize.small,
-        top = NjGapSize.small,
-        right = NjGapSize.small,
-        bottom = NjGapSize.small;
+  const NJEdgeInsets.small()
+      : left = NJGapSize.small,
+        top = NJGapSize.small,
+        right = NJGapSize.small,
+        bottom = NJGapSize.small;
 
-  const NjEdgeInsets.medium()
-      : left = NjGapSize.medium,
-        top = NjGapSize.medium,
-        right = NjGapSize.medium,
-        bottom = NjGapSize.medium;
+  const NJEdgeInsets.medium()
+      : left = NJGapSize.medium,
+        top = NJGapSize.medium,
+        right = NJGapSize.medium,
+        bottom = NJGapSize.medium;
 
-  const NjEdgeInsets.regular()
-      : left = NjGapSize.regular,
-        top = NjGapSize.regular,
-        right = NjGapSize.regular,
-        bottom = NjGapSize.regular;
+  const NJEdgeInsets.regular()
+      : left = NJGapSize.regular,
+        top = NJGapSize.regular,
+        right = NJGapSize.regular,
+        bottom = NJGapSize.regular;
 
-  const NjEdgeInsets.large()
-      : left = NjGapSize.large,
-        top = NjGapSize.large,
-        right = NjGapSize.large,
-        bottom = NjGapSize.large;
+  const NJEdgeInsets.large()
+      : left = NJGapSize.large,
+        top = NJGapSize.large,
+        right = NJGapSize.large,
+        bottom = NJGapSize.large;
 
-  const NjEdgeInsets.veryLarge()
-      : left = NjGapSize.veryLarge,
-        top = NjGapSize.veryLarge,
-        right = NjGapSize.veryLarge,
-        bottom = NjGapSize.veryLarge;
+  const NJEdgeInsets.veryLarge()
+      : left = NJGapSize.veryLarge,
+        top = NJGapSize.veryLarge,
+        right = NJGapSize.veryLarge,
+        bottom = NJGapSize.veryLarge;
 
   EdgeInsets toEdgeInsets() => EdgeInsets.only(
       left: left.size, top: top.size, right: right.size, bottom: bottom.size);
