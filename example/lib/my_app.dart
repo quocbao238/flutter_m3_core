@@ -6,6 +6,8 @@ import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/ninja_core.dart';
 
+import 'src/screens/chips/chip_screen.dart';
+
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -42,6 +44,14 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const CheckBoxScreen())),
                   text: 'Ninja CheckBox'),
+
+              const NJGap.medium(),
+              NJButton.outline(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ChipScreen())),
+                  text: 'Ninja Chips'),
+
+
 
               // const ButtonsWithoutIcon(isDisabled: false),
               // const ButtonsWithoutIcon(isDisabled: true),

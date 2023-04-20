@@ -147,7 +147,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                     NJCheckBox(
                         value: tristate,
                         onChanged: (val) => setState(() => tristate = val!)),
-                    const NJText.bodyMedium(text: 'Tristate'),
+                    const NJText.bodyMedium(text: 'Tristate')
                   ],
                 ),
               ],
