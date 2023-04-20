@@ -69,7 +69,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: GridView(
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 6,
+                              crossAxisCount: 8,
                               crossAxisSpacing: 10,
                               mainAxisSpacing: 10),
                       children: [
