@@ -59,6 +59,12 @@ class NJEdgeInsets extends Equatable {
         right = NJGapSize.veryLarge,
         bottom = NJGapSize.veryLarge;
 
+  const NJEdgeInsets.none()
+      : left = NJGapSize.none,
+        top = NJGapSize.none,
+        right = NJGapSize.none,
+        bottom = NJGapSize.none;
+
   EdgeInsets toEdgeInsets() => EdgeInsets.only(
       left: left.size, top: top.size, right: right.size, bottom: bottom.size);
 

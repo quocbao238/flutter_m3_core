@@ -1,6 +1,7 @@
 import 'package:example/src/screens/badge/badge_screen.dart';
 import 'package:example/src/screens/buttons/button_screen.dart';
 import 'package:example/src/screens/checkbox/checkbox_screen.dart';
+import 'package:example/src/screens/dialog/dialog.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -25,33 +26,36 @@ class _MyAppState extends State<MyApp> {
           child: ListView(
             children: [
               NJButton.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ButtonScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ButtonScreen())),
                   text: 'Ninja Buttons'),
               const NJGap.medium(),
               NJButton.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const TypographyScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TypographyScreen())),
                   text: 'Ninja Typography'),
               const NJGap.medium(),
               NJButton.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const BadgeScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const BadgeScreen())),
                   text: 'Ninja Badge'),
 
               const NJGap.medium(),
               NJButton.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const CheckBoxScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CheckBoxScreen())),
                   text: 'Ninja CheckBox'),
 
               const NJGap.medium(),
               NJButton.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ChipScreen())),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ChipScreen())),
                   text: 'Ninja Chips'),
-
-
+              const NJGap.medium(),
+              NJButton.outline(
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DialogScreen())),
+                  text: 'Ninja Dialogs'),
 
               // const ButtonsWithoutIcon(isDisabled: false),
               // const ButtonsWithoutIcon(isDisabled: true),
