@@ -14,6 +14,7 @@ class NJInputChip extends StatelessWidget {
   final Color? backgroundColor;
   final Color? foregroundColor;
   final NjChipType _type;
+  final bool isEnable;
 
   const NJInputChip(
       {super.key,
@@ -21,6 +22,7 @@ class NJInputChip extends StatelessWidget {
       this.leading,
       this.deleteIcon,
       this.onDeleted,
+      this.isEnable = false,
       this.backgroundColor,
       this.foregroundColor,
       this.onPressed})
@@ -31,6 +33,7 @@ class NJInputChip extends StatelessWidget {
       required this.text,
       this.leading,
       this.deleteIcon,
+      this.isEnable = false,
       this.onDeleted,
       this.backgroundColor,
       this.foregroundColor,
@@ -44,6 +47,7 @@ class NJInputChip extends StatelessWidget {
       this.deleteIcon,
       this.onDeleted,
       this.backgroundColor,
+      this.isEnable = false,
       this.foregroundColor,
       this.onPressed})
       : _type = NjChipType.filledTonal;
@@ -60,36 +64,26 @@ class NJInputChip extends StatelessWidget {
     }
 
     if (_type == NjChipType.filledTonal) {
-      currentBackgroundColor = scheme.secondary.withOpacity(0.2);
+      currentBackgroundColor = scheme.secondary.withOpacity(0.1);
       currentForegroundColor = scheme.onSecondaryContainer;
+    }
+
+    Widget? forceColor(BuildContext context, Widget? widget) {
+      if (widget == null) return null;
+      if (isEnable == false) return widget;
+      return Theme(
+          data: Theme.of(context)
+              .copyWith(iconTheme: Theme.of(context).iconTheme.copyWith(color: currentForegroundColor)),
+          child: widget);
     }
 
     return InputChip(
       onPressed: onPressed,
-      label: Text(text,
-          style: TextStyle(
-              color: onPressed == null ? null : currentForegroundColor)),
+      isEnabled: isEnable,
+      label: Text(text, style: TextStyle(color: !isEnable ? null : currentForegroundColor)),
       backgroundColor: currentBackgroundColor,
-      avatar: leading == null
-          ? null
-          : onPressed == null
-              ? leading
-              : Theme(
-                  data: Theme.of(context).copyWith(
-                      iconTheme: Theme.of(context)
-                          .iconTheme
-                          .copyWith(color: currentForegroundColor)),
-                  child: leading!),
-      deleteIcon: deleteIcon == null
-          ? null
-          : onPressed == null
-              ? deleteIcon
-              : Theme(
-                  data: Theme.of(context).copyWith(
-                      iconTheme: Theme.of(context)
-                          .iconTheme
-                          .copyWith(color: currentForegroundColor)),
-                  child: deleteIcon!),
+      avatar: forceColor(context, leading),
+      deleteIcon: forceColor(context, deleteIcon),
       onDeleted: onDeleted,
     );
   }

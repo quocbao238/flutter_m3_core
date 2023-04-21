@@ -24,8 +24,8 @@ class ChipScreen extends StatelessWidget {
               ),
               NinjaInputChipComponent(
                 title: 'NJ Input Chip Leading icon, label & trailing icon',
-                leading: Icon(Icons.add),
-                deleteIcon: Icon(Icons.close),
+                leading: const Icon(Icons.add),
+                deleteIcon: const Icon(Icons.close),
                 onDeleted: () {},
               ),
             ],
@@ -36,76 +36,73 @@ class ChipScreen extends StatelessWidget {
   }
 }
 
-class NinjaInputChipComponent extends StatelessWidget {
+class NinjaInputChipComponent extends StatefulWidget {
   final String title;
   final Widget? leading;
   final Widget? deleteIcon;
   final VoidCallback? onDeleted;
 
-  const NinjaInputChipComponent(
-      {Key? key,
-      this.leading,
-      this.deleteIcon,
-      this.onDeleted,
-      required this.title})
+  const NinjaInputChipComponent({Key? key, this.leading, this.deleteIcon, this.onDeleted, required this.title})
       : super(key: key);
+
+  @override
+  State<NinjaInputChipComponent> createState() => _NinjaInputChipComponentState();
+}
+
+class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
+  bool isDisable = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  _onChangeDisable() => setState(() => isDisable = !isDisable);
+
+  Null Function()? onPressed(bool isDisable) {
+    return isDisable ? null : () {};
+  }
 
   @override
   Widget build(BuildContext context) {
     return NJCard(
-      width: 1280 / 4,
+      width: 1280 / 3,
       child: Wrap(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NJText.titleMedium(text: title),
+              NJText.titleMedium(text: widget.title),
               const NJGap.medium(),
               NJInputChip(
-                text: 'NJ InputChip',
+                text: 'NJ InputChip ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
-              ),
-              const NJGap.medium(),
-              NJInputChip(
-                text: 'NJ InputChip Disable',
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
+                leading: widget.leading,
+                isEnable: !isDisable,
+                deleteIcon: widget.deleteIcon,
+                onDeleted: widget.onDeleted,
               ),
               const NJGap.medium(),
               NJInputChip.filled(
-                text: 'NJ InputChip Filled',
+                text: 'NJ InputChip Filled ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
-              ),
-              const NJGap.medium(),
-              NJInputChip.filled(
-                text: 'NJ InputChip Filled Disable',
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
+                leading: widget.leading,
+                isEnable: !isDisable,
+                deleteIcon: widget.deleteIcon,
+                onDeleted: widget.onDeleted,
               ),
               const NJGap.medium(),
               NJInputChip.filledTonal(
-                text: 'NJ InputChip Filled Tonal',
+                text: 'NJ InputChip Filled Tonal ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
+                leading: widget.leading,
+                deleteIcon: widget.deleteIcon,
+                isEnable: !isDisable,
+                onDeleted: widget.onDeleted,
               ),
               const NJGap.medium(),
-              NJInputChip.filledTonal(
-                text: 'NJ InputChip Filled Tonal Disable',
-                leading: leading,
-                deleteIcon: deleteIcon,
-                onDeleted: onDeleted,
-              ),
-              const NJGap.medium(),
+              NJButton(onPressed: _onChangeDisable, text: 'Disable/Enable Chips')
             ],
           )
         ],
