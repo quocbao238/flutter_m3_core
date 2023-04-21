@@ -8,3 +8,4 @@ export 'package:ninja_core/src/ninja_components/nj_card/nj_card.dart';
 export 'package:ninja_core/src/ninja_components/nj_checkbox/nj_checkbox.dart';
 export 'package:ninja_core/src/ninja_components/nj_chips/nj_chip.dart';
 export 'package:ninja_core/src/ninja_components/nj_dialog/nj_dialog.dart';
+export 'package:ninja_core/src/ninja_components/nj_fab//nj_fab.dart';

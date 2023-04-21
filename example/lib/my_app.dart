@@ -2,6 +2,7 @@ import 'package:example/src/screens/badge/badge_screen.dart';
 import 'package:example/src/screens/buttons/button_screen.dart';
 import 'package:example/src/screens/checkbox/checkbox_screen.dart';
 import 'package:example/src/screens/dialog/dialog.dart';
+import 'package:example/src/screens/fab/fab.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -56,6 +57,11 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () =>
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DialogScreen())),
                   text: 'Ninja Dialogs'),
+              const NJGap.medium(),
+              NJButton.outline(
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FabScreen())),
+                  text: 'Ninja Floating Action Button'),
 
               // const ButtonsWithoutIcon(isDisabled: false),
               // const ButtonsWithoutIcon(isDisabled: true),
