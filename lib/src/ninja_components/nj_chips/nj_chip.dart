@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_core/src/ninja_components/nj_chips/nj_chip_enum_type.dart';
 
+export 'package:ninja_core/src/ninja_components/nj_chips/nj_filter_chip.dart';
+
 ///Chips help people enter information,
 ///make selections, filter content,
 ///or trigger actions.
@@ -64,7 +66,7 @@ class NJInputChip extends StatelessWidget {
     }
 
     if (_type == NjChipType.filledTonal) {
-      currentBackgroundColor = scheme.secondary.withOpacity(0.1);
+      currentBackgroundColor = scheme.secondary.withOpacity(0.4);
       currentForegroundColor = scheme.onSecondaryContainer;
     }
 
