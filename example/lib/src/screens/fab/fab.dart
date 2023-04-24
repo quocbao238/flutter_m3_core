@@ -18,7 +18,7 @@ class FabScreen extends StatelessWidget {
           child: Wrap(
             spacing: 10,
             runSpacing: 10,
-            
+
             children: const [
               SmallFab(),
               NormalFab(),
