@@ -16,6 +16,7 @@ class M3DatePicker {
     String? errorInvalidText,
     String? fieldHintText,
     String? fieldLabelText,
+    bool use24HourDials = false,
     DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
     DatePickerMode initialDatePickerMode = DatePickerMode.day,
   }) async {
@@ -27,7 +28,7 @@ class M3DatePicker {
       lastDate: lastDate ?? initialDate.add(const Duration(days: 365)),
       initialDate: initialDate,
       builder: (BuildContext context, Widget? child) =>
-          MediaQuery(data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true), child: child!),
+          MediaQuery(data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: use24HourDials), child: child!),
     );
   }
 
@@ -49,6 +50,7 @@ class M3DatePicker {
     String? fieldEndLabelText,
     DateTime? firstDate,
     DateTime? lastDate,
+    bool use24HourDials = false,
   }) async {
     final themeData = Theme.of(ctx);
     return await showDateRangePicker(
@@ -89,7 +91,7 @@ class M3DatePicker {
               SafeArea(
             child: NJPadding.regular(
               child: MediaQuery(
-                data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+                data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: use24HourDials),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -119,14 +121,21 @@ class M3DatePicker {
       String? helpText,
       String? errorInvalidText,
       String? hourLabelText,
+      bool use24HourDials = false,
+      TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dialOnly,
       String? minuteLabelText}) async {
-    final themeData = Theme.of(ctx);
+    final themeData = Theme.of(ctx).copyWith(
+      timePickerTheme: Theme.of(ctx).timePickerTheme.copyWith(
+            hourMinuteShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+            shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(28))),
+          ),
+    );
 
     // return show
 
     return showTimePicker(
         context: ctx,
-        initialEntryMode: TimePickerEntryMode.inputOnly,
+        initialEntryMode: initialEntryMode,
         initialTime: initialTime,
         cancelText: cancelText,
         confirmText: confirmText,
@@ -142,28 +151,19 @@ class M3DatePicker {
                       appBarTheme: themeData.appBarTheme.copyWith(
                           backgroundColor: themeData.colorScheme.primary,
                           foregroundColor: themeData.colorScheme.onPrimary),
-                      // iconTheme: themeData.appBarTheme.iconTheme?.copyWith(color: Colors.white)
-                      // ),
-                      // colorScheme: themeData.colorScheme.brightness == Brightness.dark
-                      //     ? themeData.colorScheme
-                      //     : themeData.colorScheme.copyWith(),
                       scaffoldBackgroundColor: themeData.colorScheme.secondaryContainer,
                     ),
-
-              // ColorScheme.light(onPrimary: Colors.white, primary: Colors.red)
-
               child: MediaQuery(
-                  data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+                  data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: use24HourDials),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ConstrainedBox(
-                        constraints:
-                            BoxConstraints(maxWidth: 560, maxHeight: MediaQuery.of(context).size.height * 0.65),
+                        constraints: const BoxConstraints(maxWidth: 560),
                         child: NJPadding.regular(
-                            child: ClipRRect(borderRadius: BorderRadius.circular(16.0), child: child)),
+                            child: ClipRRect(borderRadius: BorderRadius.circular(32.0), child: child)),
                       )
                     ],
                   )));

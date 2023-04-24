@@ -8,7 +8,7 @@ class DatePicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const CustomAppBar(title: 'Ninja Date Picker'),
+        appBar: const CustomAppBar(title: 'Ninja Date Time Picker'),
         body: NJPadding.medium(
             child: SingleChildScrollView(
           child: Wrap(
@@ -32,6 +32,8 @@ class _DatePickerCardState extends State<DatePickerCard> {
   final String selectedDate = '';
   final String dateRange = '';
   final String time = '';
+
+  bool use24HourFormat = false;
 
   _onChangeDateTime(DateTime newDateTime) => setState(() => dateTime = newDateTime);
 
@@ -85,12 +87,59 @@ class _DatePickerCardState extends State<DatePickerCard> {
                 onPressed: () async {
                   final result = await M3DatePicker.showModalDatePicker(context,
                       initialEntryMode: DatePickerEntryMode.inputOnly,
+                      use24HourDials: use24HourFormat,
                       onDateSelected: _onChangeDateTime,
                       initialDate: dateTime);
                   if (result != null) {
                     _onChangeDateTime(result);
                   }
                 },
+              ),
+              const NJDivider(),
+              NJButtonWithIcon.outline(
+                text: 'M3 Time Picker Dial ',
+                icon: Icons.calendar_today_outlined,
+                onPressed: () async {
+                  final result = await M3DatePicker.showModalTimePicker(context,
+                      use24HourDials: use24HourFormat,
+                      initialTime: TimeOfDay(hour: dateTime.hour, minute: dateTime.minute),
+                      onDateSelected: _onChangeDateTime);
+                  if (result != null) {
+                    final newDateTime =
+                        DateTime(dateTime.year, dateTime.month, dateTime.day, result.hour, result.minute);
+                    _onChangeDateTime(newDateTime);
+                  }
+                },
+              ),
+              NJButtonWithIcon.filled(
+                text: 'M3 Time Picker Input ',
+                icon: Icons.calendar_today_outlined,
+                onPressed: () async {
+                  final result = await M3DatePicker.showModalTimePicker(
+                      initialEntryMode: TimePickerEntryMode.inputOnly,
+                      context,
+                      use24HourDials: use24HourFormat,
+                      initialTime: TimeOfDay(hour: dateTime.hour, minute: dateTime.minute),
+                      onDateSelected: _onChangeDateTime);
+                  if (result != null) {
+                    final newDateTime =
+                        DateTime(dateTime.year, dateTime.month, dateTime.day, result.hour, result.minute);
+                    _onChangeDateTime(newDateTime);
+                  }
+                },
+              ),
+              Row(
+                children: [
+                  NJCheckBox(
+                    value: use24HourFormat,
+                    onChanged: (value) {
+                      setState(() {
+                        if (value != null) use24HourFormat = value;
+                      });
+                    },
+                  ),
+                  const NJPadding(child: NJText.bodyLarge(text: 'Use 24 hour format')),
+                ],
               ),
             ],
           ),
@@ -101,9 +150,5 @@ class _DatePickerCardState extends State<DatePickerCard> {
 }
 
 String _formatDateTime(DateTime dateTime) {
-  return '${dateTime.day}/${dateTime.month}/${dateTime.year}';
-}
-
-String _formatTimeOfDay(TimeOfDay timeOfDay) {
-  return '${timeOfDay.hour}:${timeOfDay.minute}';
+  return '${dateTime.day}/${dateTime.month}/${dateTime.year} ${dateTime.hour}:${dateTime.minute}';
 }
