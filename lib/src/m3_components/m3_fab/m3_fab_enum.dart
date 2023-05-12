@@ -7,12 +7,10 @@ enum M3FabType {
   tertiary;
 
   (Color backgroundColor, Color foregroundColor) getColor(
-      ColorScheme colorScheme) {
-    return switch (this) {
+      ColorScheme colorScheme) => switch (this) {
       M3FabType.surface => (colorScheme.surface, colorScheme.onSurface),
       M3FabType.primary => (colorScheme.primary, colorScheme.onPrimary),
       M3FabType.secondary => (colorScheme.secondary, colorScheme.onSecondary),
       M3FabType.tertiary => (colorScheme.tertiary, colorScheme.onTertiary),
     };
-  }
 }

@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 import 'package:ninja_core/src/m3_theme/m3_day_night_helper.dart';
 import 'package:ninja_core/src/m3_theme/m3_theme_mode.dart';
 import 'package:ninja_core/src/m3_theme/m3_theme_prefs.dart';
@@ -10,6 +10,9 @@ final class M3ThemeManager extends ChangeNotifier {
   late Color _themeBaseColors;
   late bool _enableAutomationDayNight;
 
+  // /// M3DeviceService is service for get device layout
+  // late M3DeviceService _m3deviceService;
+
   late M3ThemeMode _currentMode = M3ThemeMode.light;
   StreamSubscription<M3ThemeMode>? _streamSubscription;
 
@@ -18,6 +21,7 @@ final class M3ThemeManager extends ChangeNotifier {
   M3ThemeManager({required Color m3BaseColors, bool? automationDayNight}) {
     _themeBaseColors = m3BaseColors;
     _enableAutomationDayNight = automationDayNight ?? false;
+    M3DeviceService.init();
     _listenDayNightTime();
   }
 
@@ -52,6 +56,8 @@ final class M3ThemeManager extends ChangeNotifier {
     _themeBaseColors = newM3BaseColor;
     notifyListeners();
   }
+
+  M3DeviceType getCurrentDevice() => M3DeviceService.deviceType;
 
   Color get getBaseColors => _themeBaseColors;
 

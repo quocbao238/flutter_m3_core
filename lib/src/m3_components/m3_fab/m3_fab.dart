@@ -3,7 +3,7 @@ import 'package:ninja_core/src/m3_components/m3_fab/m3_fab_enum.dart';
 
 enum M3FabSize { small, normal, large, extended }
 
-class M3FloatingActionButton extends StatelessWidget {
+final class M3FloatingActionButton extends StatelessWidget {
   final IconData iconData;
   final String? label;
   final VoidCallback? onPressed;

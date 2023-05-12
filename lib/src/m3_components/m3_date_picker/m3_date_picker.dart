@@ -78,15 +78,7 @@ class M3DatePicker {
                   appBarTheme: themeData.appBarTheme.copyWith(
                     backgroundColor: themeData.colorScheme.primary,
                     foregroundColor: themeData.colorScheme.onPrimary,
-                    // iconTheme: themeData.appBarTheme.iconTheme?.copyWith(color: Colors.white)
                   ),
-                  // colorScheme: themeData.colorScheme.brightness == Brightness.dark
-                  //     ? themeData.colorScheme
-                  //     : themeData.colorScheme.copyWith(),
-                  // scaffoldBackgroundColor: themeData.colorScheme.secondaryContainer.withOpacity(0.5),
-                  // backgroundColor: themeData.colorScheme.secondaryContainer.withOpacity(0.5),
-                  //
-                  // ColorScheme.light(onPrimary: Colors.white, primary: Colors.red)
                 ),
           child:
               // child,
@@ -137,9 +129,6 @@ class M3DatePicker {
                 borderRadius: BorderRadius.all(Radius.circular(28))),
           ),
     );
-
-    // return show
-
     return showTimePicker(
         context: ctx,
         initialEntryMode: initialEntryMode,

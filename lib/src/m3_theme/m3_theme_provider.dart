@@ -1,17 +1,17 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
+import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 import 'package:ninja_core/src/m3_theme/m3_theme_manager.dart';
 import 'package:provider/provider.dart';
 import 'm3_color_builder.dart';
 
-class M3ThemeProvider extends StatelessWidget {
+final class M3ThemeProvider extends StatelessWidget {
   final M3ThemeManager m3ThemeManager;
 
   // Call back builder
   final Widget Function(BuildContext context, ThemeData themeData,
       ThemeData darkTheme, ThemeMode themeMode) builder;
 
-  
   const M3ThemeProvider(
       {Key? key, required this.m3ThemeManager, required this.builder})
       : super(key: key);
@@ -52,4 +52,7 @@ class M3ThemeProvider extends StatelessWidget {
   static changeM3Color(BuildContext context, Color newM3BaseColor) =>
       Provider.of<M3ThemeManager>(context, listen: false)
           .changeM3Color(newM3BaseColor);
+
+  static M3DeviceType getCurrentDevice(BuildContext context) =>
+      Provider.of<M3ThemeManager>(context, listen: false).getCurrentDevice();
 }

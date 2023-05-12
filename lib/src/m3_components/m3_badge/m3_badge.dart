@@ -16,12 +16,9 @@ class M3Badge extends StatelessWidget {
         super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    return Badge.count(
-      backgroundColor: scheme.primary.withOpacity(0.8),
-      count: count,
-      child: child ?? Icon(iconData),
-    );
-  }
+  Widget build(BuildContext context) => Badge.count(
+        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.8),
+        count: count,
+        child: child ?? Icon(iconData),
+      );
 }

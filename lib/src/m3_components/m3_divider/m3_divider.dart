@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
-class M3Divider extends StatelessWidget {
+final class M3Divider extends StatelessWidget {
   final Axis axis;
   final Color color;
   final double thickness;

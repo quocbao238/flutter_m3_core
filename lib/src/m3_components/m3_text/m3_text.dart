@@ -164,13 +164,11 @@ class NJText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textStyle = _njTextStyle.getTextStyle(context);
-    return AutoSizeText(
-      text,
-      textAlign: textAlign ?? TextAlign.center,
-      overflow: overflow,
-      maxLines: maxLines,
-      style: textStyle.copyWith(
-          fontWeight: fontWeight, color: color ?? textStyle.color),
-    );
+    return AutoSizeText(text,
+        textAlign: textAlign ?? TextAlign.center,
+        overflow: overflow,
+        maxLines: maxLines,
+        style: textStyle.copyWith(
+            fontWeight: fontWeight, color: color ?? textStyle.color));
   }
 }

@@ -25,18 +25,17 @@ class M3Card extends StatelessWidget {
       : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Card(
-        elevation: elevation ?? 4,
-        color: color ?? Theme.of(context).colorScheme.surface,
-        shadowColor: shadowColor ?? Theme.of(context).colorScheme.onSurface,
-        child: M3Padding(
-            padding: njEdgeInsets ?? const M3EdgeInsets.all(M3Spacing.regular),
-            child: child),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => SizedBox(
+        width: width,
+        height: height,
+        child: Card(
+          elevation: elevation ?? 4,
+          color: color ?? Theme.of(context).colorScheme.surface,
+          shadowColor: shadowColor ?? Theme.of(context).colorScheme.onSurface,
+          child: M3Padding(
+              padding:
+                  njEdgeInsets ?? const M3EdgeInsets.all(M3Spacing.regular),
+              child: child),
+        ),
+      );
 }

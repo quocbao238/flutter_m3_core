@@ -18,7 +18,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
   Widget build(BuildContext context) {
     final Function()? onPressed = isEnable ? () {} : null;
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja Icon Button'),
+      appBar: const CustomAppBar(title: 'M3 IconButton'),
       body: M3Padding.medium(
         child: M3Card(
           child: M3Padding.medium(
@@ -31,7 +31,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                   children: [
                     Row(
                       children: [
-                        NjIconButton(
+                        M3IconButton(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
                           padding: const M3EdgeInsets.symmetric(
@@ -44,7 +44,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                     ),
                     Row(
                       children: [
-                        NjIconButton.filled(
+                        M3IconButton.filled(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
@@ -56,7 +56,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                     ),
                     Row(
                       children: [
-                        NjIconButton.filledTonal(
+                        M3IconButton.filledTonal(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
@@ -68,7 +68,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                     ),
                     Row(
                       children: [
-                        NjIconButton.outlined(
+                        M3IconButton.outlined(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
@@ -80,7 +80,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                     ),
                     Row(
                       children: [
-                        NjIconButton.filledTertiary(
+                        M3IconButton.filledTertiary(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(

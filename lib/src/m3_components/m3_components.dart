@@ -11,3 +11,4 @@ export 'package:ninja_core/src/m3_components/m3_dialog/m3_dialog.dart';
 export 'package:ninja_core/src/m3_components/m3_fab/m3_fab.dart';
 export 'package:ninja_core/src/m3_components/m3_icon_button/m3_icon_button.dart';
 export 'package:ninja_core/src/m3_components/m3_date_picker/m3_date_picker.dart';
+export 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_layout.dart';

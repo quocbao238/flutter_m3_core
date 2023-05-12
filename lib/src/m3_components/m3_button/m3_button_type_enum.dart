@@ -13,7 +13,7 @@ enum M3ButtonType {
     MaterialStateProperty<double?>? elevation
   ) getPalette({required ColorScheme colorScheme, bool isCancel = false}) {
     Color? backgroundColor;
-    Color? foregroundColor;
+    Color? foregroundColor; 
     MaterialStateProperty<double?>? elevation;
     switch (this) {
       case M3ButtonType.normal:
