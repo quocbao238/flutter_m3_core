@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
-class NinjaInputChipFilter extends StatefulWidget {
+class InputChipFilter extends StatefulWidget {
   final String title;
   final IconData? leadingIcon;
   final Widget? deleteIcon;
   final VoidCallback? onDeleted;
 
-  const NinjaInputChipFilter(
+  const InputChipFilter(
       {Key? key,
       this.leadingIcon,
       this.deleteIcon,
@@ -16,10 +16,10 @@ class NinjaInputChipFilter extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<NinjaInputChipFilter> createState() => _NinjaInputChipFilterState();
+  State<InputChipFilter> createState() => _InputChipFilterState();
 }
 
-class _NinjaInputChipFilterState extends State<NinjaInputChipFilter> {
+class _InputChipFilterState extends State<InputChipFilter> {
   bool isDisable = false;
 
   final List<String> selectedChips = [];

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
-class NinjaInputChipComponent extends StatefulWidget {
+class InputChipComponent extends StatefulWidget {
   final String title;
   final Widget? leading;
   final Widget? deleteIcon;
   final VoidCallback? onDeleted;
 
-  const NinjaInputChipComponent(
+  const InputChipComponent(
       {Key? key,
       this.leading,
       this.deleteIcon,
@@ -16,11 +16,10 @@ class NinjaInputChipComponent extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<NinjaInputChipComponent> createState() =>
-      _NinjaInputChipComponentState();
+  State<InputChipComponent> createState() => _InputChipComponentState();
 }
 
-class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
+class _InputChipComponentState extends State<InputChipComponent> {
   bool isDisable = false;
 
   @override

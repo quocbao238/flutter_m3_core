@@ -83,19 +83,22 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3IconButton.filledTertiary(
                             icon: Icons.settings, onPressed: onPressed),
                         M3Padding(
-                            padding: const M3EdgeInsets.symmetric(
-                                horizontal: M3Spacing.medium),
-                            child: NJText.titleSmall(
-                                text: 'IconButton (filledTertiary)',
-                                color: isEnable ? Colors.red : null)),
+                          padding: const M3EdgeInsets.symmetric(
+                              horizontal: M3Spacing.medium),
+                          child: NJText.titleSmall(
+                            text: 'IconButton (filledTertiary)',
+                            color: isEnable ? Colors.red : null,
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
                 const M3Space.medium(),
                 M3Button.outline(
-                    onPressed: onChangeEnable,
-                    child: Text(isEnable ? 'Disable' : 'Enable')),
+                  onPressed: onChangeEnable,
+                  child: Text(isEnable ? 'Disable' : 'Enable'),
+                ),
               ],
             ),
           ),

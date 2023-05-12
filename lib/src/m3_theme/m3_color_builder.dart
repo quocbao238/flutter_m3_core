@@ -13,7 +13,6 @@ final class M3ColorBuilder {
     lightColorScheme = ColorScheme.fromSeed(seedColor: brandColor);
     darkColorScheme = ColorScheme.fromSeed(
         seedColor: brandColor, brightness: Brightness.dark);
-
     final lightTheme = ThemeData(
         useMaterial3: true,
         colorScheme: lightColorScheme,

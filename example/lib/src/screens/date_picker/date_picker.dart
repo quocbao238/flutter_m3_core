@@ -8,7 +8,7 @@ class DatePicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const CustomAppBar(title: 'Ninja Date Time Picker'),
+        appBar: const CustomAppBar(title: 'M3 DatePicker'),
         body: M3Padding.medium(
             child: SingleChildScrollView(
           child: Wrap(

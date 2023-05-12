@@ -17,17 +17,17 @@ class ChipScreen extends StatelessWidget {
             spacing: M3Spacing.medium.size,
             runSpacing: M3Spacing.medium.size,
             children: [
-              const NinjaInputChipComponent(title: 'M3 Input Chip Label Only'),
-              const NinjaInputChipComponent(
+              const InputChipComponent(title: 'M3 Input Chip Label Only'),
+              const InputChipComponent(
                   title: 'M3 Input Chip Label & trailing icon',
                   leading: Icon(Icons.add)),
-              NinjaInputChipComponent(
+              InputChipComponent(
                   title: 'M3 Input Chip Leading icon, label & trailing icon',
                   leading: const Icon(Icons.add),
                   deleteIcon: const Icon(Icons.close),
                   onDeleted: () {}),
-              const NinjaInputChipFilter(title: 'M3 Input Chip Label Only'),
-              const NinjaInputChipFilter(
+              const InputChipFilter(title: 'M3 Input Chip Label Only'),
+              const InputChipFilter(
                   title: 'M3 Input Chip Leading Icon', leadingIcon: Icons.add),
             ],
           ),

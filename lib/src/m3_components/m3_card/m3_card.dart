@@ -11,7 +11,7 @@ class M3Card extends StatelessWidget {
   final Widget child;
   final double? width;
   final double? height;
-  final M3EdgeInsets? njEdgeInsets;
+  final M3EdgeInsets? m3EdgeInsets;
 
   const M3Card(
       {Key? key,
@@ -21,7 +21,7 @@ class M3Card extends StatelessWidget {
       this.shadowColor,
       this.width,
       this.height,
-      this.njEdgeInsets})
+      this.m3EdgeInsets})
       : super(key: key);
 
   @override
@@ -34,7 +34,7 @@ class M3Card extends StatelessWidget {
           shadowColor: shadowColor ?? Theme.of(context).colorScheme.onSurface,
           child: M3Padding(
               padding:
-                  njEdgeInsets ?? const M3EdgeInsets.all(M3Spacing.regular),
+                  m3EdgeInsets ?? const M3EdgeInsets.all(M3Spacing.regular),
               child: child),
         ),
       );

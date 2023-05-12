@@ -12,7 +12,7 @@ class FabScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: 'Ninja Floating Action Button'),
+      appBar: CustomAppBar(title: 'M3 FloatingActionButton'),
       body: M3Padding.medium(
         child: SingleChildScrollView(
           child: Wrap(
