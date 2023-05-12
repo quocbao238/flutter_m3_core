@@ -22,7 +22,7 @@ class _NormalButtonState extends State<NormalButtons> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const NJText.titleLarge(
+          const M3Text.titleLarge(
               text: 'Normal Button', textAlign: TextAlign.start),
           const M3Space.small(),
           M3Button(onPressed: !_isEnable ? null : () {}, text: 'NjButton'),

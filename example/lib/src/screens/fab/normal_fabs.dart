@@ -22,7 +22,7 @@ class _NormalFabState extends State<NormalFab> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const NJText.titleMedium(text: 'FABs (56x56)'),
+          const M3Text.titleMedium(text: 'FABs (56x56)'),
           const M3Space.medium(),
           Wrap(
             spacing: 10,
@@ -35,28 +35,28 @@ class _NormalFabState extends State<NormalFab> {
                 ),
                 const M3Padding(
                     padding: M3EdgeInsets.only(top: M3Spacing.medium),
-                    child: NJText.bodyMedium(text: 'Surface'))
+                    child: M3Text.bodyMedium(text: 'Surface'))
               ]),
               Column(children: [
                 M3FloatingActionButton.primary(
                     iconData: Icons.edit_rounded, onPressed: onPressed),
                 const M3Padding(
                     padding: M3EdgeInsets.only(top: M3Spacing.medium),
-                    child: NJText.bodyMedium(text: 'Primary'))
+                    child: M3Text.bodyMedium(text: 'Primary'))
               ]),
               Column(children: [
                 M3FloatingActionButton.secondary(
                     iconData: Icons.edit_rounded, onPressed: onPressed),
                 const M3Padding(
                     padding: M3EdgeInsets.only(top: M3Spacing.medium),
-                    child: NJText.bodyMedium(text: 'Secondary'))
+                    child: M3Text.bodyMedium(text: 'Secondary'))
               ]),
               Column(children: [
                 M3FloatingActionButton.tertiary(
                     iconData: Icons.edit_rounded, onPressed: onPressed),
                 const M3Padding(
                     padding: M3EdgeInsets.only(top: M3Spacing.medium),
-                    child: NJText.bodyMedium(text: 'Tertiary'))
+                    child: M3Text.bodyMedium(text: 'Tertiary'))
               ]),
             ],
           ),

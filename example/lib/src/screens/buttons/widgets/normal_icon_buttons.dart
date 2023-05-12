@@ -25,7 +25,7 @@ class _NormalIconButtonState extends State<NormalIconButtons> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          NJText.titleLarge(
+          M3Text.titleLarge(
               text: 'Normal Icon Button',
               textAlign: TextAlign.start,
               color: Theme.of(context).colorScheme.error),

@@ -6,6 +6,7 @@ import 'package:example/src/screens/dialog/dialog.dart';
 import 'package:example/src/screens/fab/fab.dart';
 import 'package:example/src/screens/icon_button/icon_button.dart';
 import 'package:example/src/screens/progress/progress_screen.dart';
+import 'package:example/src/screens/segment/segments.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ final Map<String, Widget> components = {
   'M3 FloatingActionButton': const FabScreen(),
   'M3 DatePicker': const DatePicker(),
   'M3 Progress Indicator': const ProgressScreen(),
+  'M3 Segmented': const SegmentedScreen(),
 };
 
 class MyApp extends StatefulWidget {

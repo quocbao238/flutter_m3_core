@@ -28,8 +28,7 @@ class ProgressScreen extends StatelessWidget {
                     if (snapshot.connectionState == ConnectionState.done) {
                       return Column(
                         children: [
-                          const LinearProgressIndicator(),
-                          
+                          const M3LinearProgressIndicator(),
                           if (index != 54) const M3Space.small(),
                         ],
                       );

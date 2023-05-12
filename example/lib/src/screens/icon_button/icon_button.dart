@@ -36,7 +36,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3Padding(
                           padding: const M3EdgeInsets.symmetric(
                               horizontal: M3Spacing.medium),
-                          child: NJText.titleSmall(
+                          child: M3Text.titleSmall(
                               text: 'IconButton (normal)',
                               color: isEnable ? Colors.red : null),
                         ),
@@ -49,7 +49,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
                                 horizontal: M3Spacing.medium),
-                            child: NJText.titleSmall(
+                            child: M3Text.titleSmall(
                                 text: 'IconButton (filled)',
                                 color: isEnable ? Colors.red : null)),
                       ],
@@ -61,7 +61,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
                                 horizontal: M3Spacing.medium),
-                            child: NJText.titleSmall(
+                            child: M3Text.titleSmall(
                                 text: 'IconButton (filledTonal)',
                                 color: isEnable ? Colors.red : null)),
                       ],
@@ -73,7 +73,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3Padding(
                             padding: const M3EdgeInsets.symmetric(
                                 horizontal: M3Spacing.medium),
-                            child: NJText.titleSmall(
+                            child: M3Text.titleSmall(
                                 text: 'IconButton (outlined)',
                                 color: isEnable ? Colors.red : null)),
                       ],
@@ -85,7 +85,7 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                         M3Padding(
                           padding: const M3EdgeInsets.symmetric(
                               horizontal: M3Spacing.medium),
-                          child: NJText.titleSmall(
+                          child: M3Text.titleSmall(
                             text: 'IconButton (filledTertiary)',
                             color: isEnable ? Colors.red : null,
                           ),

@@ -22,7 +22,7 @@ class _ErrorButtonsState extends State<ErrorButtons> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          NJText.titleLarge(
+          M3Text.titleLarge(
               text: 'Error Button',
               textAlign: TextAlign.start,
               color: Theme.of(context).colorScheme.error),

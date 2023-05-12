@@ -79,7 +79,7 @@ Widget _checkBoxView(
           isError: isError,
           tristate: tristate),
       Expanded(
-          child: NJText.bodyMedium(
+          child: M3Text.bodyMedium(
               textAlign: TextAlign.start,
               maxLines: 1,
               text: getStrByFunction())),
@@ -128,7 +128,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                     M3CheckBox(
                         value: isDisable,
                         onChanged: (val) => setState(() => isDisable = val!)),
-                    const NJText.bodyMedium(text: 'Disable'),
+                    const M3Text.bodyMedium(text: 'Disable'),
                   ],
                 ),
                 Column(
@@ -137,7 +137,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                     M3CheckBox(
                         value: isError,
                         onChanged: (val) => setState(() => isError = val!)),
-                    const NJText.bodyMedium(text: 'Error'),
+                    const M3Text.bodyMedium(text: 'Error'),
                   ],
                 ),
                 Column(
@@ -146,7 +146,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                     M3CheckBox(
                         value: tristate,
                         onChanged: (val) => setState(() => tristate = val!)),
-                    const NJText.bodyMedium(text: 'Tristate')
+                    const M3Text.bodyMedium(text: 'Tristate')
                   ],
                 ),
               ],

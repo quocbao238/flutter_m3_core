@@ -43,7 +43,7 @@ class _InputChipFilterState extends State<InputChipFilter> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NJText.titleMedium(text: widget.title),
+              M3Text.titleMedium(text: widget.title),
               const M3Space.medium(),
               M3FilterChip(
                 text: 'M3 Filter ${isDisable ? 'Disable' : ''}',

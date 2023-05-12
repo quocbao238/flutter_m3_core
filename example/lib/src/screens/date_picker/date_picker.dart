@@ -48,8 +48,8 @@ class _DatePickerCardState extends State<DatePickerCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const NJText.titleMedium(text: 'DateTime Picker'),
-              NJText.bodyLarge(text: _formatDateTime(dateTime)),
+              const M3Text.titleMedium(text: 'DateTime Picker'),
+              M3Text.bodyLarge(text: _formatDateTime(dateTime)),
             ],
           ),
           const M3Space.medium(),
@@ -142,7 +142,7 @@ class _DatePickerCardState extends State<DatePickerCard> {
                     },
                   ),
                   const M3Padding(
-                      child: NJText.bodyLarge(text: 'Use 24 hour format')),
+                      child: M3Text.bodyLarge(text: 'Use 24 hour format')),
                 ],
               ),
             ],

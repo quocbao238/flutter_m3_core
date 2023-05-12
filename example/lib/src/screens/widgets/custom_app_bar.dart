@@ -46,7 +46,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               Row(
                 children: [
                   const Flexible(
-                    child: NJText.titleMedium(
+                    child: M3Text.titleMedium(
                       text: 'Change M3 Base Color',
                       maxLines: 1,
                       textAlign: TextAlign.center,

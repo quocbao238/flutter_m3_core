@@ -42,7 +42,7 @@ class _InputChipComponentState extends State<InputChipComponent> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NJText.titleMedium(text: widget.title),
+              M3Text.titleMedium(text: widget.title),
               const M3Space.medium(),
               M3InputChip(
                 text: 'M3 InputChip ${isDisable ? 'Disable' : ''}',
