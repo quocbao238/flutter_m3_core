@@ -1,6 +1,6 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class IconButtonScreen extends StatefulWidget {
   const IconButtonScreen({Key? key}) : super(key: key);
@@ -19,9 +19,9 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
     final Function()? onPressed = isEnable ? () {} : null;
     return Scaffold(
       appBar: const CustomAppBar(title: 'Ninja Icon Button'),
-      body: NJPadding.medium(
-        child: NJCard(
-          child: NJPadding.medium(
+      body: M3Padding.medium(
+        child: M3Card(
+          child: M3Padding.medium(
             child: ListView(
               shrinkWrap: true,
               children: [
@@ -31,52 +31,71 @@ class _IconButtonScreenState extends State<IconButtonScreen> {
                   children: [
                     Row(
                       children: [
-                        NjIconButton(icon: Icons.settings, onPressed: onPressed),
-                        NJPadding(
-                          padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.medium),
-                          child: NJText.titleSmall(text: 'IconButton (normal)', color: isEnable ? Colors.red : null),
+                        NjIconButton(
+                            icon: Icons.settings, onPressed: onPressed),
+                        M3Padding(
+                          padding: const M3EdgeInsets.symmetric(
+                              horizontal: M3Spacing.medium),
+                          child: NJText.titleSmall(
+                              text: 'IconButton (normal)',
+                              color: isEnable ? Colors.red : null),
                         ),
                       ],
                     ),
                     Row(
                       children: [
-                        NjIconButton.filled(icon: Icons.settings, onPressed: onPressed),
-                        NJPadding(
-                            padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.medium),
-                            child: NJText.titleSmall(text: 'IconButton (filled)', color: isEnable ? Colors.red : null)),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        NjIconButton.filledTonal(icon: Icons.settings, onPressed: onPressed),
-                        NJPadding(
-                            padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.medium),
+                        NjIconButton.filled(
+                            icon: Icons.settings, onPressed: onPressed),
+                        M3Padding(
+                            padding: const M3EdgeInsets.symmetric(
+                                horizontal: M3Spacing.medium),
                             child: NJText.titleSmall(
-                                text: 'IconButton (filledTonal)', color: isEnable ? Colors.red : null)),
+                                text: 'IconButton (filled)',
+                                color: isEnable ? Colors.red : null)),
                       ],
                     ),
                     Row(
                       children: [
-                        NjIconButton.outlined(icon: Icons.settings, onPressed: onPressed),
-                        NJPadding(
-                            padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.medium),
-                            child:
-                                NJText.titleSmall(text: 'IconButton (outlined)', color: isEnable ? Colors.red : null)),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        NjIconButton.filledTertiary(icon: Icons.settings, onPressed: onPressed),
-                        NJPadding(
-                            padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.medium),
+                        NjIconButton.filledTonal(
+                            icon: Icons.settings, onPressed: onPressed),
+                        M3Padding(
+                            padding: const M3EdgeInsets.symmetric(
+                                horizontal: M3Spacing.medium),
                             child: NJText.titleSmall(
-                                text: 'IconButton (filledTertiary)', color: isEnable ? Colors.red : null)),
+                                text: 'IconButton (filledTonal)',
+                                color: isEnable ? Colors.red : null)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        NjIconButton.outlined(
+                            icon: Icons.settings, onPressed: onPressed),
+                        M3Padding(
+                            padding: const M3EdgeInsets.symmetric(
+                                horizontal: M3Spacing.medium),
+                            child: NJText.titleSmall(
+                                text: 'IconButton (outlined)',
+                                color: isEnable ? Colors.red : null)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        NjIconButton.filledTertiary(
+                            icon: Icons.settings, onPressed: onPressed),
+                        M3Padding(
+                            padding: const M3EdgeInsets.symmetric(
+                                horizontal: M3Spacing.medium),
+                            child: NJText.titleSmall(
+                                text: 'IconButton (filledTertiary)',
+                                color: isEnable ? Colors.red : null)),
                       ],
                     ),
                   ],
                 ),
-                const NJGap.medium(),
-                NJButton.outline(onPressed: onChangeEnable, child: Text(isEnable ? 'Disable' : 'Enable')),
+                const M3Space.medium(),
+                M3Button.outline(
+                    onPressed: onChangeEnable,
+                    child: Text(isEnable ? 'Disable' : 'Enable')),
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:example/src/common/common.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -13,14 +13,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(title),
       centerTitle: false,
       actions: [
-        NJButton(
+        M3Button(
           onPressed: () => showDialogPaletteColor(context),
           child: const Icon(Icons.palette),
         ),
-        NJPadding(
-          padding: const NJEdgeInsets.symmetric(horizontal: NJGapSize.small),
-          child: NJButton(
-            onPressed: () => NJThemeProvider.toggleTheme(context),
+        M3Padding(
+          padding: const M3EdgeInsets.symmetric(horizontal: M3Spacing.small),
+          child: M3Button(
+            onPressed: () => M3ThemeProvider.toggleTheme(context),
             child: Icon(Theme.of(context).brightness == Brightness.light
                 ? Icons.brightness_3
                 : Icons.brightness_7),
@@ -31,7 +31,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   Future<void> showDialogPaletteColor(BuildContext buildContext) async {
@@ -53,9 +52,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  NJPadding(
-                    padding: const NJEdgeInsets.only(left: NJGapSize.small),
-                    child: NJButtonWithIcon.outline(
+                  M3Padding(
+                    padding: const M3EdgeInsets.only(left: M3Spacing.small),
+                    child: M3ButtonWithIcon.outline(
                         icon: Icons.close,
                         onPressed: () => Navigator.of(ctx).pop(),
                         text: 'Close'),
@@ -63,9 +62,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ],
               ),
               Expanded(
-                child: NJPadding(
+                child: M3Padding(
                   padding:
-                      const NJEdgeInsets.symmetric(vertical: NJGapSize.medium),
+                      const M3EdgeInsets.symmetric(vertical: M3Spacing.medium),
                   child: GridView(
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
@@ -75,10 +74,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       children: [
                         ...listPaletteColor.entries
                             .map(
-                              (e) => NJButton(
+                              (e) => M3Button(
                                 text: '',
                                 backgroundColor: e.value,
-                                onPressed: () => NJThemeProvider.changeM3Color(
+                                onPressed: () => M3ThemeProvider.changeM3Color(
                                     buildContext, e.value),
                               ),
                             )

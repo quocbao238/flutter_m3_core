@@ -2,7 +2,7 @@ import 'dart:core';
 
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class CheckBoxScreen extends StatelessWidget {
   const CheckBoxScreen({Key? key}) : super(key: key);
@@ -10,17 +10,16 @@ class CheckBoxScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja CheckBox'),
-      body: NJPadding.medium(
+      appBar: const CustomAppBar(title: 'M3 CheckBox'),
+      body: M3Padding.medium(
         child: SingleChildScrollView(
           child: Column(
             children: [
               const CheckBoxTest(),
-              NJCard(
-                  // width: 1280 / 3.2,
+              M3Card(
                   child: Wrap(
-                spacing: NJGapSize.regular.size,
-                runSpacing: NJGapSize.regular.size,
+                spacing: M3Spacing.regular.size,
+                runSpacing: M3Spacing.regular.size,
                 crossAxisAlignment: WrapCrossAlignment.center,
                 alignment: WrapAlignment.center,
                 children: [
@@ -28,21 +27,21 @@ class CheckBoxScreen extends StatelessWidget {
                   _checkBoxView(value: true),
                   _checkBoxView(value: false, onChanged: (val) {}),
                   _checkBoxView(value: false),
-                  const NJDivider(),
+                  const M3Divider(),
                   _checkBoxView(
                       value: true, onChanged: (val) {}, isError: true),
                   _checkBoxView(value: true),
                   _checkBoxView(
                       value: false, onChanged: (val) {}, isError: true),
                   _checkBoxView(value: false),
-                  const NJDivider(),
+                  const M3Divider(),
                   _checkBoxView(
                       value: null, onChanged: (val) {}, tristate: true),
                   _checkBoxView(value: null, tristate: true),
                   _checkBoxView(
                       value: null, onChanged: (val) {}, tristate: true),
                   _checkBoxView(value: null, tristate: true),
-                  const NJDivider(),
+                  const M3Divider(),
                   _checkBoxView(
                       value: null,
                       onChanged: (val) {},
@@ -70,11 +69,11 @@ class CheckBoxScreen extends StatelessWidget {
 Widget _checkBoxView(
     {bool? value, Function(bool?)? onChanged, bool? isError, bool? tristate}) {
   String getStrByFunction() =>
-      'NJCheckBox {value = $value, status = ${onChanged != null ? 'enable' : 'disable'}, isError = $isError, tristate = $tristate}';
+      'M3CheckBox {value = $value, status = ${onChanged != null ? 'enable' : 'disable'}, isError = $isError, tristate = $tristate}';
 
   return Row(
     children: [
-      NJCheckBox(
+      M3CheckBox(
           value: value,
           onChanged: onChanged,
           isError: isError,
@@ -103,9 +102,9 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
 
   @override
   Widget build(BuildContext context) {
-    return NJPadding(
-      padding: const NJEdgeInsets.only(bottom: NJGapSize.regular),
-      child: NJCard(
+    return M3Padding(
+      padding: const M3EdgeInsets.only(bottom: M3Spacing.regular),
+      child: M3Card(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -113,7 +112,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                 tristate: tristate,
                 isError: isError,
                 value: tristate ? null : value,
-                onChanged: isDisable == false
+                onChanged: isDisable == true
                     ? null
                     : (val) {
                         setState(() {
@@ -126,7 +125,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    NJCheckBox(
+                    M3CheckBox(
                         value: isDisable,
                         onChanged: (val) => setState(() => isDisable = val!)),
                     const NJText.bodyMedium(text: 'Disable'),
@@ -135,7 +134,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    NJCheckBox(
+                    M3CheckBox(
                         value: isError,
                         onChanged: (val) => setState(() => isError = val!)),
                     const NJText.bodyMedium(text: 'Error'),
@@ -144,7 +143,7 @@ class _CheckBoxTestState extends State<CheckBoxTest> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    NJCheckBox(
+                    M3CheckBox(
                         value: tristate,
                         onChanged: (val) => setState(() => tristate = val!)),
                     const NJText.bodyMedium(text: 'Tristate')

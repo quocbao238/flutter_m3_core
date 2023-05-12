@@ -2,7 +2,7 @@ import 'package:example/src/screens/chips/chip_filter.dart';
 import 'package:example/src/screens/chips/chip_input.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class ChipScreen extends StatelessWidget {
   const ChipScreen({Key? key}) : super(key: key);
@@ -10,30 +10,25 @@ class ChipScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja Chips'),
+      appBar: const CustomAppBar(title: 'M3 Chips'),
       body: SingleChildScrollView(
-        child: NJPadding.regular(
+        child: M3Padding.regular(
           child: Wrap(
-            spacing: NJGapSize.medium.size,
-            runSpacing: NJGapSize.medium.size,
+            spacing: M3Spacing.medium.size,
+            runSpacing: M3Spacing.medium.size,
             children: [
-              const NinjaInputChipComponent(title: 'NJ Input Chip Label Only'),
-              const NinjaInputChipComponent(title: 'NJ Input Chip Label & trailing icon', leading: Icon(Icons.add)),
+              const NinjaInputChipComponent(title: 'M3 Input Chip Label Only'),
+              const NinjaInputChipComponent(
+                  title: 'M3 Input Chip Label & trailing icon',
+                  leading: Icon(Icons.add)),
               NinjaInputChipComponent(
-                  title: 'NJ Input Chip Leading icon, label & trailing icon',
+                  title: 'M3 Input Chip Leading icon, label & trailing icon',
                   leading: const Icon(Icons.add),
                   deleteIcon: const Icon(Icons.close),
                   onDeleted: () {}),
-
-              const NinjaInputChipFilter(title: 'NJ Input Chip Label Only'),
-              const NinjaInputChipFilter(title: 'NJ Input Chip Leading Icon', leadingIcon: Icons.add),
-              // const NinjaInputChipFilter(title: 'NJ Input Chip Label & trailing icon', leading: Icon(Icons.add)),
-              // NinjaInputChipFilter(
-              //     title: 'NJ Filter Chip',
-              //     leading: const Icon(Icons.add),
-              //     deleteIcon: const Icon(Icons.close),
-              //     onDeleted: () {}
-              // ),
+              const NinjaInputChipFilter(title: 'M3 Input Chip Label Only'),
+              const NinjaInputChipFilter(
+                  title: 'M3 Input Chip Leading Icon', leadingIcon: Icons.add),
             ],
           ),
         ),

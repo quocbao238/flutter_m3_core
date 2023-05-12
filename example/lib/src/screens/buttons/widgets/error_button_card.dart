@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class ErrorButtons extends StatefulWidget {
   const ErrorButtons({super.key});
@@ -17,7 +17,7 @@ class _ErrorButtonsState extends State<ErrorButtons> {
 
   @override
   Widget build(BuildContext context) {
-    return NJCard(
+    return M3Card(
       width: 1280 / 3.2,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -26,25 +26,25 @@ class _ErrorButtonsState extends State<ErrorButtons> {
               text: 'Error Button',
               textAlign: TextAlign.start,
               color: Theme.of(context).colorScheme.error),
-          const NJGap.medium(),
-          NJButtonError(onPressed: !_isEnable ? null : () {}, text: 'NjButton'),
-          const NJGap.small(),
-          NJButtonError.filled(
+          const M3Space.medium(),
+          M3ButtonError(onPressed: !_isEnable ? null : () {}, text: 'NjButton'),
+          const M3Space.small(),
+          M3ButtonError.filled(
               onPressed: !_isEnable ? null : () {}, text: 'NjButton.filled'),
-          const NJGap.small(),
-          NJButtonError.filledTonal(
+          const M3Space.small(),
+          M3ButtonError.filledTonal(
               onPressed: !_isEnable ? null : () {},
               text: 'NjButton.filledTonal'),
-          const NJGap.small(),
-          NJButtonError.outline(
+          const M3Space.small(),
+          M3ButtonError.outline(
               onPressed: !_isEnable ? null : () {}, text: "NjButton.outline"),
-          const NJGap.small(),
-          NJButtonError.text(
+          const M3Space.small(),
+          M3ButtonError.text(
               onPressed: !_isEnable ? null : () {}, text: "NjButton.text"),
-          const NJGap.small(),
-          const NJDivider(),
-          const NJGap.small(),
-          NJButton(onPressed: _changeEnable, text: _getStr()),
+          const M3Space.small(),
+          const M3Divider(),
+          const M3Space.small(),
+          M3Button(onPressed: _changeEnable, text: _getStr()),
         ],
       ),
     );

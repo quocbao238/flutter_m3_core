@@ -1,8 +1,9 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class BadgeScreen extends StatefulWidget {
   const BadgeScreen({Key? key}) : super(key: key);
@@ -21,23 +22,40 @@ class _BadgeScreenState extends State<BadgeScreen> {
     'Settings': Icons.settings,
   };
 
+  final timeRefresh = 500; // ms
+  Timer? timer;
+
+  @override
+  void initState() {
+    super.initState();
+    timer = Timer.periodic(
+        Duration(milliseconds: timeRefresh), (timer) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja Badge'),
-      body: NJPadding.medium(
+      appBar: const CustomAppBar(title: 'M3 Badge'),
+      body: M3Padding.medium(
         child: ListView(
           children: [
-            NJCard(
+            M3Card(
                 width: 1280 / 3.2,
                 child: Wrap(
-                    spacing: NJGapSize.medium.size,
-                    runSpacing: NJGapSize.medium.size,
+                    spacing: M3Spacing.medium.size,
+                    runSpacing: M3Spacing.medium.size,
                     children: listIconsData
-                        .map((e) => NJPadding.regular(
-                            child: NJBadge(count: randomNumber(), iconData: e)))
+                        .map((e) => M3Padding.regular(
+                            child: M3Badge(count: randomNumber(), iconData: e)))
                         .toList())),
-            NJCard(
+            const M3Space.medium(),
+            M3Card(
               width: 1280 / 3.2,
               child: NavigationBar(
                 onDestinationSelected: (int? index) =>
@@ -46,7 +64,7 @@ class _BadgeScreenState extends State<BadgeScreen> {
                 destinations: [
                   ...mapIconsData.entries
                       .map((e) => NavigationDestination(
-                            icon: NJBadge(
+                            icon: M3Badge(
                               count: randomNumber(),
                               iconData: e.value,
                             ),

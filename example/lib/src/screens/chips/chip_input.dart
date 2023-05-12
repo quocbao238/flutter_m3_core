@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class NinjaInputChipComponent extends StatefulWidget {
   final String title;
@@ -8,11 +7,17 @@ class NinjaInputChipComponent extends StatefulWidget {
   final Widget? deleteIcon;
   final VoidCallback? onDeleted;
 
-  const NinjaInputChipComponent({Key? key, this.leading, this.deleteIcon, this.onDeleted, required this.title})
+  const NinjaInputChipComponent(
+      {Key? key,
+      this.leading,
+      this.deleteIcon,
+      this.onDeleted,
+      required this.title})
       : super(key: key);
 
   @override
-  State<NinjaInputChipComponent> createState() => _NinjaInputChipComponentState();
+  State<NinjaInputChipComponent> createState() =>
+      _NinjaInputChipComponentState();
 }
 
 class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
@@ -20,7 +25,6 @@ class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -32,7 +36,7 @@ class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return NJCard(
+    return M3Card(
       width: 1280 / 3,
       child: Wrap(
         children: [
@@ -40,35 +44,36 @@ class _NinjaInputChipComponentState extends State<NinjaInputChipComponent> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               NJText.titleMedium(text: widget.title),
-              const NJGap.medium(),
-              NJInputChip(
-                text: 'NJ InputChip ${isDisable ? 'Disable' : ''}',
+              const M3Space.medium(),
+              M3InputChip(
+                text: 'M3 InputChip ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
                 leading: widget.leading,
                 isEnable: !isDisable,
                 deleteIcon: widget.deleteIcon,
                 onDeleted: widget.onDeleted,
               ),
-              const NJGap.medium(),
-              NJInputChip.filled(
-                text: 'NJ InputChip Filled ${isDisable ? 'Disable' : ''}',
+              const M3Space.medium(),
+              M3InputChip.filled(
+                text: 'M3 InputChip Filled ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
                 leading: widget.leading,
                 isEnable: !isDisable,
                 deleteIcon: widget.deleteIcon,
                 onDeleted: widget.onDeleted,
               ),
-              const NJGap.medium(),
-              NJInputChip.filledTonal(
-                text: 'NJ InputChip Filled Tonal ${isDisable ? 'Disable' : ''}',
+              const M3Space.medium(),
+              M3InputChip.filledTonal(
+                text: 'M3 InputChip Filled Tonal ${isDisable ? 'Disable' : ''}',
                 onPressed: () {},
                 leading: widget.leading,
                 deleteIcon: widget.deleteIcon,
                 isEnable: !isDisable,
                 onDeleted: widget.onDeleted,
               ),
-              const NJGap.medium(),
-              NJButton(onPressed: _onChangeDisable, text: 'Disable/Enable Chips')
+              const M3Space.medium(),
+              M3Button(
+                  onPressed: _onChangeDisable, text: 'Disable/Enable Chips')
             ],
           )
         ],

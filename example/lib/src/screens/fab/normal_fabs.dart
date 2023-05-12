@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class NormalFab extends StatefulWidget {
   const NormalFab({Key? key}) : super(key: key);
@@ -16,45 +16,52 @@ class _NormalFabState extends State<NormalFab> {
   @override
   Widget build(BuildContext context) {
     void Function()? onPressed = isEnable ? () {} : null;
-    return NJCard(
+    return M3Card(
       width: 1280 / 3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
           const NJText.titleMedium(text: 'FABs (56x56)'),
-          const NJGap.medium(),
+          const M3Space.medium(),
           Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               Column(children: [
-                NJFloatingActionButton.surface(
+                M3FloatingActionButton.surface(
                   iconData: Icons.edit_rounded,
                   onPressed: onPressed,
                 ),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Surface'))
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Surface'))
               ]),
               Column(children: [
-                NJFloatingActionButton.primary(iconData: Icons.edit_rounded, onPressed: onPressed),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Primary'))
+                M3FloatingActionButton.primary(
+                    iconData: Icons.edit_rounded, onPressed: onPressed),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Primary'))
               ]),
               Column(children: [
-                NJFloatingActionButton.secondary(iconData: Icons.edit_rounded, onPressed: onPressed),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Secondary'))
+                M3FloatingActionButton.secondary(
+                    iconData: Icons.edit_rounded, onPressed: onPressed),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Secondary'))
               ]),
               Column(children: [
-                NJFloatingActionButton.tertiary(iconData: Icons.edit_rounded, onPressed: onPressed),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Tertiary'))
+                M3FloatingActionButton.tertiary(
+                    iconData: Icons.edit_rounded, onPressed: onPressed),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Tertiary'))
               ]),
             ],
           ),
-          const NJGap.small(),
-          NJButton.outline(
+          const M3Space.small(),
+          M3Button.outline(
             onPressed: _onChangeEnable,
             text: isEnable ? 'Disable' : 'Enable',
           )

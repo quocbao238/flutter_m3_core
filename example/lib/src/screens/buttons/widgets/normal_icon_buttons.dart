@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class NormalIconButtons extends StatefulWidget {
   const NormalIconButtons({super.key});
@@ -20,7 +20,7 @@ class _NormalIconButtonState extends State<NormalIconButtons> {
 
   @override
   Widget build(BuildContext context) {
-    return NJCard(
+    return M3Card(
       width: 1280 / 3.2,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -29,46 +29,46 @@ class _NormalIconButtonState extends State<NormalIconButtons> {
               text: 'Normal Icon Button',
               textAlign: TextAlign.start,
               color: Theme.of(context).colorScheme.error),
-          const NJGap.medium(),
-          NJButtonWithIcon(
+          const M3Space.medium(),
+          M3ButtonWithIcon(
               onPressed: !_isEnable ? null : () {},
               text: 'NjButtonWithIcon',
               reverseIcon: _reverse,
               icon: Icons.add),
-          const NJGap.small(),
-          NJButtonWithIcon.filled(
+          const M3Space.small(),
+          M3ButtonWithIcon.filled(
               onPressed: !_isEnable ? null : () {},
               text: 'NjButtonWithIcon.filled',
               reverseIcon: _reverse,
               icon: Icons.add),
-          const NJGap.small(),
-          NJButtonWithIcon.filledTonal(
+          const M3Space.small(),
+          M3ButtonWithIcon.filledTonal(
               onPressed: !_isEnable ? null : () {},
               text: 'NjButtonWithIcon.filledTonal',
               reverseIcon: _reverse,
               icon: Icons.add),
-          const NJGap.small(),
-          NJButtonWithIcon.outline(
+          const M3Space.small(),
+          M3ButtonWithIcon.outline(
               onPressed: !_isEnable ? null : () {},
               text: "NjButtonWithIcon.outline",
               reverseIcon: _reverse,
               icon: Icons.add),
-          const NJGap.small(),
-          NJButtonWithIcon.text(
+          const M3Space.small(),
+          M3ButtonWithIcon.text(
               onPressed: !_isEnable ? null : () {},
               text: "NjButtonWithIcon.text",
               reverseIcon: _reverse,
               icon: Icons.add),
-          const NJGap.small(),
-          const NJDivider(),
-          const NJGap.small(),
+          const M3Space.small(),
+          const M3Divider(),
+          const M3Space.small(),
           Wrap(
-            spacing: NJGapSize.medium.size,
-            runSpacing: NJGapSize.medium.size,
+            spacing: M3Spacing.medium.size,
+            runSpacing: M3Spacing.medium.size,
             alignment: WrapAlignment.center,
             children: [
-              NJButton(onPressed: _changeEnable, text: _getStr()),
-              NJButton(onPressed: _changeReverse, text: 'Reverse Icon'),
+              M3Button(onPressed: _changeEnable, text: _getStr()),
+              M3Button(onPressed: _changeReverse, text: 'Reverse Icon'),
             ],
           ),
         ],

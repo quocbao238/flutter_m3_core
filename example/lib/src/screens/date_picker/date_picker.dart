@@ -1,6 +1,6 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class DatePicker extends StatelessWidget {
   const DatePicker({Key? key}) : super(key: key);
@@ -9,11 +9,11 @@ class DatePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CustomAppBar(title: 'Ninja Date Time Picker'),
-        body: NJPadding.medium(
+        body: M3Padding.medium(
             child: SingleChildScrollView(
           child: Wrap(
-            spacing: NJGapSize.regular.size,
-            runSpacing: NJGapSize.regular.size,
+            spacing: M3Spacing.regular.size,
+            runSpacing: M3Spacing.regular.size,
             children: const [DatePickerCard()],
           ),
         )));
@@ -35,11 +35,12 @@ class _DatePickerCardState extends State<DatePickerCard> {
 
   bool use24HourFormat = false;
 
-  _onChangeDateTime(DateTime newDateTime) => setState(() => dateTime = newDateTime);
+  _onChangeDateTime(DateTime newDateTime) =>
+      setState(() => dateTime = newDateTime);
 
   @override
   Widget build(BuildContext context) {
-    return NJCard(
+    return M3Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -51,10 +52,10 @@ class _DatePickerCardState extends State<DatePickerCard> {
               NJText.bodyLarge(text: _formatDateTime(dateTime)),
             ],
           ),
-          const NJGap.medium(),
+          const M3Space.medium(),
           Wrap(
             children: [
-              NJButtonWithIcon(
+              M3ButtonWithIcon(
                 text: 'Day Picker Calendar Only',
                 icon: Icons.calendar_today_outlined,
                 onPressed: () async {
@@ -67,7 +68,7 @@ class _DatePickerCardState extends State<DatePickerCard> {
                   }
                 },
               ),
-              NJButtonWithIcon.filledTonal(
+              M3ButtonWithIcon.filledTonal(
                 text: 'Year Picker Calendar Only',
                 icon: Icons.calendar_month_outlined,
                 onPressed: () async {
@@ -81,7 +82,7 @@ class _DatePickerCardState extends State<DatePickerCard> {
                   }
                 },
               ),
-              NJButtonWithIcon.filled(
+              M3ButtonWithIcon.filled(
                 text: 'M3 Picker Input Only ',
                 icon: Icons.calendar_today_outlined,
                 onPressed: () async {
@@ -95,23 +96,24 @@ class _DatePickerCardState extends State<DatePickerCard> {
                   }
                 },
               ),
-              const NJDivider(),
-              NJButtonWithIcon.outline(
+              const M3Divider(),
+              M3ButtonWithIcon.outline(
                 text: 'M3 Time Picker Dial ',
                 icon: Icons.calendar_today_outlined,
                 onPressed: () async {
                   final result = await M3DatePicker.showModalTimePicker(context,
                       use24HourDials: use24HourFormat,
-                      initialTime: TimeOfDay(hour: dateTime.hour, minute: dateTime.minute),
+                      initialTime: TimeOfDay(
+                          hour: dateTime.hour, minute: dateTime.minute),
                       onDateSelected: _onChangeDateTime);
                   if (result != null) {
-                    final newDateTime =
-                        DateTime(dateTime.year, dateTime.month, dateTime.day, result.hour, result.minute);
+                    final newDateTime = DateTime(dateTime.year, dateTime.month,
+                        dateTime.day, result.hour, result.minute);
                     _onChangeDateTime(newDateTime);
                   }
                 },
               ),
-              NJButtonWithIcon.filled(
+              M3ButtonWithIcon.filled(
                 text: 'M3 Time Picker Input ',
                 icon: Icons.calendar_today_outlined,
                 onPressed: () async {
@@ -119,18 +121,19 @@ class _DatePickerCardState extends State<DatePickerCard> {
                       initialEntryMode: TimePickerEntryMode.inputOnly,
                       context,
                       use24HourDials: use24HourFormat,
-                      initialTime: TimeOfDay(hour: dateTime.hour, minute: dateTime.minute),
+                      initialTime: TimeOfDay(
+                          hour: dateTime.hour, minute: dateTime.minute),
                       onDateSelected: _onChangeDateTime);
                   if (result != null) {
-                    final newDateTime =
-                        DateTime(dateTime.year, dateTime.month, dateTime.day, result.hour, result.minute);
+                    final newDateTime = DateTime(dateTime.year, dateTime.month,
+                        dateTime.day, result.hour, result.minute);
                     _onChangeDateTime(newDateTime);
                   }
                 },
               ),
               Row(
                 children: [
-                  NJCheckBox(
+                  M3CheckBox(
                     value: use24HourFormat,
                     onChanged: (value) {
                       setState(() {
@@ -138,7 +141,8 @@ class _DatePickerCardState extends State<DatePickerCard> {
                       });
                     },
                   ),
-                  const NJPadding(child: NJText.bodyLarge(text: 'Use 24 hour format')),
+                  const M3Padding(
+                      child: NJText.bodyLarge(text: 'Use 24 hour format')),
                 ],
               ),
             ],

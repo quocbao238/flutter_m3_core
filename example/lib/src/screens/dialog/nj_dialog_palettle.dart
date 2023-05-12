@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:ninja_core/src/ninja_components/ninja_components.dart';
 
 class DialogPalette {
   static const title = 'Dialog with hero icon';

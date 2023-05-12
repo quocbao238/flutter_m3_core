@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class NinjaInputChipFilter extends StatefulWidget {
   final String title;
@@ -7,7 +7,12 @@ class NinjaInputChipFilter extends StatefulWidget {
   final Widget? deleteIcon;
   final VoidCallback? onDeleted;
 
-  const NinjaInputChipFilter({Key? key, this.leadingIcon, this.deleteIcon, this.onDeleted, required this.title})
+  const NinjaInputChipFilter(
+      {Key? key,
+      this.leadingIcon,
+      this.deleteIcon,
+      this.onDeleted,
+      required this.title})
       : super(key: key);
 
   @override
@@ -21,17 +26,17 @@ class _NinjaInputChipFilterState extends State<NinjaInputChipFilter> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
   _onChangeDisable() => setState(() => isDisable = !isDisable);
 
-  _onSelected(bool val, String text) => setState(() => val ? selectedChips.add(text) : selectedChips.remove(text));
+  _onSelected(bool val, String text) => setState(
+      () => val ? selectedChips.add(text) : selectedChips.remove(text));
 
   @override
   Widget build(BuildContext context) {
-    return NJCard(
+    return M3Card(
       width: 1280 / 3,
       child: Wrap(
         children: [
@@ -39,40 +44,41 @@ class _NinjaInputChipFilterState extends State<NinjaInputChipFilter> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               NJText.titleMedium(text: widget.title),
-              const NJGap.medium(),
-              NJFilterChip(
-                text: 'NJ Filter ${isDisable ? 'Disable' : ''}',
-                selected: selectedChips.contains('NJ Filter'),
+              const M3Space.medium(),
+              M3FilterChip(
+                text: 'M3 Filter ${isDisable ? 'Disable' : ''}',
+                selected: selectedChips.contains('M3 Filter'),
                 isEnabled: !isDisable,
                 leadingIcon: widget.leadingIcon,
-                onSelected: (val) => _onSelected(val, 'NJ Filter'),
+                onSelected: (val) => _onSelected(val, 'M3 Filter'),
                 // onPressed: () {},
                 // leading: widget.leading,
                 // isEnable: !isDisable,
                 // deleteIcon: widget.deleteIcon,
                 // onDeleted: widget.onDeleted,
               ),
-              const NJGap.medium(),
-              NJFilterChip.filled(
-                text: 'NJ Filter Filled ${isDisable ? 'Disable' : ''}',
-                selected: selectedChips.contains('NJ Filter Filled'),
-                onSelected: (val) => _onSelected(val, 'NJ Filter Filled'),
+              const M3Space.medium(),
+              M3FilterChip.filled(
+                text: 'M3 Filter Filled ${isDisable ? 'Disable' : ''}',
+                selected: selectedChips.contains('M3 Filter Filled'),
+                onSelected: (val) => _onSelected(val, 'M3 Filter Filled'),
                 isEnabled: !isDisable,
                 leadingIcon: widget.leadingIcon,
                 // isEnable: !isDisable,
                 // deleteIcon: widget.deleteIcon,
                 // onDeleted: widget.onDeleted,
               ),
-              const NJGap.medium(),
-              NJFilterChip.filledTonal(
-                text: 'NJ Filter Filled Tonal ${isDisable ? 'Disable' : ''}',
-                selected: selectedChips.contains('NJ Filter Filled Tonal'),
-                onSelected: (val) => _onSelected(val, 'NJ Filter Filled Tonal'),
+              const M3Space.medium(),
+              M3FilterChip.filledTonal(
+                text: 'M3 Filter Filled Tonal ${isDisable ? 'Disable' : ''}',
+                selected: selectedChips.contains('M3 Filter Filled Tonal'),
+                onSelected: (val) => _onSelected(val, 'M3 Filter Filled Tonal'),
                 isEnabled: !isDisable,
                 leadingIcon: widget.leadingIcon,
               ),
-              const NJGap.medium(),
-              NJButton(onPressed: _onChangeDisable, text: 'Disable/Enable Chips')
+              const M3Space.medium(),
+              M3Button(
+                  onPressed: _onChangeDisable, text: 'Disable/Enable Chips')
             ],
           )
         ],

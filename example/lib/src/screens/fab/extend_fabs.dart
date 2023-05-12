@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/ninja_core.dart';
+import 'package:ninja_core/m3_theme_core.dart';
 
 class ExtendFab extends StatefulWidget {
   const ExtendFab({Key? key}) : super(key: key);
@@ -16,46 +16,62 @@ class _ExtendFabState extends State<ExtendFab> {
   @override
   Widget build(BuildContext context) {
     void Function()? onPressed = isEnable ? () {} : null;
-    return NJCard(
+    return M3Card(
       width: 1280 / 3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
           const NJText.titleMedium(text: 'Extended FABs'),
-          const NJGap.medium(),
+          const M3Space.medium(),
           Wrap(
             spacing: 10,
             runSpacing: 10,
             children: [
               Column(children: [
-                NJFloatingActionButton.surface(
-                    label: 'Label', iconData: Icons.edit_rounded, onPressed: onPressed, njFabSize: NjFabSize.extended),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Surface'))
+                M3FloatingActionButton.surface(
+                    label: 'Label',
+                    iconData: Icons.edit_rounded,
+                    onPressed: onPressed,
+                    m3FabSize: M3FabSize.extended),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Surface'))
               ]),
               Column(children: [
-                NJFloatingActionButton.primary(
-                    label: 'Label', iconData: Icons.edit_rounded, onPressed: onPressed, njFabSize: NjFabSize.extended),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Primary'))
+                M3FloatingActionButton.primary(
+                    label: 'Label',
+                    iconData: Icons.edit_rounded,
+                    onPressed: onPressed,
+                    m3FabSize: M3FabSize.extended),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Primary'))
               ]),
               Column(children: [
-                NJFloatingActionButton.secondary(
-                    label: 'Label', iconData: Icons.edit_rounded, onPressed: onPressed, njFabSize: NjFabSize.extended),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Secondary'))
+                M3FloatingActionButton.secondary(
+                    label: 'Label',
+                    iconData: Icons.edit_rounded,
+                    onPressed: onPressed,
+                    m3FabSize: M3FabSize.extended),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Secondary'))
               ]),
               Column(children: [
-                NJFloatingActionButton.tertiary(
-                    label: 'Label', iconData: Icons.edit_rounded, onPressed: onPressed, njFabSize: NjFabSize.extended),
-                const NJPadding(
-                    padding: NJEdgeInsets.only(top: NJGapSize.medium), child: NJText.bodyMedium(text: 'Tertiary'))
+                M3FloatingActionButton.tertiary(
+                    label: 'Label',
+                    iconData: Icons.edit_rounded,
+                    onPressed: onPressed,
+                    m3FabSize: M3FabSize.extended),
+                const M3Padding(
+                    padding: M3EdgeInsets.only(top: M3Spacing.medium),
+                    child: NJText.bodyMedium(text: 'Tertiary'))
               ]),
             ],
           ),
-          const NJGap.small(),
-          NJButton.outline(
+          const M3Space.small(),
+          M3Button.outline(
             onPressed: _onChangeEnable,
             text: isEnable ? 'Disable' : 'Enable',
           )
