@@ -31,32 +31,34 @@ class SegmentedScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 Segmented Button'),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          M3Card(
+      body: M3Padding.medium(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            M3Card(
+                width: MediaQuery.of(context).size.width,
+                child: const Column(
+                  children: [
+                    M3Text.titleLarge(
+                        text: 'Single choice', fontWeight: FontWeight.bold),
+                    M3Space.medium(),
+                    SingleChoice()
+                  ],
+                )),
+            const M3Space.medium(),
+            M3Card(
               width: MediaQuery.of(context).size.width,
               child: const Column(
                 children: [
                   M3Text.titleLarge(
-                      text: 'Single choice', fontWeight: FontWeight.bold),
+                      text: 'Multiple choice', fontWeight: FontWeight.bold),
                   M3Space.medium(),
-                  SingleChoice()
+                  MultipleChoice()
                 ],
-              )),
-          const M3Space.medium(),
-          M3Card(
-            width: MediaQuery.of(context).size.width,
-            child: const Column(
-              children: [
-                M3Text.titleLarge(
-                    text: 'Multiple choice', fontWeight: FontWeight.bold),
-                M3Space.medium(),
-                MultipleChoice()
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
