@@ -1,3 +1,4 @@
+import 'package:example/src/common/common.dart';
 import 'package:example/src/screens/badge/badge_screen.dart';
 import 'package:example/src/screens/buttons/button_screen.dart';
 import 'package:example/src/screens/checkbox/checkbox_screen.dart';
@@ -29,9 +30,9 @@ final Map<String, Widget> components = {
   'M3 DatePicker': const DatePicker(),
   'M3 Progress': const ProgressScreen(),
   'Segmented': const SegmentedScreen(),
-  'Slider': const SliderScreen(),
+  'M3 Slider': const SliderScreen(),
   'Snack Bar': const SnackBarScreen(),
-  'Switch': const SwitchScreen(),
+  'M3 Switch': const SwitchScreen(),
   'M3 Input': const TextFieldsScreen(),
 };
 
@@ -45,14 +46,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const M3DeviceLayout(
-      mobile: Scaffold(
-        appBar: CustomAppBar(title: 'M3 Theme Core'),
-        body: MobileView(),
-      ),
-      tablet: Scaffold(
-        body: TabletView(),
-      ),
+    return const M3LayoutView(
+      mobile: MobileView(),
+      tablet: TabletView(),
+      desktop: DesktopView(),
+      web: DesktopView(),
     );
   }
 }
@@ -62,14 +60,20 @@ class MobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return M3Padding(
-      padding: const M3EdgeInsets.all(M3Spacing.regular),
-      child: ListView.builder(
-        itemCount: components.length,
-        itemBuilder: (context, index) => M3Button.outline(
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => components.values.elementAt(index))),
-            text: components.keys.elementAt(index)),
+    return Scaffold(
+      appBar: const CustomAppBar(title: 'M3 Theme Core'),
+      body: M3Padding(
+        padding: const M3EdgeInsets.all(M3Spacing.regular),
+        child: ListView.builder(
+          itemCount: components.length,
+          itemBuilder: (context, index) => M3Padding(
+            padding: const M3EdgeInsets.only(bottom: M3Spacing.medium),
+            child: M3Button.outline(
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => components.values.elementAt(index))),
+                text: components.keys.elementAt(index)),
+          ),
+        ),
       ),
     );
   }
@@ -89,68 +93,198 @@ class _TabletViewState extends State<TabletView> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: M3Padding.medium(
-              child: M3Card(
-                  child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    ...components.keys.map((e) {
-                      int index = components.keys.toList().indexOf(e);
-                      final text = e;
-                      if (index == currentIndex) {
-                        return SizedBox(
-                          width: double.infinity,
-                          child: M3Button.filled(
-                              onPressed: () => _changeIndex(index), text: text),
+    return Scaffold(
+      body: SafeArea(
+        child: Row(
+          children: [
+            Expanded(
+              flex: 2,
+              child: M3Padding.medium(
+                child: M3Card(
+                    child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ...components.keys.map((e) {
+                        int index = components.keys.toList().indexOf(e);
+                        final text = e;
+                        if (index == currentIndex) {
+                          return M3Padding(
+                            padding: const M3EdgeInsets.only(
+                                bottom: M3Spacing.medium),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: M3Button.filled(
+                                  onPressed: () => _changeIndex(index),
+                                  text: text),
+                            ),
+                          );
+                        }
+                        return M3Padding(
+                          padding:
+                              const M3EdgeInsets.only(bottom: M3Spacing.medium),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: M3Button.filledTonal(
+                                onPressed: () => _changeIndex(index),
+                                text: text),
+                          ),
                         );
-                      }
-                      return SizedBox(
-                        width: double.infinity,
-                        child: M3Button.filledTonal(
-                            onPressed: () => _changeIndex(index), text: text),
-                      );
-                    }),
-                  ],
-                ),
-              )
-
-                  // child: ListView.builder(
-                  //   itemCount: components.length,
-                  //   shrinkWrap: true,
-                  //   physics: const NeverScrollableScrollPhysics(),
-                  //   itemBuilder: (context, index) {
-                  //     if (index == currentIndex) {
-                  //       return M3Button.filled(
-                  //         onPressed: () => _changeIndex(index),
-                  //         text: components.keys
-                  //             .elementAt(index)
-                  //             .replaceAll('M3 ', ''),
-                  //       );
-                  //     }
-                  //     return M3Button.filledTonal(
-                  //         onPressed: () => _changeIndex(index),
-                  //         text: components.keys
-                  //             .elementAt(index)
-                  //             .replaceAll('M3 ', ''));
-                  //   },
-                  // ),
+                      }),
+                    ],
                   ),
+                )),
+              ),
             ),
-          ),
-          Expanded(
-            flex: 5,
-            child: M3Padding.small(
-                child: components.values.elementAt(currentIndex)),
-          ),
-        ],
+            Expanded(
+              flex: 5,
+              child: M3Padding.small(
+                  child: components.values.elementAt(currentIndex)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DesktopView extends StatefulWidget {
+  const DesktopView({super.key});
+
+  @override
+  State<DesktopView> createState() => _DesktopViewState();
+}
+
+class _DesktopViewState extends State<DesktopView> {
+  int currentIndex = 0;
+
+  _changeIndex(int index) => setState(() => currentIndex = index);
+
+  @override
+  Widget build(BuildContext context) {
+    final shortSize = MediaQuery.of(context).size.shortestSide;
+    if (shortSize < 600) return const MobileView();
+    if (shortSize < 900) return const TabletView();
+
+    final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
+      body: SafeArea(
+        child: Row(
+          children: [
+            SizedBox(
+              width: 312,
+              height: MediaQuery.of(context).size.height * 0.8,
+              child: Center(
+                child: M3Padding.medium(
+                  child: M3Card(
+                      child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        M3Padding(
+                          padding:
+                              const M3EdgeInsets.only(bottom: M3Spacing.medium),
+                          child: M3Text.titleLarge(
+                            text: 'M3 Theme Core',
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
+                        ...components.keys.map((e) {
+                          int index = components.keys.toList().indexOf(e);
+                          final text = e;
+                          if (index == currentIndex) {
+                            return M3Padding(
+                              padding: const M3EdgeInsets.only(
+                                  bottom: M3Spacing.medium),
+                              child: SizedBox(
+                                width: double.infinity,
+                                child: M3Button.filled(
+                                    onPressed: () => _changeIndex(index),
+                                    text: text),
+                              ),
+                            );
+                          }
+                          return M3Padding(
+                            padding: const M3EdgeInsets.only(
+                                bottom: M3Spacing.medium),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: M3Button.filledTonal(
+                                  onPressed: () => _changeIndex(index),
+                                  text: text),
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
+                  )),
+                ),
+              ),
+            ),
+            Expanded(
+                child: Center(
+              child: M3Padding.small(
+                  child: components.values.elementAt(currentIndex)),
+            )),
+            SizedBox(
+              width: 312,
+              height: MediaQuery.of(context).size.height * 0.8,
+              child: Center(
+                child: M3Padding.regular(
+                  child: M3Card(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const M3Text.titleMedium(
+                          text: 'Change M3 Base Color',
+                          maxLines: 2,
+                          textAlign: TextAlign.start,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        const M3Divider(),
+                        M3Padding(
+                            padding: const M3EdgeInsets.symmetric(
+                                horizontal: M3Spacing.medium),
+                            child: M3ButtonWithIcon.filled(
+                                text: isDarkTheme ? 'Light Mode' : 'Dark Mode',
+                                icon: isDarkTheme
+                                    ? Icons.dark_mode
+                                    : Icons.light_mode,
+                                onPressed: () =>
+                                    M3ThemeProvider.toggleTheme(context))),
+                        const M3Space.medium(),
+                        Wrap(
+                          spacing: M3Spacing.small.size,
+                          runSpacing: M3Spacing.small.size,
+                          children: listPaletteColor.entries
+                              .map(
+                                (e) => M3Button(
+                                    text: '',
+                                    backgroundColor: e.value,
+                                    onPressed: () =>
+                                        M3ThemeProvider.changeM3Color(
+                                            context, e.value)),
+                              )
+                              .toList(),
+                        ),
+                        const M3Space.medium(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -14,19 +14,22 @@ class SnackBarScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: M3Spacing.medium.size),
         children: [
-          M3Button.filledTonal(
+          M3Button.filled(
               text: 'Show SnackBar',
               onPressed: () =>
                   _showSnackBar(context, content: 'Single-line snackbar')),
+          const M3Space.medium(),
           M3Button.filledTonal(
               text: 'Snack bar with close affordance',
               onPressed: () => _showSnackBar(context,
                   showCloseIcon: true,
                   content: 'Single-line snackbar with close affordance')),
-          M3Button.filledTonal(
+          const M3Space.medium(),
+          M3Button.filled(
               text: 'Show SnackBar with action',
               onPressed: () => _showSnackBar(context,
                   content: 'Single-line snackbar with action')),
+          const M3Space.medium(),
           M3Button.filledTonal(
               text: 'Show SnackBar with action close',
               onPressed: () => _showSnackBar(context,
@@ -34,21 +37,25 @@ class SnackBarScreen extends StatelessWidget {
                   label: 'Action',
                   onPressed: () => print('Action pressed'),
                   content: 'Single-line snackbar with action')),
-          M3Button.filledTonal(
+          const M3Space.medium(),
+          M3Button.filled(
               text: 'Two-line snackbar without action',
               onPressed: () => _showSnackBar(context,
                   content: 'Two-line snackbar\nwithout action')),
+          const M3Space.medium(),
           M3Button.filledTonal(
               text: 'Two-line snackbar with close affordance',
               onPressed: () => _showSnackBar(context,
                   showCloseIcon: true,
                   content: 'Two-line snackbar\nclose affordance')),
-          M3Button.filledTonal(
+          const M3Space.medium(),
+          M3Button.filled(
               text: 'Two-line snackbar with action',
               onPressed: () => _showSnackBar(context,
                   label: 'Action',
                   onPressed: () => print('Action pressed'),
                   content: 'Two-line snackbar\nwith action')),
+          const M3Space.medium(),
           M3Button.filledTonal(
               text: 'Two-line snackbar with action and close affordance',
               onPressed: () => _showSnackBar(context,

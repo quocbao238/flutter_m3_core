@@ -3,15 +3,18 @@ import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dar
 
 // M3 Device Layout use MediaQuery size to check
 // Return empty widget if device type not match
-final class M3DeviceLayout extends StatelessWidget {
+final class M3LayoutView extends StatelessWidget {
   final Widget mobile;
   final Widget desktop;
   final Widget tablet;
-  const M3DeviceLayout(
-      {super.key,
-      this.mobile = const _M3EmptyWidget(deviceEmpty: "Mobile"),
-      this.desktop = const _M3EmptyWidget(deviceEmpty: "Desktop"),
-      this.tablet = const _M3EmptyWidget(deviceEmpty: "Tablet")});
+  final Widget web;
+  const M3LayoutView({
+    super.key,
+    this.mobile = const _M3EmptyWidget(deviceEmpty: "Mobile"),
+    this.desktop = const _M3EmptyWidget(deviceEmpty: "Desktop"),
+    this.tablet = const _M3EmptyWidget(deviceEmpty: "Tablet"),
+    this.web = const _M3EmptyWidget(deviceEmpty: "Web"),
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,8 @@ final class M3DeviceLayout extends StatelessWidget {
         builder: (context, orientation) => switch (M3DeviceService.deviceType) {
               M3DeviceType.tablet => tablet,
               M3DeviceType.desktop => desktop,
-              M3DeviceType.mobile => mobile
+              M3DeviceType.mobile => mobile,
+              M3DeviceType.web => web,
             });
   }
 }

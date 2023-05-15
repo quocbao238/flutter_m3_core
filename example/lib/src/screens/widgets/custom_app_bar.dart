@@ -9,6 +9,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final shortSize = MediaQuery.of(context).size.shortestSide;
     return AppBar(
       title: M3Text.titleLarge(
         text: title,
@@ -17,19 +18,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: false,
       actions: [
-        M3Button(
-          onPressed: () => showDialogPaletteColor(context),
-          child: const Icon(Icons.palette),
-        ),
-        M3Padding(
-          padding: const M3EdgeInsets.symmetric(horizontal: M3Spacing.small),
-          child: M3Button(
-            onPressed: () => M3ThemeProvider.toggleTheme(context),
-            child: Icon(Theme.of(context).brightness == Brightness.light
-                ? Icons.dark_mode
-                : Icons.light_mode),
+        if (shortSize < 900)
+          M3Button(
+            onPressed: () => showDialogPaletteColor(context),
+            child: const Icon(Icons.palette),
           ),
-        ),
+        if (shortSize < 900)
+          M3Padding(
+            padding: const M3EdgeInsets.symmetric(horizontal: M3Spacing.small),
+            child: M3Button(
+              onPressed: () => M3ThemeProvider.toggleTheme(context),
+              child: Icon(Theme.of(context).brightness == Brightness.light
+                  ? Icons.dark_mode
+                  : Icons.light_mode),
+            ),
+          ),
       ],
     );
   }
