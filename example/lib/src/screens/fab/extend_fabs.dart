@@ -17,7 +17,6 @@ class _ExtendFabState extends State<ExtendFab> {
   Widget build(BuildContext context) {
     void Function()? onPressed = isEnable ? () {} : null;
     return M3Card(
-      width: 1280 / 3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,

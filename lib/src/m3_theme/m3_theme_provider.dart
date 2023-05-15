@@ -5,15 +5,20 @@ import 'package:ninja_core/src/m3_theme/m3_theme_manager.dart';
 import 'package:provider/provider.dart';
 import 'm3_color_builder.dart';
 
+typedef M3Builder = Widget Function(BuildContext context, ThemeData themeData,
+    ThemeData darkTheme, ThemeMode themeMode);
+
 final class M3ThemeProvider extends StatelessWidget {
   final M3ThemeManager m3ThemeManager;
 
   // Call back builder
-  final Widget Function(BuildContext context, ThemeData themeData,
-      ThemeData darkTheme, ThemeMode themeMode) builder;
+  final M3Builder m3Builder;
 
+  /// M3ThemeProvider is provider for theme
+  /// "m3ThemeManager" is M3ThemeManager
+  /// "builder" is call back builder
   const M3ThemeProvider(
-      {Key? key, required this.m3ThemeManager, required this.builder})
+      {Key? key, required this.m3ThemeManager, required this.m3Builder})
       : super(key: key);
 
   @override
@@ -33,7 +38,7 @@ final class M3ThemeProvider extends StatelessWidget {
                         darkDynamic, m3ThemeManager.getBaseColors);
                     return AnimatedBuilder(
                         animation: m3ThemeManager,
-                        builder: (context, child) => builder(
+                        builder: (context, child) => m3Builder(
                             context,
                             themes['lightTheme']!,
                             themes['darkTheme']!,

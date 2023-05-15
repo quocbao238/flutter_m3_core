@@ -18,7 +18,6 @@ class _ErrorButtonsState extends State<ErrorButtons> {
   @override
   Widget build(BuildContext context) {
     return M3Card(
-      width: 1280 / 3.2,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

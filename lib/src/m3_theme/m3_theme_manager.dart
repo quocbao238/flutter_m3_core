@@ -15,8 +15,6 @@ final class M3ThemeManager extends ChangeNotifier {
       printer: PrettyPrinter(methodCount: 0, colors: false, printEmojis: true));
 
   // /// M3DeviceService is service for get device layout
-  // late M3DeviceService _m3deviceService;
-
   late M3ThemeMode _currentMode = M3ThemeMode.light;
   StreamSubscription<M3ThemeMode>? _streamSubscription;
 
@@ -53,13 +51,13 @@ final class M3ThemeManager extends ChangeNotifier {
         ? _currentMode = M3ThemeMode.dark
         : _currentMode = M3ThemeMode.light;
     await M3ThemePrefs.saveThemeMode(_currentMode);
-    logger.d('Change ThemeMode to $_currentMode', '[M3_core]');
+    logger.d('Change ThemeMode to $_currentMode', '[ M3_core ]');
 
     notifyListeners();
   }
 
   void changeM3Color(Color newM3BaseColor) {
-    logger.d('Change theme color to $newM3BaseColor', '[M3_core]');
+    logger.d('Change theme color to $newM3BaseColor', '[ M3_core ]');
     _themeBaseColors = newM3BaseColor;
     notifyListeners();
   }

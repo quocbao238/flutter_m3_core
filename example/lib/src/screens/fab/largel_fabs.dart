@@ -17,7 +17,6 @@ class _LargeFabState extends State<LargeFab> {
   Widget build(BuildContext context) {
     void Function()? onPressed = isEnable ? () {} : null;
     return M3Card(
-      width: 1280 / 2.5,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,

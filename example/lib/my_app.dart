@@ -25,14 +25,14 @@ final Map<String, Widget> components = {
   'M3 CheckBox': const CheckBoxScreen(),
   'M3 Chips': const ChipScreen(),
   'M3 Dialogs': const DialogScreen(),
-  'M3 FloatingActionButton': const FabScreen(),
+  'M3 FAB': const FabScreen(),
   'M3 DatePicker': const DatePicker(),
-  'M3 Progress Indicator': const ProgressScreen(),
+  'M3 Progress': const ProgressScreen(),
   'Segmented': const SegmentedScreen(),
   'Slider': const SliderScreen(),
   'Snack Bar': const SnackBarScreen(),
   'Switch': const SwitchScreen(),
-  'M3 TextField': const TextFieldsScreen(),
+  'M3 Input': const TextFieldsScreen(),
 };
 
 class MyApp extends StatefulWidget {
@@ -45,24 +45,113 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: const CustomAppBar(title: 'M3 Theme Core'),
-        body: M3DeviceLayout(
-          mobile: M3Padding(
-            padding: const M3EdgeInsets.all(M3Spacing.regular),
-            child: ListView.builder(
-              itemCount: components.length,
-              itemBuilder: (context, index) => M3Button.outline(
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          components.values.elementAt(index))),
-                  text: components.keys.elementAt(index)),
+    return const M3DeviceLayout(
+      mobile: Scaffold(
+        appBar: CustomAppBar(title: 'M3 Theme Core'),
+        body: MobileView(),
+      ),
+      tablet: Scaffold(
+        body: TabletView(),
+      ),
+    );
+  }
+}
+
+class MobileView extends StatelessWidget {
+  const MobileView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return M3Padding(
+      padding: const M3EdgeInsets.all(M3Spacing.regular),
+      child: ListView.builder(
+        itemCount: components.length,
+        itemBuilder: (context, index) => M3Button.outline(
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => components.values.elementAt(index))),
+            text: components.keys.elementAt(index)),
+      ),
+    );
+  }
+}
+
+class TabletView extends StatefulWidget {
+  const TabletView({super.key});
+
+  @override
+  State<TabletView> createState() => _TabletViewState();
+}
+
+class _TabletViewState extends State<TabletView> {
+  int currentIndex = 0;
+
+  _changeIndex(int index) => setState(() => currentIndex = index);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: M3Padding.medium(
+              child: M3Card(
+                  child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ...components.keys.map((e) {
+                      int index = components.keys.toList().indexOf(e);
+                      final text = e;
+                      if (index == currentIndex) {
+                        return SizedBox(
+                          width: double.infinity,
+                          child: M3Button.filled(
+                              onPressed: () => _changeIndex(index), text: text),
+                        );
+                      }
+                      return SizedBox(
+                        width: double.infinity,
+                        child: M3Button.filledTonal(
+                            onPressed: () => _changeIndex(index), text: text),
+                      );
+                    }),
+                  ],
+                ),
+              )
+
+                  // child: ListView.builder(
+                  //   itemCount: components.length,
+                  //   shrinkWrap: true,
+                  //   physics: const NeverScrollableScrollPhysics(),
+                  //   itemBuilder: (context, index) {
+                  //     if (index == currentIndex) {
+                  //       return M3Button.filled(
+                  //         onPressed: () => _changeIndex(index),
+                  //         text: components.keys
+                  //             .elementAt(index)
+                  //             .replaceAll('M3 ', ''),
+                  //       );
+                  //     }
+                  //     return M3Button.filledTonal(
+                  //         onPressed: () => _changeIndex(index),
+                  //         text: components.keys
+                  //             .elementAt(index)
+                  //             .replaceAll('M3 ', ''));
+                  //   },
+                  // ),
+                  ),
             ),
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => M3ThemeProvider.toggleTheme(context),
-          child: const Icon(Icons.add),
-        ));
+          Expanded(
+            flex: 5,
+            child: M3Padding.small(
+                child: components.values.elementAt(currentIndex)),
+          ),
+        ],
+      ),
+    );
   }
 }

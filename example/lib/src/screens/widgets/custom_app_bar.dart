@@ -71,22 +71,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: M3Padding(
                   padding:
                       const M3EdgeInsets.symmetric(vertical: M3Spacing.medium),
-                  child: GridView(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10),
-                    children: listPaletteColor.entries
-                        .map(
-                          (e) => M3Button(
-                              text: '',
-                              backgroundColor: e.value,
-                              onPressed: () => M3ThemeProvider.changeM3Color(
-                                  buildContext, e.value)),
-                        )
-                        .toList(),
-                  ),
+                  child: OrientationBuilder(builder: (context, orientation) {
+                    final int crossAxisCount =
+                        orientation == Orientation.portrait ? 4 : 10;
+
+                    return GridView(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: crossAxisCount,
+                          crossAxisSpacing: 10,
+                          mainAxisSpacing: 10),
+                      children: listPaletteColor.entries
+                          .map(
+                            (e) => M3Button(
+                                text: '',
+                                backgroundColor: e.value,
+                                onPressed: () => M3ThemeProvider.changeM3Color(
+                                    buildContext, e.value)),
+                          )
+                          .toList(),
+                    );
+                  }),
                 ),
               ),
             ],

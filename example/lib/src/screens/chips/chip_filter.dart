@@ -37,7 +37,6 @@ class _InputChipFilterState extends State<InputChipFilter> {
   @override
   Widget build(BuildContext context) {
     return M3Card(
-      width: 1280 / 3,
       child: Wrap(
         children: [
           Column(

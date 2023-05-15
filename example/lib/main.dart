@@ -8,7 +8,7 @@ Future<void> main() async {
   runApp(
     M3ThemeProvider(
         m3ThemeManager: M3ThemeManager(m3BaseColors: const Color(0xFF6750A4)),
-        builder: (context, themeData, darkTheme, themeMode) => MaterialApp(
+        m3Builder: (context, themeData, darkTheme, themeMode) => MaterialApp(
             title: 'M3 Theme Core',
             theme: themeData,
             debugShowCheckedModeBanner: false,

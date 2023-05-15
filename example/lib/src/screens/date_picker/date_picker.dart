@@ -54,6 +54,8 @@ class _DatePickerCardState extends State<DatePickerCard> {
           ),
           const M3Space.medium(),
           Wrap(
+            spacing: M3Spacing.medium.size,
+            runSpacing: M3Spacing.medium.size,
             children: [
               M3ButtonWithIcon(
                 text: 'Day Picker Calendar Only',
