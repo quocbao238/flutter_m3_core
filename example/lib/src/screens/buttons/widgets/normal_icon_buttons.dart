@@ -26,37 +26,37 @@ class _NormalIconButtonState extends State<NormalIconButtons> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           M3Text.titleLarge(
-              text: 'Normal Icon Button',
+              text: 'M3 Button With Icon',
               textAlign: TextAlign.start,
               color: Theme.of(context).colorScheme.error),
           const M3Space.medium(),
           M3ButtonWithIcon(
               onPressed: !_isEnable ? null : () {},
-              text: 'NjButtonWithIcon',
+              text: 'M3ButtonWithIcon',
               reverseIcon: _reverse,
               icon: Icons.add),
           const M3Space.small(),
           M3ButtonWithIcon.filled(
               onPressed: !_isEnable ? null : () {},
-              text: 'NjButtonWithIcon.filled',
+              text: 'M3ButtonWithIcon.filled',
               reverseIcon: _reverse,
               icon: Icons.add),
           const M3Space.small(),
           M3ButtonWithIcon.filledTonal(
               onPressed: !_isEnable ? null : () {},
-              text: 'NjButtonWithIcon.filledTonal',
+              text: 'M3ButtonWithIcon.filledTonal',
               reverseIcon: _reverse,
               icon: Icons.add),
           const M3Space.small(),
           M3ButtonWithIcon.outline(
               onPressed: !_isEnable ? null : () {},
-              text: "NjButtonWithIcon.outline",
+              text: "M3ButtonWithIcon.outline",
               reverseIcon: _reverse,
               icon: Icons.add),
           const M3Space.small(),
           M3ButtonWithIcon.text(
               onPressed: !_isEnable ? null : () {},
-              text: "NjButtonWithIcon.text",
+              text: "M3ButtonWithIcon.text",
               reverseIcon: _reverse,
               icon: Icons.add),
           const M3Space.small(),

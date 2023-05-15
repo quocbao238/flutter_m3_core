@@ -72,29 +72,37 @@ class M3SwitchTertiary extends StatelessWidget {
         Row(
           children: [
             Expanded(
-                child: M3Switch.tertiary(
-                    value: false,
-                    onChanged: (v) {},
-                    normalIcon: normalIcon,
-                    selectedIcon: selectedIcon)),
+              child: M3Switch.tertiary(
+                value: false,
+                onChanged: (v) {},
+                normalIcon: normalIcon,
+                selectedIcon: selectedIcon,
+              ),
+            ),
             Expanded(
-                child: M3Switch.tertiary(
-                    value: false,
-                    onChanged: null,
-                    normalIcon: normalIcon,
-                    selectedIcon: selectedIcon)),
+              child: M3Switch.tertiary(
+                value: false,
+                onChanged: null,
+                normalIcon: normalIcon,
+                selectedIcon: selectedIcon,
+              ),
+            ),
             Expanded(
-                child: M3Switch.tertiary(
-                    value: true,
-                    onChanged: (v) {},
-                    normalIcon: normalIcon,
-                    selectedIcon: selectedIcon)),
+              child: M3Switch.tertiary(
+                value: true,
+                onChanged: (v) {},
+                normalIcon: normalIcon,
+                selectedIcon: selectedIcon,
+              ),
+            ),
             Expanded(
-                child: M3Switch.tertiary(
-                    value: true,
-                    onChanged: null,
-                    normalIcon: normalIcon,
-                    selectedIcon: selectedIcon)),
+              child: M3Switch.tertiary(
+                value: true,
+                onChanged: null,
+                normalIcon: normalIcon,
+                selectedIcon: selectedIcon,
+              ),
+            ),
           ],
         ),
       ],
@@ -244,10 +252,9 @@ class M3Switchs extends StatelessWidget {
           ),
           const M3Space.medium(),
           const M3Padding(
-            padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
-            child: M3Text.titleLarge(
-                text: 'M3 Switch with Icon', fontWeight: FontWeight.bold),
-          ),
+              padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
+              child: M3Text.titleLarge(
+                  text: 'M3 Switch with Icon', fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,

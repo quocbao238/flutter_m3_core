@@ -14,12 +14,14 @@ final class M3DeviceLayout extends StatelessWidget {
       this.tablet = const _M3EmptyWidget(deviceEmpty: "Tablet")});
 
   @override
-  Widget build(BuildContext context) => OrientationBuilder(
-      builder: (context, orientation) => switch (M3DeviceService.deviceType) {
-            M3DeviceType.tablet => tablet,
-            M3DeviceType.desktop => desktop,
-            M3DeviceType.mobile => mobile
-          });
+  Widget build(BuildContext context) {
+    return OrientationBuilder(
+        builder: (context, orientation) => switch (M3DeviceService.deviceType) {
+              M3DeviceType.tablet => tablet,
+              M3DeviceType.desktop => desktop,
+              M3DeviceType.mobile => mobile
+            });
+  }
 }
 
 class _M3EmptyWidget extends StatelessWidget {

@@ -10,6 +10,7 @@ import 'package:example/src/screens/segment/segments.dart';
 import 'package:example/src/screens/slider/slider_screen.dart';
 import 'package:example/src/screens/snackbar/snack_bar_screen.dart';
 import 'package:example/src/screens/switch/switch_screen.dart';
+import 'package:example/src/screens/input_screen/input_screen.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ final Map<String, Widget> components = {
   'Slider': const SliderScreen(),
   'Snack Bar': const SnackBarScreen(),
   'Switch': const SwitchScreen(),
+  'M3 TextField': const TextFieldsScreen(),
 };
 
 class MyApp extends StatefulWidget {
@@ -45,14 +47,17 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CustomAppBar(title: 'M3 Theme Core'),
-        body: M3Padding(
-          padding: const M3EdgeInsets.all(M3Spacing.regular),
-          child: ListView.builder(
-            itemCount: components.length,
-            itemBuilder: (context, index) => M3Button.outline(
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => components.values.elementAt(index))),
-                text: components.keys.elementAt(index)),
+        body: M3DeviceLayout(
+          mobile: M3Padding(
+            padding: const M3EdgeInsets.all(M3Spacing.regular),
+            child: ListView.builder(
+              itemCount: components.length,
+              itemBuilder: (context, index) => M3Button.outline(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          components.values.elementAt(index))),
+                  text: components.keys.elementAt(index)),
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(

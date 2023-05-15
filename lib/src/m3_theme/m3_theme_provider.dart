@@ -25,19 +25,19 @@ final class M3ThemeProvider extends StatelessWidget {
           return ListenableProvider<M3ThemeManager>(
             create: (context) => m3ThemeManager,
             child: Consumer<M3ThemeManager>(
-              builder: (context, ninjaThemeManager, child) {
+              builder: (context, m3ThemeManager, child) {
                 return DynamicColorBuilder(
                   builder:
                       (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
                     final themes = M3ColorBuilder.generateColor(lightDynamic,
-                        darkDynamic, ninjaThemeManager.getBaseColors);
+                        darkDynamic, m3ThemeManager.getBaseColors);
                     return AnimatedBuilder(
-                        animation: ninjaThemeManager,
+                        animation: m3ThemeManager,
                         builder: (context, child) => builder(
                             context,
                             themes['lightTheme']!,
                             themes['darkTheme']!,
-                            ninjaThemeManager.getThemeMode));
+                            m3ThemeManager.getThemeMode));
                   },
                 );
               },

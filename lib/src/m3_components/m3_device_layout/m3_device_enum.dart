@@ -1,20 +1,33 @@
 // ignore_for_file: deprecated_member_use
 
-import 'dart:ui' as ui;
+import 'dart:ui';
+
+import 'package:logger/logger.dart';
 
 enum M3DeviceType { tablet, mobile, desktop }
 
 final class M3DeviceService {
   static M3DeviceType deviceType = M3DeviceType.mobile;
-  static double devicePixelRatio = ui.window.devicePixelRatio;
-  static ui.Size size = ui.window.physicalSize;
+
   static init() {
-    if (size.shortestSide < 600) {
+    var pixelRatio = window.devicePixelRatio;
+    var physicalScreenSize = window.physicalSize;
+    var shortestSide = physicalScreenSize.shortestSide / pixelRatio;
+    final logger = Logger(
+        printer:
+            PrettyPrinter(methodCount: 0, colors: false, printEmojis: true));
+
+    if (shortestSide < 600) {
+      logger.d('Current Device is Mobile', '[M3_Core]');
       return deviceType = M3DeviceType.mobile;
     }
-    if (size.shortestSide < 900) {
+    if (shortestSide < 900) {
+      logger.d('Current Device is Tablet', '[M3_core]');
+
       return deviceType = M3DeviceType.tablet;
     }
+    logger.d('Current Device is Desktop', '[M3_core]');
+
     return deviceType = M3DeviceType.desktop;
   }
 }

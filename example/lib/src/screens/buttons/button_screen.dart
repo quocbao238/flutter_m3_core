@@ -16,7 +16,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Ninja Buttons'),
+      appBar: const CustomAppBar(title: 'M3 Buttons'),
       body: M3Padding.regular(
         child: SingleChildScrollView(
           child: Wrap(

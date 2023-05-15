@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ninja_core/src/m3_components/m3_button/m3_button_type_enum.dart';
 export 'm3_button_with_icon.dart';
 
-/// NjButton is a button with text
 
-base class M3ButtonError extends StatelessWidget {
+base class M3ErrorButton extends StatelessWidget {
   final String? text;
   final Widget? child;
   final VoidCallback? onPressed;
@@ -14,7 +13,7 @@ base class M3ButtonError extends StatelessWidget {
   final Size? fixedSize;
   final bool? isFlexible;
 
-  const M3ButtonError({
+  const M3ErrorButton({
     super.key,
     this.text,
     this.child,
@@ -27,7 +26,7 @@ base class M3ButtonError extends StatelessWidget {
         assert(text != null || child != null,
             "\"text\" or \"child\" must not be null at the same time");
 
-  const M3ButtonError.filled({
+  const M3ErrorButton.filled({
     super.key,
     this.text,
     this.child,
@@ -40,7 +39,7 @@ base class M3ButtonError extends StatelessWidget {
         assert(text != null || child != null,
             "\"text\" or \"child\" must not be null at the same time");
 
-  const M3ButtonError.filledTonal({
+  const M3ErrorButton.filledTonal({
     super.key,
     this.text,
     this.child,
@@ -53,7 +52,7 @@ base class M3ButtonError extends StatelessWidget {
         assert(text != null || child != null,
             "\"text\" or \"child\" must not be null at the same time");
 
-  const M3ButtonError.outline({
+  const M3ErrorButton.outline({
     super.key,
     this.text,
     this.fixedSize,
@@ -66,7 +65,7 @@ base class M3ButtonError extends StatelessWidget {
         assert(text != null || child != null,
             "\"text\" or \"child\" must not be null at the same time");
 
-  const M3ButtonError.text({
+  const M3ErrorButton.text({
     super.key,
     this.text,
     this.child,

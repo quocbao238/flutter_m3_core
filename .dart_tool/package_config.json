@@ -104,6 +104,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "logger",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/logger-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/matcher-0.12.15",
       "packageUri": "lib/",
@@ -290,7 +296,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-05-14T02:49:30.554406Z",
+  "generated": "2023-05-15T07:40:11.352283Z",
   "generator": "pub",
   "generatorVersion": "3.1.0-63.1.beta"
 }

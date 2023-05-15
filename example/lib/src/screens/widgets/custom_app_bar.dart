@@ -10,7 +10,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title),
+      title: M3Text.titleLarge(
+        text: title,
+        color: Theme.of(context).colorScheme.primary,
+        fontWeight: FontWeight.bold,
+      ),
       centerTitle: false,
       actions: [
         M3Button(
@@ -22,8 +26,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: M3Button(
             onPressed: () => M3ThemeProvider.toggleTheme(context),
             child: Icon(Theme.of(context).brightness == Brightness.light
-                ? Icons.brightness_3
-                : Icons.brightness_7),
+                ? Icons.dark_mode
+                : Icons.light_mode),
           ),
         ),
       ],
@@ -44,12 +48,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Column(
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Flexible(
                     child: M3Text.titleMedium(
                       text: 'Change M3 Base Color',
-                      maxLines: 1,
-                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      textAlign: TextAlign.start,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   M3Padding(
@@ -66,23 +72,21 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   padding:
                       const M3EdgeInsets.symmetric(vertical: M3Spacing.medium),
                   child: GridView(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 8,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 10),
-                      children: [
-                        ...listPaletteColor.entries
-                            .map(
-                              (e) => M3Button(
-                                text: '',
-                                backgroundColor: e.value,
-                                onPressed: () => M3ThemeProvider.changeM3Color(
-                                    buildContext, e.value),
-                              ),
-                            )
-                            .toList(),
-                      ]),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 4,
+                            crossAxisSpacing: 10,
+                            mainAxisSpacing: 10),
+                    children: listPaletteColor.entries
+                        .map(
+                          (e) => M3Button(
+                              text: '',
+                              backgroundColor: e.value,
+                              onPressed: () => M3ThemeProvider.changeM3Color(
+                                  buildContext, e.value)),
+                        )
+                        .toList(),
+                  ),
                 ),
               ),
             ],

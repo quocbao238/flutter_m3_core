@@ -15,3 +15,4 @@ export 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_layout.d
 export 'package:ninja_core/src/m3_components/m3_progress_indicator/m3_progress_indicator.dart';
 export 'package:ninja_core/src/m3_components/m3_slider/m3_slider.dart';
 export 'package:ninja_core/src/m3_components/m3_switch/m3_switch.dart';
+export 'package:ninja_core/src/m3_components/m3_input/m3_input.dart';

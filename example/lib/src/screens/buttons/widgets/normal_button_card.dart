@@ -23,23 +23,23 @@ class _NormalButtonState extends State<NormalButtons> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           const M3Text.titleLarge(
-              text: 'Normal Button', textAlign: TextAlign.start),
+              text: 'M3 Button', textAlign: TextAlign.start),
           const M3Space.small(),
-          M3Button(onPressed: !_isEnable ? null : () {}, text: 'NjButton'),
+          M3Button(onPressed: !_isEnable ? null : () {}, text: 'M3Button'),
           const M3Space.small(),
           M3Button.filled(
-              onPressed: !_isEnable ? null : () {}, text: 'NjButton.filled'),
+              onPressed: !_isEnable ? null : () {}, text: 'M3Button.filled'),
           const M3Space.small(),
           M3Button.filledTonal(
               onPressed: !_isEnable ? null : () {},
-              text: 'NjButton.filledTonal'),
+              text: 'M3Button.filledTonal'),
           const M3Space.small(),
           const M3Space.small(),
           M3Button.outline(
-              onPressed: !_isEnable ? null : () {}, text: "NjButton.outline"),
+              onPressed: !_isEnable ? null : () {}, text: "M3Button.outline"),
           const M3Space.small(),
           M3Button.text(
-              onPressed: !_isEnable ? null : () {}, text: "NjButton.text"),
+              onPressed: !_isEnable ? null : () {}, text: "M3Button.text"),
           const M3Space.small(),
           const M3Divider(),
           const M3Space.small(),

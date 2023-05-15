@@ -4,7 +4,6 @@ import 'package:ninja_core/src/m3_components/m3_button/m3_button_type_enum.dart'
 export 'm3_button_with_icon.dart';
 export 'm3_button_error.dart';
 
-/// NjButton is a button with text
 
 class M3Button extends StatelessWidget {
   final String? text;

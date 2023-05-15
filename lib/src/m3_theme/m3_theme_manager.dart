@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 import 'package:ninja_core/src/m3_theme/m3_day_night_helper.dart';
 import 'package:ninja_core/src/m3_theme/m3_theme_mode.dart';
@@ -9,6 +10,9 @@ final class M3ThemeManager extends ChangeNotifier {
   /// Input base color
   late Color _themeBaseColors;
   late bool _enableAutomationDayNight;
+
+  final logger = Logger(
+      printer: PrettyPrinter(methodCount: 0, colors: false, printEmojis: true));
 
   // /// M3DeviceService is service for get device layout
   // late M3DeviceService _m3deviceService;
@@ -49,10 +53,13 @@ final class M3ThemeManager extends ChangeNotifier {
         ? _currentMode = M3ThemeMode.dark
         : _currentMode = M3ThemeMode.light;
     await M3ThemePrefs.saveThemeMode(_currentMode);
+    logger.d('Change ThemeMode to $_currentMode', '[M3_core]');
+
     notifyListeners();
   }
 
   void changeM3Color(Color newM3BaseColor) {
+    logger.d('Change theme color to $newM3BaseColor', '[M3_core]');
     _themeBaseColors = newM3BaseColor;
     notifyListeners();
   }
