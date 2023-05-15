@@ -9,6 +9,7 @@ import 'package:example/src/screens/progress/progress_screen.dart';
 import 'package:example/src/screens/segment/segments.dart';
 import 'package:example/src/screens/slider/slider_screen.dart';
 import 'package:example/src/screens/snackbar/snack_bar_screen.dart';
+import 'package:example/src/screens/switch/switch_screen.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ final Map<String, Widget> components = {
   'Segmented': const SegmentedScreen(),
   'Slider': const SliderScreen(),
   'Snack Bar': const SnackBarScreen(),
+  'Switch': const SwitchScreen(),
 };
 
 class MyApp extends StatefulWidget {
