@@ -1,6 +1,7 @@
 import 'package:example/src/screens/dialog/dialog_with_list_title.dart';
-import 'package:example/src/screens/dialog/nj_dialog_palettle.dart';
+import 'package:example/src/screens/dialog/dialog_palette.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -9,29 +10,37 @@ class DialogScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(title: 'M3 Dialogs', child: _body(context));
+    }
+
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 Dialogs'),
-      body: SingleChildScrollView(
-        child: M3Padding.medium(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-            M3Button.filledTonal(
-                text: 'M3 Basic Dialog',
-                onPressed: () => _showBasicDialog(context)),
-            const M3Space.medium(),
-            M3Button.filledTonal(
-                text: 'M3 Dialog With Icon',
-                onPressed: () => _showIconDialog(context)),
-            const M3Space.medium(),
-            M3Button.filledTonal(
-                text: 'M3 Dialog List Title',
-                onPressed: () => _showDialogListTitle(context)),
-            const M3Space.medium(),
-            M3Button.filledTonal(
-                text: 'M3 Dialog List Title With Icon',
-                onPressed: () => _showDialogListTitleIcon(context))
-          ]),
-        ),
+      body: _body(context),
+    );
+  }
+
+  SingleChildScrollView _body(BuildContext context) {
+    return SingleChildScrollView(
+      child: M3Padding.medium(
+        child:
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          M3Button.filledTonal(
+              text: 'M3 Basic Dialog',
+              onPressed: () => _showBasicDialog(context)),
+          const M3Space.medium(),
+          M3Button.filledTonal(
+              text: 'M3 Dialog With Icon',
+              onPressed: () => _showIconDialog(context)),
+          const M3Space.medium(),
+          M3Button.filledTonal(
+              text: 'M3 Dialog List Title',
+              onPressed: () => _showDialogListTitle(context)),
+          const M3Space.medium(),
+          M3Button.filledTonal(
+              text: 'M3 Dialog List Title With Icon',
+              onPressed: () => _showDialogListTitleIcon(context))
+        ]),
       ),
     );
   }

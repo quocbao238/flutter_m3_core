@@ -36,4 +36,12 @@ final class M3DeviceService {
 
     return deviceType = M3DeviceType.desktop;
   }
+
+  static isMobile() => deviceType == M3DeviceType.mobile;
+
+  static isTablet() => deviceType == M3DeviceType.tablet;
+
+  static isDesktop() => deviceType == M3DeviceType.desktop;
+
+  static isWeb() => deviceType == M3DeviceType.web;
 }

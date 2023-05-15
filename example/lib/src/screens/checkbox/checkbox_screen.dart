@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -9,58 +10,63 @@ class CheckBoxScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(
+          title: 'M3 Badge', child: Expanded(child: _body()));
+    }
+
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 CheckBox'),
       body: M3Padding.medium(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const CheckBoxTest(),
-              M3Card(
-                  child: Wrap(
-                spacing: M3Spacing.regular.size,
-                runSpacing: M3Spacing.regular.size,
-                crossAxisAlignment: WrapCrossAlignment.center,
-                alignment: WrapAlignment.center,
-                children: [
-                  _checkBoxView(value: true, onChanged: (val) {}),
-                  _checkBoxView(value: true),
-                  _checkBoxView(value: false, onChanged: (val) {}),
-                  _checkBoxView(value: false),
-                  const M3Divider(),
-                  _checkBoxView(
-                      value: true, onChanged: (val) {}, isError: true),
-                  _checkBoxView(value: true),
-                  _checkBoxView(
-                      value: false, onChanged: (val) {}, isError: true),
-                  _checkBoxView(value: false),
-                  const M3Divider(),
-                  _checkBoxView(
-                      value: null, onChanged: (val) {}, tristate: true),
-                  _checkBoxView(value: null, tristate: true),
-                  _checkBoxView(
-                      value: null, onChanged: (val) {}, tristate: true),
-                  _checkBoxView(value: null, tristate: true),
-                  const M3Divider(),
-                  _checkBoxView(
-                      value: null,
-                      onChanged: (val) {},
-                      tristate: true,
-                      isError: true),
-                  _checkBoxView(value: null, tristate: true, isError: true),
-                  _checkBoxView(
-                      value: null,
-                      onChanged: (val) {},
-                      tristate: true,
-                      isError: true),
-                  _checkBoxView(value: null, tristate: true, isError: true),
+        child: _body(),
+      ),
+    );
+  }
 
-                  // )
-                ],
-              ))
+  SingleChildScrollView _body() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          const CheckBoxTest(),
+          M3Card(
+              child: Wrap(
+            spacing: M3Spacing.regular.size,
+            runSpacing: M3Spacing.regular.size,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            alignment: WrapAlignment.center,
+            children: [
+              _checkBoxView(value: true, onChanged: (val) {}),
+              _checkBoxView(value: true),
+              _checkBoxView(value: false, onChanged: (val) {}),
+              _checkBoxView(value: false),
+              const M3Divider(),
+              _checkBoxView(value: true, onChanged: (val) {}, isError: true),
+              _checkBoxView(value: true),
+              _checkBoxView(value: false, onChanged: (val) {}, isError: true),
+              _checkBoxView(value: false),
+              const M3Divider(),
+              _checkBoxView(value: null, onChanged: (val) {}, tristate: true),
+              _checkBoxView(value: null, tristate: true),
+              _checkBoxView(value: null, onChanged: (val) {}, tristate: true),
+              _checkBoxView(value: null, tristate: true),
+              const M3Divider(),
+              _checkBoxView(
+                  value: null,
+                  onChanged: (val) {},
+                  tristate: true,
+                  isError: true),
+              _checkBoxView(value: null, tristate: true, isError: true),
+              _checkBoxView(
+                  value: null,
+                  onChanged: (val) {},
+                  tristate: true,
+                  isError: true),
+              _checkBoxView(value: null, tristate: true, isError: true),
+
+              // )
             ],
-          ),
-        ),
+          ))
+        ],
       ),
     );
   }

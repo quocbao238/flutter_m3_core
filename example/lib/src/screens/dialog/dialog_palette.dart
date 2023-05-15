@@ -1,4 +1,3 @@
-
 class DialogPalette {
   static const title = 'Dialog with hero icon';
   static const content =

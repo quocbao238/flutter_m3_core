@@ -3,6 +3,7 @@ import 'package:example/src/screens/fab/largel_fabs.dart';
 import 'package:example/src/screens/fab/normal_fabs.dart';
 import 'package:example/src/screens/fab/small_fabs.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -11,22 +12,23 @@ class FabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(title: 'M3 FloatingActionButton'),
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(
+          title: 'M3 FloatingActionButton', child: Expanded(child: _body()));
+    }
+    return Scaffold(
+      appBar: const CustomAppBar(title: 'M3 FloatingActionButton'),
       body: M3Padding.medium(
-        child: SingleChildScrollView(
-          child: Wrap(
-            spacing: 10,
-            runSpacing: 10,
-            children: [
-              SmallFab(),
-              NormalFab(),
-              LargeFab(),
-              ExtendFab(),
-            ],
-          ),
-        ),
+        child: _body(),
       ),
     );
   }
+
+  Widget _body() => const SingleChildScrollView(
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: [SmallFab(), NormalFab(), LargeFab(), ExtendFab()],
+        ),
+      );
 }

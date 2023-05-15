@@ -5,7 +5,6 @@ import 'package:example/src/screens/checkbox/checkbox_screen.dart';
 import 'package:example/src/screens/date_picker/date_picker.dart';
 import 'package:example/src/screens/dialog/dialog.dart';
 import 'package:example/src/screens/fab/fab.dart';
-import 'package:example/src/screens/icon_button/icon_button.dart';
 import 'package:example/src/screens/progress/progress_screen.dart';
 import 'package:example/src/screens/segment/segments.dart';
 import 'package:example/src/screens/slider/slider_screen.dart';
@@ -21,7 +20,6 @@ import 'src/screens/chips/chip_screen.dart';
 final Map<String, Widget> components = {
   'M3 Typography': const TypographyScreen(),
   'M3 Buttons': const ButtonScreen(),
-  'M3 IconButton': const IconButtonScreen(),
   'M3 Badge': const BadgeScreen(),
   'M3 CheckBox': const CheckBoxScreen(),
   'M3 Chips': const ChipScreen(),
@@ -170,121 +168,119 @@ class _DesktopViewState extends State<DesktopView> {
 
     final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
-      body: SafeArea(
-        child: Row(
-          children: [
-            SizedBox(
-              width: 312,
-              height: MediaQuery.of(context).size.height * 0.8,
-              child: Center(
-                child: M3Padding.medium(
-                  child: M3Card(
-                      child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        M3Padding(
-                          padding:
-                              const M3EdgeInsets.only(bottom: M3Spacing.medium),
-                          child: M3Text.titleLarge(
-                            text: 'M3 Theme Core',
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 312,
+            child: Center(
+              child: M3Padding.medium(
+                child: M3Card(
+                    child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      M3Padding(
+                        padding:
+                            const M3EdgeInsets.only(bottom: M3Spacing.medium),
+                        child: M3Text.titleLarge(
+                          text: 'M3 Theme Core',
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
-                        ...components.keys.map((e) {
-                          int index = components.keys.toList().indexOf(e);
-                          final text = e;
-                          if (index == currentIndex) {
-                            return M3Padding(
-                              padding: const M3EdgeInsets.only(
-                                  bottom: M3Spacing.medium),
-                              child: SizedBox(
-                                width: double.infinity,
-                                child: M3Button.filled(
-                                    onPressed: () => _changeIndex(index),
-                                    text: text),
-                              ),
-                            );
-                          }
+                      ),
+                      ...components.keys.map((e) {
+                        int index = components.keys.toList().indexOf(e);
+                        final text = e;
+                        if (index == currentIndex) {
                           return M3Padding(
                             padding: const M3EdgeInsets.only(
                                 bottom: M3Spacing.medium),
                             child: SizedBox(
                               width: double.infinity,
-                              child: M3Button.filledTonal(
+                              child: M3Button.filled(
                                   onPressed: () => _changeIndex(index),
                                   text: text),
                             ),
                           );
-                        }),
-                      ],
-                    ),
-                  )),
-                ),
+                        }
+                        return M3Padding(
+                          padding:
+                              const M3EdgeInsets.only(bottom: M3Spacing.medium),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: M3Button.filledTonal(
+                                onPressed: () => _changeIndex(index),
+                                text: text),
+                          ),
+                        );
+                      }),
+                    ],
+                  ),
+                )),
               ),
             ),
-            Expanded(
-                child: Center(
-              child: M3Padding.small(
-                  child: components.values.elementAt(currentIndex)),
-            )),
-            SizedBox(
-              width: 312,
-              height: MediaQuery.of(context).size.height * 0.8,
+          ),
+          Expanded(
               child: Center(
-                child: M3Padding.regular(
-                  child: M3Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const M3Text.titleMedium(
-                          text: 'Change M3 Base Color',
-                          maxLines: 2,
-                          textAlign: TextAlign.start,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        const M3Divider(),
-                        M3Padding(
-                            padding: const M3EdgeInsets.symmetric(
-                                horizontal: M3Spacing.medium),
-                            child: M3ButtonWithIcon.filled(
-                                text: isDarkTheme ? 'Light Mode' : 'Dark Mode',
-                                icon: isDarkTheme
-                                    ? Icons.dark_mode
-                                    : Icons.light_mode,
-                                onPressed: () =>
-                                    M3ThemeProvider.toggleTheme(context))),
-                        const M3Space.medium(),
-                        Wrap(
-                          spacing: M3Spacing.small.size,
-                          runSpacing: M3Spacing.small.size,
-                          children: listPaletteColor.entries
-                              .map(
-                                (e) => M3Button(
-                                    text: '',
-                                    backgroundColor: e.value,
-                                    onPressed: () =>
-                                        M3ThemeProvider.changeM3Color(
-                                            context, e.value)),
-                              )
-                              .toList(),
-                        ),
-                        const M3Space.medium(),
-                      ],
-                    ),
+            child: M3Padding.small(
+                child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxHeight: 1200),
+                    child: components.values.elementAt(currentIndex))),
+          )),
+          SizedBox(
+            width: 312,
+            child: Center(
+              child: M3Padding.regular(
+                child: M3Card(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const M3Text.titleMedium(
+                        text: 'Change M3 Base Color',
+                        maxLines: 2,
+                        textAlign: TextAlign.start,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      const M3Divider(),
+                      M3Padding(
+                          padding: const M3EdgeInsets.symmetric(
+                              horizontal: M3Spacing.medium),
+                          child: M3ButtonWithIcon.filled(
+                              text: isDarkTheme ? 'Light Mode' : 'Dark Mode',
+                              icon: isDarkTheme
+                                  ? Icons.dark_mode
+                                  : Icons.light_mode,
+                              onPressed: () =>
+                                  M3ThemeProvider.toggleTheme(context))),
+                      const M3Space.medium(),
+                      Wrap(
+                        spacing: M3Spacing.medium.size,
+                        runSpacing: M3Spacing.small.size,
+                        children: listPaletteColor.entries
+                            .map(
+                              (e) => M3Button(
+                                  fixedSize: const Size(44, 44),
+                                  text: '',
+                                  backgroundColor: e.value,
+                                  onPressed: () =>
+                                      M3ThemeProvider.changeM3Color(
+                                          context, e.value)),
+                            )
+                            .toList(),
+                      ),
+                      const M3Space.medium(),
+                    ],
                   ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

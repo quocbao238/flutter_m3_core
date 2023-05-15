@@ -1,4 +1,5 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -29,37 +30,46 @@ class SegmentedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(
+          title: 'Segmented Button', child: _body(context));
+    }
+
     return Scaffold(
-      appBar: const CustomAppBar(title: 'M3 Segmented Button'),
+      appBar: const CustomAppBar(title: 'Segmented Button'),
       body: M3Padding.medium(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            M3Card(
-                width: MediaQuery.of(context).size.width,
-                child: const Column(
-                  children: [
-                    M3Text.titleLarge(
-                        text: 'Single choice', fontWeight: FontWeight.bold),
-                    M3Space.medium(),
-                    SingleChoice()
-                  ],
-                )),
-            const M3Space.medium(),
-            M3Card(
-              width: MediaQuery.of(context).size.width,
-              child: const Column(
-                children: [
-                  M3Text.titleLarge(
-                      text: 'Multiple choice', fontWeight: FontWeight.bold),
-                  M3Space.medium(),
-                  MultipleChoice()
-                ],
-              ),
-            ),
-          ],
-        ),
+        child: _body(context),
       ),
+    );
+  }
+
+  Column _body(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        M3Card(
+            width: MediaQuery.of(context).size.width,
+            child: const Column(
+              children: [
+                M3Text.titleLarge(
+                    text: 'Single choice', fontWeight: FontWeight.bold),
+                M3Space.medium(),
+                SingleChoice()
+              ],
+            )),
+        const M3Space.medium(),
+        M3Card(
+          width: MediaQuery.of(context).size.width,
+          child: const Column(
+            children: [
+              M3Text.titleLarge(
+                  text: 'Multiple choice', fontWeight: FontWeight.bold),
+              M3Space.medium(),
+              MultipleChoice()
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

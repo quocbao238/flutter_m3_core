@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -40,43 +41,54 @@ class _BadgeScreenState extends State<BadgeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(
+          title: 'M3 Badge', child: Expanded(child: _body()));
+    }
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 Badge'),
       body: M3Padding.medium(
-        child: ListView(
-          children: [
-            M3Card(
-                width: 1280 / 3.2,
-                child: Wrap(
-                    spacing: M3Spacing.medium.size,
-                    runSpacing: M3Spacing.medium.size,
-                    children: listIconsData
-                        .map((e) => M3Padding.regular(
-                            child: M3Badge(count: randomNumber(), iconData: e)))
-                        .toList())),
-            const M3Space.medium(),
-            M3Card(
-              width: 1280 / 3.2,
-              child: NavigationBar(
-                onDestinationSelected: (int? index) =>
-                    setState(() => currentIndex = index!),
-                selectedIndex: currentIndex,
-                destinations: [
-                  ...mapIconsData.entries
-                      .map((e) => NavigationDestination(
-                            icon: M3Badge(
-                              count: randomNumber(),
-                              iconData: e.value,
-                            ),
-                            label: e.key,
-                          ))
-                      .toList(),
-                ],
-              ),
-            ),
-          ],
-        ),
+        child: _body(),
       ),
+    );
+  }
+
+  Widget _body() {
+    return ListView(
+      children: [
+        M3Card(
+            width: 1280 / 3.2,
+            child: Wrap(
+                spacing: M3Spacing.medium.size,
+                runSpacing: M3Spacing.medium.size,
+                children: listIconsData
+                    .map((e) => M3Card(
+                          child: M3Padding.regular(
+                              child:
+                                  M3Badge(count: randomNumber(), iconData: e)),
+                        ))
+                    .toList())),
+        const M3Space.medium(),
+        M3Card(
+          // width: 1280 / 3.2,
+          child: NavigationBar(
+            onDestinationSelected: (int? index) =>
+                setState(() => currentIndex = index!),
+            selectedIndex: currentIndex,
+            destinations: [
+              ...mapIconsData.entries
+                  .map((e) => NavigationDestination(
+                        icon: M3Badge(
+                          count: randomNumber(),
+                          iconData: e.value,
+                        ),
+                        label: e.key,
+                      ))
+                  .toList(),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -110,6 +122,22 @@ final listIconsData = <IconData>[
   Icons.notifications_active_sharp,
   Icons.notifications_none_outlined,
   Icons.notifications_none_rounded,
+  Icons.verified_user,
+  Icons.verified_user_outlined,
+  Icons.verified_user_rounded,
+  Icons.verified_user_sharp,
+  Icons.verified,
+  Icons.verified_outlined,
+  Icons.verified_rounded,
+  Icons.verified_sharp,
+  Icons.verified_user,
+  Icons.verified_user_outlined,
+  Icons.verified_user_rounded,
+  Icons.verified_user_sharp,
+  Icons.verified,
+  Icons.verified_outlined,
+  Icons.verified_rounded,
+  Icons.verified_sharp,
   Icons.verified_user,
   Icons.verified_user_outlined,
   Icons.verified_user_rounded,

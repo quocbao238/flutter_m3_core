@@ -1,4 +1,5 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -14,23 +15,29 @@ class _SwitchScreenState extends State<SwitchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(title: 'M3 Switch', child: _body());
+    }
     return Scaffold(
       appBar: const CustomAppBar(title: 'Switch Screen'),
       body: M3Padding.medium(
-        child: ListView(
-          shrinkWrap: true,
-          children: const [
-            M3Switchs(normalIcon: Icons.close, selectedIcon: Icons.check),
-            M3Space.medium(),
-            M3SwitchPrimary(normalIcon: Icons.close, selectedIcon: Icons.check),
-            M3Space.medium(),
-            M3SwitchTertiary(
-                normalIcon: Icons.close, selectedIcon: Icons.check),
-            M3Space.medium(),
-            M3SwtichAdaptive(),
-          ],
-        ),
+        child: _body(),
       ),
+    );
+  }
+
+  ListView _body() {
+    return ListView(
+      shrinkWrap: true,
+      children: const [
+        M3Switchs(normalIcon: Icons.close, selectedIcon: Icons.check),
+        M3Space.medium(),
+        M3SwitchPrimary(normalIcon: Icons.close, selectedIcon: Icons.check),
+        M3Space.medium(),
+        M3SwitchTertiary(normalIcon: Icons.close, selectedIcon: Icons.check),
+        M3Space.medium(),
+        M3SwtichAdaptive(),
+      ],
     );
   }
 }

@@ -7,7 +7,7 @@ enum M3SliderType {
   tertiary;
 
   Color getColor(ColorScheme colorScheme) => switch (this) {
-        M3SliderType.surface => colorScheme.surface,
+        M3SliderType.surface => colorScheme.onSurface,
         M3SliderType.primary => colorScheme.primary,
         M3SliderType.secondary => colorScheme.secondary,
         M3SliderType.tertiary => colorScheme.tertiary,

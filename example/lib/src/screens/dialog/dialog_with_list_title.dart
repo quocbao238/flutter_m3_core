@@ -1,4 +1,4 @@
-import 'package:example/src/screens/dialog/nj_dialog_palettle.dart';
+import 'package:example/src/screens/dialog/dialog_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 

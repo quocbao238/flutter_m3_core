@@ -1,4 +1,5 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -7,16 +8,23 @@ class DatePicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(title: 'M3 DatePicker', child: _body());
+    }
+
     return Scaffold(
         appBar: const CustomAppBar(title: 'M3 DatePicker'),
-        body: M3Padding.medium(
-            child: SingleChildScrollView(
-          child: Wrap(
-            spacing: M3Spacing.regular.size,
-            runSpacing: M3Spacing.regular.size,
-            children: const [DatePickerCard()],
-          ),
-        )));
+        body: M3Padding.medium(child: _body()));
+  }
+
+  SingleChildScrollView _body() {
+    return SingleChildScrollView(
+      child: Wrap(
+        spacing: M3Spacing.regular.size,
+        runSpacing: M3Spacing.regular.size,
+        children: const [DatePickerCard()],
+      ),
+    );
   }
 }
 

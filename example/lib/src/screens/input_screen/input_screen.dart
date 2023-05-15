@@ -1,4 +1,5 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
+import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
 import 'package:ninja_core/m3_theme_core.dart';
 
@@ -12,38 +13,46 @@ class TextFieldsScreen extends StatefulWidget {
 class _TextFieldsScreenState extends State<TextFieldsScreen> {
   @override
   Widget build(BuildContext context) {
+    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+      return CustomContentHeaderWeb(
+          title: 'M3 Input', child: Expanded(child: _body()));
+    }
+
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 Input'),
       body: M3Padding.medium(
-        child: ListView(
-          children: const [
-            M3Inputs(title: 'M3 Input Label only'),
-            M3Inputs(
-                title: 'M3 Input Prefix Icon', prefixIconData: Icons.search),
-            M3Inputs(
-                title: 'M3 Input Suffix Icon', suffixIconData: Icons.cancel),
-            M3Inputs(
-                title: 'M3 Input Prefix Icon & Suffix Icon',
-                prefixIconData: Icons.search,
-                suffixIconData: Icons.cancel),
-            M3Divider(),
-            M3Inputs(isOutline: true, title: 'M3 Input Label only'),
-            M3Inputs(
-                isOutline: true,
-                title: 'M3 Input Prefix Icon',
-                prefixIconData: Icons.search),
-            M3Inputs(
-                isOutline: true,
-                title: 'M3 Input Suffix Icon',
-                suffixIconData: Icons.cancel),
-            M3Inputs(
-                isOutline: true,
-                title: 'M3 Input Prefix Icon & Suffix Icon',
-                prefixIconData: Icons.search,
-                suffixIconData: Icons.cancel),
-          ],
-        ),
+        child: _body(),
       ),
+    );
+  }
+
+  Widget _body() {
+    return ListView(
+      shrinkWrap: true,
+      children: const [
+        M3Inputs(title: 'M3 Input Label only'),
+        M3Inputs(title: 'M3 Input Prefix Icon', prefixIconData: Icons.search),
+        M3Inputs(title: 'M3 Input Suffix Icon', suffixIconData: Icons.cancel),
+        M3Inputs(
+            title: 'M3 Input Prefix Icon & Suffix Icon',
+            prefixIconData: Icons.search,
+            suffixIconData: Icons.cancel),
+        M3Divider(),
+        M3Inputs(isOutline: true, title: 'M3 Input Label only'),
+        M3Inputs(
+            isOutline: true,
+            title: 'M3 Input Prefix Icon',
+            prefixIconData: Icons.search),
+        M3Inputs(
+            isOutline: true,
+            title: 'M3 Input Suffix Icon',
+            suffixIconData: Icons.cancel),
+        M3Inputs(
+            isOutline: true,
+            title: 'M3 Input Prefix Icon & Suffix Icon',
+            prefixIconData: Icons.search,
+            suffixIconData: Icons.cancel),
+      ],
     );
   }
 }
