@@ -36,22 +36,28 @@ final class M3ThemeManager extends ChangeNotifier {
   _listenDayNightTime() {
     if (!_enableAutomationDayNight) return;
     _streamSubscription =
-        DayNightHelper.isDayTimeStream().listen((themeModeResult) {
+        DayNightHelper.isDayTimeStream().listen((themeModeResult) async {
       if (themeModeResult == _currentMode) return;
-      toggleThemeMode();
+      await toggleThemeMode(isAuto: true);
     });
   }
 
   Future<M3ThemeMode> prefsThemMode() async =>
       await M3ThemePrefs.getCurrentThemeMode();
 
-  Future<void> toggleThemeMode() async {
-    if (_enableAutomationDayNight) return;
+  Future<void> toggleThemeMode({bool isAuto = false}) async {
+    // if (_enableAutomationDayNight) return;
     _currentMode == M3ThemeMode.light
         ? _currentMode = M3ThemeMode.dark
         : _currentMode = M3ThemeMode.light;
     await M3ThemePrefs.saveThemeMode(_currentMode);
-    logger.d('Change ThemeMode to $_currentMode', '[ M3_core ]');
+    if (isAuto) {
+      logger.d(
+          'automationDayNight is Enable && Time now is ${_convertDateTimeToHourMinutes()} \n---> Change ThemeMode to $_currentMode ',
+          '[ M3_core ]');
+    } else {
+      logger.d('Change ThemeMode to $_currentMode', '[ M3_core ]');
+    }
 
     notifyListeners();
   }
@@ -68,4 +74,17 @@ final class M3ThemeManager extends ChangeNotifier {
 
   ThemeMode get getThemeMode =>
       _currentMode == M3ThemeMode.light ? ThemeMode.light : ThemeMode.dark;
+
+  String _convertDateTimeToHourMinutes() {
+    DateTime dateTime = DateTime.now();
+    String hour = dateTime.hour.toString();
+    String minute = dateTime.minute.toString();
+    if (dateTime.hour < 10) {
+      hour = '0${dateTime.hour}';
+    }
+    if (dateTime.minute < 10) {
+      minute = '0${dateTime.minute}';
+    }
+    return '$hour:$minute';
+  }
 }

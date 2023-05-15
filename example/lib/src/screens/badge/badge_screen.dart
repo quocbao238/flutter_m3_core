@@ -57,7 +57,7 @@ class _BadgeScreenState extends State<BadgeScreen> {
     return ListView(
       children: [
         M3Card(
-            width: 1280 / 3.2,
+            // width: 1280 / 3.2,
             child: Wrap(
                 spacing: M3Spacing.medium.size,
                 runSpacing: M3Spacing.medium.size,
