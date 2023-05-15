@@ -46,7 +46,15 @@ final class M3ThemeManager extends ChangeNotifier {
       await M3ThemePrefs.getCurrentThemeMode();
 
   Future<void> toggleThemeMode({bool isAuto = false}) async {
-    // if (_enableAutomationDayNight) return;
+    // Disable automation day night if user change theme mode
+    if (!isAuto) {
+      _enableAutomationDayNight = false;
+      _streamSubscription?.cancel();
+      logger.d(
+          'automationDayNight is Disable\nBecause user change Theme Mode\n---> Now Theme Mode is $_currentMode ',
+          '[ M3_core ]');
+    }
+
     _currentMode == M3ThemeMode.light
         ? _currentMode = M3ThemeMode.dark
         : _currentMode = M3ThemeMode.light;
