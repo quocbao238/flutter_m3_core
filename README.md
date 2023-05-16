@@ -1,4 +1,4 @@
-# flutter_m3_core
+# 📦 flutter_m3_core 📦
 
 - Simplifies theme management by providing effortless switching between light, dark, or custom themes. This feature allows you to create visually striking apps with ease.
 
@@ -6,7 +6,18 @@
 
 - With customization options, you can easily tailor the appearance and behavior of Material 3 components to match your app's unique requirements. This level of customization guarantees a cohesive and consistent user experience, enhancing the overall quality of your app.
 
-# 💻 Installation
+# 🧪 Download for testing
+
+| Platform      | Package/Installation Method                                                                                                                                                                                                       |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Android       | [<img width='220' alt='Android Download' src='https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png'/>][android-link]                                                            |
+| Debian/Ubuntu | [<img width='220' alt='Linux Debian/Ubuntu Download' src='https://user-images.githubusercontent.com/61944859/169097994-e92aff78-fd75-4c93-b6e4-f072a4b5a7ed.png'/>][deb-link] <br/><br/> Then run: `sudo apt install FlutterM3Core-linux-x86_64.deb` |
+| Windows       | [<img width='220' alt='Windows Download' src='https://get.todoist.help/hc/article_attachments/4403191721234/WindowsButton.svg'/>][win32-link]                                                                                     |
+| Web           | [<img width='220' alt='https://d500.epimg.net/cincodias/imagenes/2023/02/17/lifestyle/1676632642_727990_1676632686_noticia_normal.jpg'/>][web-link]           |
+| MacOS         | [<img width='220' alt='MacOS Download' src='https://reachify.io/wp-content/uploads/2018/09/mac-download-button-1.png'/>][mac-link]                                                                                                
+
+
+# 💊 Installation
 Add the following to your pubspec.yaml file:
 ```yaml
 dependencies:
@@ -944,3 +955,10 @@ M3Switch(
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/SnackBar.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/SnackBar_dark.png" width="500"/>  |
   <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/tablet/SnackBar.png"/>
   <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/tablet/SnackBar_dark.png"/>
+
+<!-- Variables/Text References -->
+[win32-link]: win32-link
+[android-link]: android-link
+[deb-link]: deb-link
+[web-link]: web-link
+[mac-link]: mac-link
