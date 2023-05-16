@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_icon_button/m3_icon_button_type.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_icon_button/m3_icon_button_type.dart';
 
 final class M3IconButton extends StatelessWidget {
   final IconData icon;

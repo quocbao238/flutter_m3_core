@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
-export 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
+export 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 
 // M3 Device Layout use MediaQuery size to check
 // Return empty widget if device type not match

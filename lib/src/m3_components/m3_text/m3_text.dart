@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_text/m3_text_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_text/m3_text_enum.dart';
 
 class M3Text extends StatelessWidget {
   final String text;

@@ -1,7 +1,7 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
-import 'package:ninja_core/src/m3_theme/m3_theme_manager.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
+import 'package:flutter_m3_core/src/m3_theme/m3_theme_manager.dart';
 import 'package:provider/provider.dart';
 import 'm3_color_builder.dart';
 

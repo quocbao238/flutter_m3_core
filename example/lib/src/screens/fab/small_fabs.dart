@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/m3_theme_core.dart';
+import 'package:flutter_m3_core/m3_theme_core.dart';
 
 class SmallFab extends StatefulWidget {
   const SmallFab({Key? key}) : super(key: key);

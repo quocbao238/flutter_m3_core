@@ -1,4 +1,4 @@
-import 'package:ninja_core/src/m3_theme/m3_theme_mode.dart';
+import 'package:flutter_m3_core/src/m3_theme/m3_theme_mode.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final class M3ThemePrefs {

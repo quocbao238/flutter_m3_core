@@ -1,7 +1,7 @@
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:example/src/screens/widgets/custom_header_content_web.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/m3_theme_core.dart';
+import 'package:flutter_m3_core/m3_theme_core.dart';
 
 class DatePicker extends StatelessWidget {
   const DatePicker({Key? key}) : super(key: key);

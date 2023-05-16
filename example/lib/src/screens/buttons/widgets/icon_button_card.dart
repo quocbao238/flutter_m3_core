@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/m3_theme_core.dart';
+import 'package:flutter_m3_core/m3_theme_core.dart';
 
 class IconButtonCard extends StatefulWidget {
   const IconButtonCard({super.key});

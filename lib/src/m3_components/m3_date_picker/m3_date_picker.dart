@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/m3_theme_core.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_padding/m3_padding.dart';
 
 class M3DatePicker {
   static Future<DateTime?> showModalDatePicker(

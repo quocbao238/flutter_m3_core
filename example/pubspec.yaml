@@ -12,7 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  ninja_core:
+  flutter_m3_core:
     path: ../
 
 dev_dependencies:

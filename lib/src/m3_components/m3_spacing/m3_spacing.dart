@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_spacing/m3_spacing_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_spacing/m3_spacing_enum.dart';
 
-export 'package:ninja_core/src/m3_components/m3_spacing/m3_spacing_enum.dart';
+export 'package:flutter_m3_core/src/m3_components/m3_spacing/m3_spacing_enum.dart';
 
 class M3Space extends StatelessWidget {
   final M3Spacing? width;

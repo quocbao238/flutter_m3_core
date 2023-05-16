@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_fab/m3_fab_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_fab/m3_fab_enum.dart';
 
 enum M3FabSize { small, normal, large, extended }
 

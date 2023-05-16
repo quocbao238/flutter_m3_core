@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_chips/m3_chip_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_chips/m3_chip_enum.dart';
 
-export 'package:ninja_core/src/m3_components/m3_chips/m3_filter_chip.dart';
+export 'package:flutter_m3_core/src/m3_components/m3_chips/m3_filter_chip.dart';
 
 ///Chips help people enter information,
 ///make selections, filter content,

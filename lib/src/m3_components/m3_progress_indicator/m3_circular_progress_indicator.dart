@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_progress_indicator/m3_progress_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_progress_indicator/m3_progress_enum.dart';
 
 base class M3CircularProgressIndicator extends CircularProgressIndicator {
   final bool enable;

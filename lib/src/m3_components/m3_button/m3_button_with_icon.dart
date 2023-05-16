@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_button/m3_button_type_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_button/m3_button_type_enum.dart';
 
 /// A button with icon
 /// Disable Button with [onPressed] = null

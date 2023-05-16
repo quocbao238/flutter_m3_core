@@ -14,7 +14,7 @@ import 'package:example/src/screens/input_screen/input_screen.dart';
 import 'package:example/src/screens/typography/typography_screen.dart';
 import 'package:example/src/screens/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:ninja_core/m3_theme_core.dart';
+import 'package:flutter_m3_core/m3_theme_core.dart';
 import 'src/screens/chips/chip_screen.dart';
 
 final Map<String, Widget> components = {

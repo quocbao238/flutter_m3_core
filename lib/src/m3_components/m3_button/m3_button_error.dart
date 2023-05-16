@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ninja_core/src/m3_components/m3_button/m3_button_type_enum.dart';
+import 'package:flutter_m3_core/src/m3_components/m3_button/m3_button_type_enum.dart';
 export 'm3_button_with_icon.dart';
 
 
