@@ -685,8 +685,8 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
 
   ```dart
   final result = await M3DatePicker.showModalTimePicker(
+     context,
     initialEntryMode: TimePickerEntryMode.inputOnly,
-    context,
     use24HourDials: use24HourFormat,
     initialTime: TimeOfDay(
       hour: dateTime.hour, minute: dateTime.minute),
@@ -698,11 +698,125 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
     }
   ```
 
-
-
-
-
 | Light                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Dark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_1.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_2.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_3.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_4.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_5.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_1.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_2.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_3.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_4.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_5.png" width="500"/> |
+
+
+
+
+## **9. M3 ProgressIndicator**
+
+#### **Constructors**
+
+- **M3LinearProgressIndicator**
+
+  ```dart
+  M3LinearProgressIndicator.primary(), 
+  M3LinearProgressIndicator.secondary()
+  M3LinearProgressIndicator.tertiary()
+  ```
+
+  - **`value`** (optional): The progress value (between 0.0 and 1.0). Defaults to 0.0.
+  - **`backgroundColor`** (optional): The background color of the progress indicator. Defaults to null.
+  - **`color`** (optional): The color of the progress indicator. Defaults to null.
+  - **`enable`** (optional): Set to true to enable the progress indicator (default), or false to disable it.
+  - **`valueColor`** (optional): The color of the progress indicator's value. Defaults to null.
+  - **`minHeight`** (optional): The minimum height of the progress indicator. Defaults to null.
+  - **`semanticsLabel`** (optional): The semantic label of the progress indicator for accessibility. Defaults to null.
+  - **`semanticsValue`** (optional): The semantic value of the progress indicator for accessibility. Defaults to null.
+  - **`borderRadius`** (optional): The border radius of the progress indicator. Defaults to null.
+
+
+- **M3CircularProgressIndicator**
+
+  ```dart
+  M3CircularProgressIndicator.primary(),
+  M3CircularProgressIndicator.secondary()
+  M3CircularProgressIndicator.tertiary()
+  ```
+
+  - **`enable`** (optional): Set to true to enable the progress indicator (default), or false to disable it.
+  - **`value`** (optional): The progress value (between 0.0 and 1.0). Defaults to 0.0.
+  - **`backgroundColor`** (optional): The background color of the progress indicator. Defaults to null.
+  - **`color`** (optional): The color of the progress indicator. Defaults to null.
+  - **`valueColor`** (optional): The color of the progress indicator's value. Defaults to null.
+  - **`strokeWidth`** (optional): The stroke width of the progress indicator. Defaults to null.
+  - **`semanticsLabel`** (optional): The semantic label of the progress indicator for accessibility. Defaults to null.
+  - **`semanticsValue`** (optional): The semantic value of the progress indicator for accessibility. Defaults to null.
+  - **`strokeCap`** (optional): The stroke cap of the progress indicator. Defaults to null.
+
+
+- **M3CircularProgressIndicatorAdaptive**
+
+  ```dart
+  M3CircularProgressIndicatorAdaptive.primary(),
+  M3CircularProgressIndicatorAdaptive.secondary()
+  M3CircularProgressIndicatorAdaptive.tertiary()
+  ```
+
+  - **`enable`** (optional): Set to true to enable the progress indicator (default), or false to disable it.
+  - **`key`** (optional): Controls the widget's identity.
+  - **`value`** (optional): The progress value (between 0.0 and 1.0). Defaults to 0.0.
+  - **`backgroundColor`** (optional): The background color of the progress indicator. Defaults to null.
+  - **`color`** (optional): The color of the progress indicator. Defaults to null.
+  - **`valueColor`** (optional): The color of the progress indicator's value. Defaults to null.
+  - **`strokeWidth`** (optional): The stroke width of the progress indicator. Defaults to null.
+  - **`semanticsLabel`** (optional): The semantic label of the progress indicator for accessibility. Defaults to null.
+  - **`semanticsValue`** (optional): The semantic value of the progress indicator for accessibility. Defaults to null.
+  - **`strokeCap`** (optional): The stroke cap of the progress indicator. Defaults to null.
+
+
+
+
+#### **Usage**
+
+- **A small floating action button with a surface background color**:
+
+    ```dart
+    M3FloatingActionButton.surface(
+      onPressed: () {},
+      iconData: Icons.add,
+      m3FabSize: M3FabSize.small,
+    )
+    ```
+
+- **A normal floating action button with a primary background color and a label**:
+
+    ```dart
+    M3FloatingActionButton.primary(
+      onPressed: () {},
+      iconData: Icons.add,
+      label: 'Add',
+    )
+    ```
+
+- **A large floating action button with a secondary background color**:
+
+  ```dart
+  M3FloatingActionButton.secondary(
+    onPressed: () {},
+    iconData: Icons.edit,
+    m3FabSize: M3FabSize.large,
+  )
+  ```
+
+- **An extended floating action button with a tertiary background color and a label**:
+
+  ```dart
+  M3FloatingActionButton.tertiary(
+    onPressed: () {},
+    iconData: Icons.share,
+    label: 'Share',
+    m3FabSize: M3FabSize.extended,
+  )
+  ```
+
+
+
+
+
+| Light                                                                                                                                                                                                                                       | Dark                                                                                                                                                                                                                                                  |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_1.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark_1.png" width="500"/> |
 
