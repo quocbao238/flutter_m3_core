@@ -98,9 +98,9 @@ class _MyAppState extends State<MyApp> {
 - This package have many components principle with Material 3 design like Buttons,CheckBox,Slider,Typography,Progress,DatePicker....
 - Let's try it
 
-## 1. M3 Typography
+## M3 Typography
 
-### Constructors
+#### Constructors
 
 ```dart
 M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineLarge, M3Text.headlineMedium, M3Text.headlineSmall, M3Text.titleLarge, M3Text.titleMedium, M3Text.titleSmall, M3Text.labelLarge, M3Text.labelMedium, M3Text.labelSmall, M3Text.bodyLarge, M3Text.bodyMedium, M3Text.bodySmall
@@ -108,7 +108,7 @@ M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineL
 
 Each constructor accepts parameters such as text, textAlign, fontWeight, color, maxLines, overflow, and isFlexible to customize the appearance and behavior of the text.
 
-### Usage
+#### Usage
 
 To use the M3Text widget, simply create an instance with the desired typography style and provide the necessary parameters. For example:
 
