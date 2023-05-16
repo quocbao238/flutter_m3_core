@@ -766,57 +766,48 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
   - **`semanticsValue`** (optional): The semantic value of the progress indicator for accessibility. Defaults to null.
   - **`strokeCap`** (optional): The stroke cap of the progress indicator. Defaults to null.
 
+  
+| Light                                                                                                                                                                                                                                       | Dark                                                                                                                                                                                                                                                  |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_1.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark_1.png" width="500"/> |
+
+
+
+## **10. M3 Slider**
+
+#### **Constructors**
+
+- **M3LinearProgressIndicator**
+
+  ```dart
+  M3Slider,
+  M3Slider.primary(), 
+  M3Slider.secondary()
+  M3Slider.tertiary()
+  ```
+- **`value`**: The current value of the slider.
+- **`min`**: The minimum value of the slider.
+- **`max`**: The maximum value of the slider.
+- **`onChanged`**: A callback function that is called when the value of the slider changes.
 
 
 
 #### **Usage**
 
-- **A small floating action button with a surface background color**:
+```dart
+M3Slider(
+  value: value, // The current value of the slider
+  min: 0.0, // The minimum value of the slider
+  max: 1.0, // The maximum value of the slider
+  onChanged: (double value) {
+    // Callback function to handle value changes
+    // Update the value and perform any desired actions
+  },
+  // Additional customization properties
+)
+```
 
-    ```dart
-    M3FloatingActionButton.surface(
-      onPressed: () {},
-      iconData: Icons.add,
-      m3FabSize: M3FabSize.small,
-    )
-    ```
-
-- **A normal floating action button with a primary background color and a label**:
-
-    ```dart
-    M3FloatingActionButton.primary(
-      onPressed: () {},
-      iconData: Icons.add,
-      label: 'Add',
-    )
-    ```
-
-- **A large floating action button with a secondary background color**:
-
-  ```dart
-  M3FloatingActionButton.secondary(
-    onPressed: () {},
-    iconData: Icons.edit,
-    m3FabSize: M3FabSize.large,
-  )
-  ```
-
-- **An extended floating action button with a tertiary background color and a label**:
-
-  ```dart
-  M3FloatingActionButton.tertiary(
-    onPressed: () {},
-    iconData: Icons.share,
-    label: 'Share',
-    m3FabSize: M3FabSize.extended,
-  )
-  ```
-
-
-
-
-
-| Light                                                                                                                                                                                                                                       | Dark                                                                                                                                                                                                                                                  |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_1.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Progress_dark_1.png" width="500"/> |
+| Light                                                                                                                                                                                                                                      | Dark                                                                                                                                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Slider.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Slider_dark.png" width="500"/> |
 
