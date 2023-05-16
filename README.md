@@ -114,8 +114,8 @@ To use the M3Text widget, simply create an instance with the desired typography 
 
 ```dart
 M3Text.displayLarge(
-  text: 'Welcome',
-  textAlign: TextAlign.center,
+text: 'Welcome',
+textAlign: TextAlign.center,
 )
 ```
 
@@ -123,7 +123,7 @@ M3Text.displayLarge(
 
 | Light                                                                                               | Dark                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png) | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png) |
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png" width="200"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png" width="200"/> |
 
 ##  2. **M3Buttons**
 
@@ -207,9 +207,50 @@ M3IconButton(
     ),
 
 ```
-| Light                                                                                                                                                                                                           | Dark                                                                                                                                                                                                                     |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png =250x250) ![Image 2](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png =250x250) | [Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png =250x250) ![Image 2](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png =250x250) |
+
+| Light                                                                                               | Dark                                                                                                     |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png" width="200"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png" width="200"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png" width="200"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png" width="200"/> |
+
+
+
+
+
+## **3. M3Badge**
+
+#### **Constructors**
+
+```dart
+M3Badge
+```
+
+- key (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
+- child (optional): The child widget to display within the badge. Either child or iconData must be provided.
+- count (required): The count value to display within the badge.
+- iconData (optional): The icon data to display within the badge. Either child or iconData must be provided.
+
+#### **Usage**
+
+- Displaying a badge with a child widget:
+
+```dart
+M3Badge(
+  count: 10,
+  child: Text('New'),
+)
+```
+
+- Displaying a badge with an icon:
+```dart
+M3Badge(
+  count: 5,
+  iconData: Icons.notifications,
+)
+```
+
+| Light                                                                                               | Dark                                                                                                     |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Badge.png" width="200"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Badge_dark.png" width="200"/> |
 
 
 
