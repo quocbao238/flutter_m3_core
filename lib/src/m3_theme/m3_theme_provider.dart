@@ -54,6 +54,11 @@ final class M3ThemeProvider extends StatelessWidget {
   static toggleTheme(BuildContext context) =>
       Provider.of<M3ThemeManager>(context, listen: false).toggleThemeMode();
 
+  static ThemeMode getThemeMode(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.light
+          ? ThemeMode.light
+          : ThemeMode.dark;
+
   static changeM3Color(BuildContext context, Color newM3BaseColor) =>
       Provider.of<M3ThemeManager>(context, listen: false)
           .changeM3Color(newM3BaseColor);
