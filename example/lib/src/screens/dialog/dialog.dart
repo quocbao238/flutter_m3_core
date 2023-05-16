@@ -54,7 +54,7 @@ class DialogScreen extends StatelessWidget {
     ];
     await M3Dialog.showBasicDialog(
         context: context,
-        title: DialogPalette.title,
+        title: 'M3 Basic Dialog',
         content: DialogPalette.content,
         actions: actions);
   }
@@ -68,7 +68,7 @@ class DialogScreen extends StatelessWidget {
     ];
     await M3Dialog.showIconsDialog(
         context: context,
-        title: DialogPalette.title,
+        title: 'M3 Dialog With Icon',
         content: DialogPalette.content,
         actions: actions,
         icon: Icons.info_outline_rounded);
@@ -84,7 +84,7 @@ class DialogScreen extends StatelessWidget {
 
     await M3Dialog.showBasicDialog(
         context: context,
-        title: DialogPalette.title,
+        title: 'M3 Dialog List Title',
         child: const DialogWithListTitle(),
         actions: actions);
   }
@@ -99,7 +99,7 @@ class DialogScreen extends StatelessWidget {
 
     await M3Dialog.showIconsDialog(
         context: context,
-        title: DialogPalette.title,
+        title: 'M3 Dialog List Title With Icon',
         child: const DialogWithListTitle(),
         actions: actions,
         icon: Icons.info_outline_rounded);
