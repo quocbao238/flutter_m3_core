@@ -6,8 +6,8 @@
 
 - With customization options, you can easily tailor the appearance and behavior of Material 3 components to match your app's unique requirements. This level of customization guarantees a cohesive and consistent user experience, enhancing the overall quality of your app.
 
-# 💻 Include in your project
-
+# 💻 Installation
+Add the following to your pubspec.yaml file:
 ```yaml
 dependencies:
   flutter_m3_core: <latest version>
@@ -415,9 +415,6 @@ M3CheckBox
 
 
 
-
-
-
 ## **6. M3 Dialogs**
 
 #### **Constructors**
@@ -475,4 +472,72 @@ M3CheckBox
 | Light                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Dark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_1.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_2.png" width="500"/><br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_3.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_4.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_dark_1.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_dark_2.png" width="500"/><br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_dark_3.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_dialog_dark_4.png" width="500"/> |
+
+
+
+
+## **7. M3 Floating Action Button**
+
+#### **Constructors**
+
+```dart
+M3FloatingActionButton.surface(), M3FloatingActionButton.primary()
+M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
+```
+
+- **`iconData`**: The icon to display on the button.
+- **`label`**: The label to display on the button (only available for M3FabSize.extended).
+- **`onPressed`**: The callback function to be called when the button is pressed.
+- **`m3FabSize`**: The size of the button (M3FabSize.small, M3FabSize.normal, M3FabSize.large, or M3FabSize.extended).
+
+#### **Usage**
+
+- **A small floating action button with a surface background color**:
+
+    ```dart
+    M3FloatingActionButton.surface(
+      onPressed: () {},
+      iconData: Icons.add,
+      m3FabSize: M3FabSize.small,
+    )
+    ```
+
+- **A normal floating action button with a primary background color and a label**:
+
+    ```dart
+    M3FloatingActionButton.primary(
+      onPressed: () {},
+      iconData: Icons.add,
+      label: 'Add',
+    )
+    ```
+
+- **A large floating action button with a secondary background color**:
+
+  ```dart
+  M3FloatingActionButton.secondary(
+    onPressed: () {},
+    iconData: Icons.edit,
+    m3FabSize: M3FabSize.large,
+  )
+  ```
+
+- **An extended floating action button with a tertiary background color and a label**:
+
+  ```dart
+  M3FloatingActionButton.tertiary(
+    onPressed: () {},
+    iconData: Icons.share,
+    label: 'Share',
+    m3FabSize: M3FabSize.extended,
+  )
+  ```
+
+
+
+
+
+| Light                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Dark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_1.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_dark_1.png" width="500"/> |
 
