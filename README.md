@@ -103,7 +103,10 @@ class _MyAppState extends State<MyApp> {
 #### **Constructors**
 
 ```dart
-M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineLarge, M3Text.headlineMedium, M3Text.headlineSmall, M3Text.titleLarge, M3Text.titleMedium, M3Text.titleSmall, M3Text.labelLarge, M3Text.labelMedium, M3Text.labelSmall, M3Text.bodyLarge, M3Text.bodyMedium, M3Text.bodySmall
+M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineLarge,
+M3Text.headlineMedium, M3Text.headlineSmall, M3Text.titleLarge, M3Text.titleMedium, 
+M3Text.titleSmall, M3Text.labelLarge, M3Text.labelMedium, M3Text.labelSmall, 
+M3Text.bodyLarge, M3Text.bodyMedium, M3Text.bodySmall
 ```
 
 Each constructor accepts parameters such as text, textAlign, fontWeight, color, maxLines, overflow, and isFlexible to customize the appearance and behavior of the text.
@@ -210,7 +213,7 @@ M3IconButton(
 
 | Light                                                                                                                                                                                                                           | Dark                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| -------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png" width="200"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png" width="200"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png" width="200"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png" width="200"/> |
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png" width="500"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png" width="500"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png" width="500"/> |
 
 
 
@@ -355,7 +358,6 @@ M3FilterChip(
     },
 ),
 ```
-
 
 | Light                                                                                                                                                                                                                        | Dark                                                                                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
