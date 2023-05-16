@@ -313,3 +313,51 @@ M3CheckBox(
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_CheckBox.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_CheckBox_dark.png" width="500"/> |
 
 
+
+## **5. M3 Chips**
+
+#### **Constructors**
+
+```dart
+M3InputChip, M3InputChip.filled, M3InputChip.filledTonal
+M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
+```
+
+- leading (optional): A widget to display as the leading icon in the chip.
+- deleteIcon (optional): A widget to display as the delete icon in the chip.
+- onDeleted (optional): A callback function that is called when the delete icon is pressed. Use it to handle chip deletion.
+- isEnable (optional): A flag indicating whether the chip is enabled or disabled. Disabled chips cannot be interacted with.
+- backgroundColor (optional): The background color of the chip.
+- foregroundColor (optional): The foreground color of the chip, which affects the text and icon colors.
+- onPressed (optional): A callback function that is called when the chip is pressed. Use it to handle chip press events.
+
+#### **Usage**
+
+- M3InputChip:
+
+```dart
+M3InputChip(
+    text: 'M3InputChip',
+    onPressed: () {
+          
+    },
+),
+```
+
+- M3FilterChip:
+
+```dart
+M3FilterChip(
+    text: 'M3FilterChip',
+    selected: true,
+    onPressed: () {
+          
+    },
+),
+```
+
+
+| Light                                                                                                                                                                                                                        | Dark                                                                                                                                                                                                                                   |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1.png" width="500"/> ,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1_dark.png" width="500"/>, <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2_dark.png" width="500"/> |
+
