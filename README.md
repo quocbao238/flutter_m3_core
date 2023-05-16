@@ -133,6 +133,8 @@ M3Text.displayLarge(
 | Light                                                                                               | Dark                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png" width="500"/> |
+  <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/tablet/m3_Typography.png"/>
+  <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/tablet/m3_Typography_dark.png"/>
 
 ##  2. **M3 Buttons**
 
