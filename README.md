@@ -138,91 +138,112 @@ M3Text.displayLarge(
 
 #### **Constructors**
 
-- M3Button
+- **M3Button**
 
-```dart
-M3Button, M3Button.filled, M3Button.filledTonal,
-M3Button.filledTertiary, M3Button.outline, M3Button.text
-```
-- **`text`**: A string that represents the text displayed on the button. Either text or child must not be null.
-- **`child`**: A widget that represents the child element displayed on the button. Either text or child must not be null.
-- **`onPressed`**: A callback function that is called when the button is pressed.
-- **`backgroundColor`**: A Color object that determines the background color of the button.
-- **`foregroundColor`**: A Color object that determines the text and icon color of the button.
-- **`fixedSize`**: A Size object that determines the size of the button. It can be used to create fixed-size buttons. If not specified, the button will adjust to its content.
+    ```dart
+    M3Button, M3Button.filled, M3Button.filledTonal,
+    M3Button.filledTertiary, M3Button.outline, M3Button.text
+    ```
+
+  - **`text`**: A string that represents the text displayed on the button. Either text or child must not be null.
+  - **`child`**: A widget that represents the child element displayed on the button. Either text or child must not be null.
+  - **`onPressed`**: A callback function that is called when the button is pressed.
+  - **`backgroundColor`**: A Color object that determines the background color of the button.
+  - **`foregroundColor`**: A Color object that determines the text and icon color of the button.
+  - **`fixedSize`**: A Size object that determines the size of the button. It can be used to create fixed-size buttons. If not specified, the button will adjust to its content.
 
 
-- M3ButtonWithIcon
+- **M3ButtonWithIcon**
 
-```dart
-M3ButtonWithIcon, M3ButtonWithIcon.filled
-M3ButtonWithIcon.filledTonal, M3ButtonWithIcon.outline
-M3ButtonWithIcon.text
-```
+    ```dart
+    M3ButtonWithIcon, M3ButtonWithIcon.filled
+    M3ButtonWithIcon.filledTonal, M3ButtonWithIcon.outline
+    M3ButtonWithIcon.text
+    ```
 
-- M3ErrorButton
+  - **`text`**: A required String parameter that specifies the text to be displayed on the button.
+  - **`icon`**: A required IconData parameter that specifies the icon to be displayed on the button.
+  - **`onPressed`**: An optional VoidCallback parameter that specifies the function to be called when the button is pressed.
+  - **`backgroundColor`**: An optional Color parameter that specifies the background color of the button.
+  - **`foregroundColor`**: An optional Color parameter that specifies the text and icon color of the button.
+  - **`fixedSize`**: An optional Size parameter that specifies the fixed size of the button.
+  - **`reverseIcon`**: An optional bool parameter that specifies whether the icon should be reversed (i.e. displayed on the right instead of the left).
 
-```dart
-M3ErrorButton, M3ErrorButton.filled
-M3ErrorButton.filledTonal, M3ErrorButton.outline
-M3ErrorButton.text
-```
 
-- M3IconButton
+- **M3ErrorButton**
 
-```dart
-M3IconButton, M3IconButton.filled
-M3IconButton.filledTonal, M3IconButton.outline
-M3IconButton.text
-```
+    ```dart
+    M3ErrorButton, M3ErrorButton.filled
+    M3ErrorButton.filledTonal, M3ErrorButton.outline
+    M3ErrorButton.text
+    ```
 
-#### Usage
+  - **`text`** (optional): A String representing the button's label text.
+  - **`child`** (optional): A Widget that can be used instead of text to define the button's child widget.
+  - **`onPressed`** (optional): A VoidCallback that is called when the button is pressed.
+  - **`backgroundColor`** (optional): A Color that defines the background color of the button.
+  - **`foregroundColor`** (optional): A Color that defines the text color of the button.
+  - **`fixedSize`** (optional): A Size that defines the fixed size of the button.
+  - **`isFlexible`** (optional): A bool that defines whether the button can be resized to fit its parent widget.
 
-- M3 Button
 
-```dart
-M3Button(
-  text: 'Click me',
-  onPressed: () {
-    // Handle button press
-  },
-)
-```
+- **M3IconButton**
 
-- M3ButtonWithIcon
+    ```dart
+    M3IconButton, M3IconButton.filled
+    M3IconButton.filledTonal, M3IconButton.outline
+    M3IconButton.text
+    ```
 
-```dart
-M3ButtonWithIcon(
-  text: 'Submit',
-  icon: Icons.check,
-  onPressed: () {
-    // Handle button press
-  },
-)
-```
+  - **`icon`** (required):  parameter of type IconData, representing the icon to be displayed in the button.
+  - **`onPressed`** (optional):  parameter of type VoidCallback, representing the function to be called when the button is pressed.
 
-- M3ErrorButton
+#### **Usage**
 
-```dart
-M3ErrorButton(
-  text: 'This is error button',
-  onPressed: () {
-    // Handle button press
-  },
-)
-```
+- **M3 Button**
 
-- M3IconButton
-
-```dart
-M3IconButton(
-      icon: Icons.add,
+    ```dart
+    M3Button(
+      text: 'Click me',
       onPressed: () {
         // Handle button press
       },
-    ),
+    )
+    ```
 
-```
+- **M3ButtonWithIcon**
+
+    ```dart
+    M3ButtonWithIcon(
+      text: 'Submit',
+      icon: Icons.check,
+      onPressed: () {
+        // Handle button press
+      },
+    )
+    ```
+
+- **M3ErrorButton**
+
+    ```dart
+    M3ErrorButton(
+      text: 'This is error button',
+      onPressed: () {
+        // Handle button press
+      },
+    )
+    ```
+
+- **M3IconButton**
+
+    ```dart
+    M3IconButton(
+          icon: Icons.add,
+          onPressed: () {
+            // Handle button press
+          },
+        ),
+    ```
 
 | Light                                                                                                                                                                                                                           | Dark                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -232,7 +253,7 @@ M3IconButton(
 
 
 
-## **3. M3Badge**
+## **3. M3 Badge**
 
 #### **Constructors**
 
@@ -249,20 +270,21 @@ M3Badge
 
 - Displaying a badge with a child widget:
 
-```dart
-M3Badge(
-  count: 10,
-  child: Text('New'),
-)
-```
+    ```dart
+    M3Badge(
+      count: 10,
+      child: Text('New'),
+    )
+    ```
 
 - Displaying a badge with an icon:
-```dart
-M3Badge(
-  count: 5,
-  iconData: Icons.notifications,
-)
-```
+
+    ```dart
+    M3Badge(
+      count: 5,
+      iconData: Icons.notifications,
+    )
+    ```
 
 | Light                                                                                               | Dark                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -288,40 +310,40 @@ M3CheckBox
 
 #### **Usage**
 
-- Basic usage:
+- **Basic usage:**
 
-```dart
-M3CheckBox(
-    value: true,
-    onChanged: (newValue) {
-    // Handle the checkbox value change here
-    },
-)
-```
+    ```dart
+    M3CheckBox(
+        value: true,
+        onChanged: (newValue) {
+        // Handle the checkbox value change here
+        },
+    )
+    ```
 
-- Checkbox with error state:
+- **Checkbox with error state**:
 
-```dart
-M3CheckBox(
-    value: false,
-    isError: true,
-    onChanged: (newValue) {
-    // Handle the checkbox value change here
-    },
-)
-```
+    ```dart
+    M3CheckBox(
+        value: false,
+        isError: true,
+        onChanged: (newValue) {
+        // Handle the checkbox value change here
+        },
+    )
+    ```
 
-- Checkbox with tristate support:
+- **Checkbox with tristate support:**
 
-```dart
-M3CheckBox(
-    value: null,
-    tristate: true,
-    onChanged: (newValue) {
-    // Handle the checkbox value change here
-    },
-)
-```
+    ```dart
+    M3CheckBox(
+        value: null,
+        tristate: true,
+        onChanged: (newValue) {
+        // Handle the checkbox value change here
+        },
+    )
+    ```
 
 
 | Light                                                                                               | Dark                                                                                                                |
@@ -335,60 +357,58 @@ M3CheckBox(
 #### **Constructors**
 
 - **M3InputChip**
-```dart
-M3InputChip, M3InputChip.filled, M3InputChip.filledTonal
-M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
-```
+    ```dart
+    M3InputChip, M3InputChip.filled, M3InputChip.filledTonal
+    M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
+    ```
 
-- **`leading`** (optional): A widget to display as the leading icon in the chip.
-- **`deleteIcon`** (optional): A widget to display as the delete icon in the chip.
-- **`onDeleted`** (optional): A callback function that is called when the delete icon is pressed. Use it to handle chip deletion.
-- **`onPressed`** (optional): A callback function that is called when the chip is pressed. Use it to handle chip press events.
-- **`isEnable`** (optional): A flag indicating whether the chip is enabled or disabled. Disabled chips cannot be interacted with.
-- **`backgroundColor`** (optional): The background color of the chip.
-- **`foregroundColor`** (optional): The foreground color of the chip, which affects the text and icon colors.
+  - **`leading`** (optional): A widget to display as the leading icon in the chip.
+  - **`deleteIcon`** (optional): A widget to display as the delete icon in the chip.
+  - **`onDeleted`** (optional): A callback function that is called when the delete icon is pressed. Use it to handle chip deletion.
+  - **`onPressed`** (optional): A callback function that is called when the chip is pressed. Use it to handle chip press events.
+  - **`isEnable`** (optional): A flag indicating whether the chip is enabled or disabled. Disabled chips cannot be interacted with.
+  - **`backgroundColor`** (optional): The background color of the chip.
+  - **`foregroundColor`** (optional): The foreground color of the chip, which affects the text and icon colors.
+
 
 - **M3FilterChip**
-```dart
-M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
-```
 
-- **`text`**: the text label to display inside the chip
-- **`selected`**: a boolean value indicating whether the chip is currently selected or not
-- **`onSelected`**: a callback function that is called when the chip is selected or unselected
-- **`isEnabled`**: a boolean value indicating whether the chip is enabled or not
-- **`backgroundColor`**: the background color of the chip
-- **`foregroundColor`**: the foreground (text) color of the chip
-- **`leadingIcon`**: an optional icon to display at the beginning of the chip label
+    ```dart
+    M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
+    ```
 
-
-
+  - **`text`**: the text label to display inside the chip
+  - **`selected`**: a boolean value indicating whether the chip is currently selected or not
+  - **`onSelected`**: a callback function that is called when the chip is selected or unselected
+  - **`isEnabled`**: a boolean value indicating whether the chip is enabled or not
+  - **`backgroundColor`**: the background color of the chip
+  - **`foregroundColor`**: the foreground (text) color of the chip
+  - **`leadingIcon`**: an optional icon to display at the beginning of the chip label
 
 #### **Usage**
 
-- M3InputChip:
+- **M3InputChip**:
 
-```dart
-M3InputChip(
-    text: 'M3InputChip',
-    onPressed: () {
-          
-    },
-),
-```
+    ```dart
+    M3InputChip(
+        text: 'M3InputChip',
+        onPressed: () {
+              
+        },
+    ),
+    ```
 
-- M3FilterChip:
+- **M3FilterChip**:
 
-```dart
-M3FilterChip(
-    text: 'M3FilterChip',
-    selected: true,
-    onPressed: () {
-          
-    },
-),
-```
-
+    ```dart
+    M3FilterChip(
+        text: 'M3FilterChip',
+        selected: true,
+        onPressed: () {
+              
+        },
+    ),
+    ```
 | Light                                                                                                                                                                                                                       | Dark                                                                                                                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1_dark.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2_dark.png" width="500"/> |
