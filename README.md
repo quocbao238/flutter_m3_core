@@ -21,7 +21,7 @@
 Add the following to your pubspec.yaml file:
 ```yaml
 dependencies:
-  flutter_m3_core: <latest version>
+  flutter_m3_core: ~
 ```
 
 # 💻 Import in your project
