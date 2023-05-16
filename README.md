@@ -656,14 +656,14 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
 - **M3 Picker Input Only**:
 
     ```dart
-  final result = await M3DatePicker.showModalDatePicker(context,
-    initialEntryMode: DatePickerEntryMode.inputOnly,
-    use24HourDials: use24HourFormat,
-    onDateSelected: _onChangeDateTime,
-    initialDate: dateTime);
-    if (result != null) {
-      _onChangeDateTime(result);
-    }
+    final result = await M3DatePicker.showModalDatePicker(context,
+      initialEntryMode: DatePickerEntryMode.inputOnly,
+      use24HourDials: use24HourFormat,
+      onDateSelected: _onChangeDateTime,
+      initialDate: dateTime);
+      if (result != null) {
+        _onChangeDateTime(result);
+      }
     ```
 
 - **M3 Time Picker Dial**:
