@@ -541,3 +541,168 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_1.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_FAB_1_dark.png" width="500"/> |
 
+
+
+## **8. M3 DatePicker**
+
+#### **Constructors**
+
+- **M3DatePicker.showModalDatePicker**
+
+  ```dart
+  M3DatePicker.showModalDatePicker(
+    context,
+    onDateSelected: (DateTime selectedDate) {
+      // Handle the selected date
+    },
+    initialDate: DateTime.now(),
+  );
+  ```
+
+  -   **``ctx``** (required): The BuildContext of the current widget.
+  -   **``onDateSelected``**(required): A function that will be called when a date is selected.
+  -   **``initialDate``**(required): The initial date to display in the date picker.
+  -   **`firstDate`** (optional): The earliest date that can be selected.
+  -   **`lastDate`** (optional): The latest date that can be selected.
+  -   **`helpText`** (optional): The text to display as the help text at the top of the date picker.
+  -   **`cancelText`** (optional): The text to display for the cancel button.
+  -   **`confirmText`** (optional): The text to display for the confirm button.
+  -   **`locale`** (optional): The locale used to format the date picker's text and labels.
+  -   **`errorFormatText`** (optional): The error message to display when the input date is not in the expected format.
+  -   **`errorInvalidText`** (optional): The error message to display when the selected date is invalid.
+  -   **`fieldHintText`** (optional): The hint text to display in the date picker's input field.
+  -   **`fieldLabelText`** (optional): The label text to display for the date picker's input field.
+  -   **`use24HourDials`** (optional): Whether to use a 24-hour format for the time picker.
+  -   **`initialEntryMode`** (optional): The initial entry mode of the date picker.
+  -   **`initialDatePickerMode`** (optional): The initial display mode of the date picker.
+
+
+- **M3DatePicker.showModalDateRangePicker**
+
+  ```dart
+  M3DatePicker.showModalDateRangePicker(
+    context,
+    onDateSelected: (DateTimeRange selectedDateRange) {
+    // Handle the selected date range
+    },
+    initialDateRange: DateTimeRange(
+      start: DateTime.now(),
+      end: DateTime.now().add(Duration(days: 7)),
+      ),
+    );
+  );
+  ```
+
+  - **`ctx`** (required): The BuildContext of the current widget.
+  - **`onDateSelected`** (required): A function that will be called when a date range is selected.
+  - **`initialDateRange`** (optional): The initial date range to display in the date range picker.
+  - **`initialEntryMode`** (optional): The initial entry mode of the date range picker.
+  - **`helpText`** (optional): The text to display as the help text at the top of the date range picker.
+  - **`cancelText`** (optional): The text to display for the cancel button.
+  - **`confirmText`** (optional): The text to display for the confirm button.
+  - **`saveText`** (optional): The text to display for the save button.
+  - **`errorFormatText`** (optional): The error message to display when the input date range is not in the expected format.
+  - **`errorInvalidText`** (optional): The error message to display when the selected date range is invalid.
+  - **`errorInvalidRangeText`** (optional): The error message to display when the selected date range is not within the allowed range.
+  - **`fieldStartHintText`** (optional): The hint text to display in the start date field of the date range picker.
+  - **`fieldEndHintText`** (optional): The hint text to display in the end date field of the date range picker.
+  - **`fieldStartLabelText`** (optional): The label text to display for the start date field of the date range picker.
+  - **`fieldEndLabelText`** (optional): The label text to display for the end date field of the date range picker.
+  - **`firstDate`** (optional): The earliest date that can be selected.
+  - **`lastDate`** (optional): The latest date that can be selected.
+  - **`use24HourDials`** (optional): Whether to use a 24-hour format for the time picker.
+
+
+- **M3DatePicker.showModalTimePicker**
+
+  ```dart
+  M3DatePicker.showModalTimePicker(
+    context,
+    onDateSelected: (DateTime selectedTime) {
+    // Handle the selected time
+    },
+    initialTime: TimeOfDay.now(),
+    );
+  ```
+
+  - **`ctx`** (required): The BuildContext of the current widget.
+  - **`onDateSelected`** (required): A function that will be called when a time is selected.
+  - **`initialTime`** (required): The initial time to display in the time picker.
+  - **`cancelText`** (optional): The text to display for the cancel button.
+  - **`confirmText`** (optional): The text to display for the confirm button.
+  - **`helpText`** (optional): The text to display as the help text at the top of the time picker.
+  - **`errorInvalidText`** (optional): The error message to display when the selected time is invalid.
+  - **`hourLabelText`** (optional): The label text to display for the hour input field in the time picker.
+  - **`use24HourDials`** (optional): Whether to use a 24-hour format for the time picker.
+  - **`initialEntryMode`** (optional): The initial entry mode of the time picker.
+  - **`minuteLabelText`** (optional): The label text to display for the minute input field in the time picker.
+
+
+  
+#### **Usage**
+
+- **Day Picker Calendar Only**:
+
+    ```dart
+    final result = await M3DatePicker.showModalDatePicker(context,
+    initialEntryMode: DatePickerEntryMode.calendarOnly,
+    onDateSelected: _onChangeDateTime,
+    initialDate: dateTime);
+    if (result != null) {
+    _onChangeDateTime(result);
+    }
+    ```
+
+- **M3 Picker Input Only**:
+
+    ```dart
+  final result = await M3DatePicker.showModalDatePicker(context,
+  initialEntryMode: DatePickerEntryMode.inputOnly,
+  use24HourDials: use24HourFormat,
+  onDateSelected: _onChangeDateTime,
+  initialDate: dateTime);
+  if (result != null) {
+  _onChangeDateTime(result);
+  }
+    ```
+
+- **M3 Time Picker Dial**:
+
+  ```dart
+  final result = await M3DatePicker.showModalTimePicker(context,
+    use24HourDials: use24HourFormat,
+    initialTime: TimeOfDay(
+    hour: dateTime.hour, minute: dateTime.minute),
+    onDateSelected: _onChangeDateTime);
+    if (result != null) {
+      final newDateTime = DateTime(dateTime.year, dateTime.month,
+      dateTime.day, result.hour, result.minute);
+      _onChangeDateTime(newDateTime);
+    }
+  ```
+
+- **M3 Time Picker Input**:
+
+  ```dart
+  final result = await M3DatePicker.showModalTimePicker(
+    initialEntryMode: TimePickerEntryMode.inputOnly,
+    context,
+    use24HourDials: use24HourFormat,
+    initialTime: TimeOfDay(
+      hour: dateTime.hour, minute: dateTime.minute),
+    onDateSelected: _onChangeDateTime);
+    if (result != null) {
+      final newDateTime = DateTime(dateTime.year, dateTime.month,
+      dateTime.day, result.hour, result.minute);
+      _onChangeDateTime(newDateTime);
+    }
+  ```
+
+
+
+
+
+| Light                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Dark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_1.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_2.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_3.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_4.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_5.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_1.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_2.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_3.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_4.png" width="500"/>  <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_DatePicker_dark_5.png" width="500"/> |
+
