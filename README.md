@@ -98,9 +98,9 @@ class _MyAppState extends State<MyApp> {
 - This package have many components principle with Material 3 design like Buttons,CheckBox,Slider,Typography,Progress,DatePicker....
 - Let's try it
 
-## 1. M3 Typography
+## **1. M3Typography**
 
-#### Constructors
+#### **Constructors**
 
 ```dart
 M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineLarge, M3Text.headlineMedium, M3Text.headlineSmall, M3Text.titleLarge, M3Text.titleMedium, M3Text.titleSmall, M3Text.labelLarge, M3Text.labelMedium, M3Text.labelSmall, M3Text.bodyLarge, M3Text.bodyMedium, M3Text.bodySmall
@@ -108,7 +108,7 @@ M3Text.displayLarge, M3Text.displayMedium, M3Text.displaySmall, M3Text.headlineL
 
 Each constructor accepts parameters such as text, textAlign, fontWeight, color, maxLines, overflow, and isFlexible to customize the appearance and behavior of the text.
 
-#### Usage
+#### **Usage**
 
 To use the M3Text widget, simply create an instance with the desired typography style and provide the necessary parameters. For example:
 
@@ -119,15 +119,15 @@ M3Text.displayLarge(
 )
 ```
 
-|
+
 
 | Light                                                                                               | Dark                                                                                                     |
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png) | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png) |
 
-2. M3 Buttons
+##  2. **M3Buttons**
 
-#### Constructors
+#### **Constructors**
 
 - M3Button
 
@@ -207,8 +207,9 @@ M3IconButton(
     ),
 
 ```
+| Light                                                                                                                                                                                                 | Dark                                                                                                                                                                                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png) ![Image 2](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png) | [Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png) ![Image 2](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png) |
 
-| Theme | Mobile                                                                                                                                             |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Light | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png), ![Image 2](path/to/m3_Buttons_2.png)           |
-| Dark  | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png), ![Image 2](path/to/m3_Buttons_2_dark.png) |
+
+
