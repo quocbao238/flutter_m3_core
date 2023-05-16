@@ -98,7 +98,7 @@ class _MyAppState extends State<MyApp> {
 - This package have many components principle with Material 3 design like Buttons,CheckBox,Slider,Typography,Progress,DatePicker....
 - Let's try it
 
-## **1. M3Typography**
+## **1. M3 Text**
 
 #### **Constructors**
 
@@ -134,7 +134,7 @@ M3Text.displayLarge(
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png" width="500"/> |
 
-##  2. **M3Buttons**
+##  2. **M3 Buttons**
 
 #### **Constructors**
 
@@ -294,7 +294,7 @@ M3Badge
 
 
 
-## **4. M3CheckBox**
+## **4. M3 CheckBox**
 
 #### **Constructors**
 
