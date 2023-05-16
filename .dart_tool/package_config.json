@@ -39,7 +39,7 @@
     },
     {
       "name": "dynamic_color",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/dynamic_color-1.6.5",
       "packageUri": "lib/",
       "languageVersion": "2.16"
     },
@@ -99,9 +99,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/lints-2.1.0",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/lints-2.0.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "logger",
@@ -290,13 +290,13 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "ninja_core",
+      "name": "flutter_m3_core",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-05-15T07:40:11.352283Z",
+  "generated": "2023-05-16T03:54:46.705026Z",
   "generator": "pub",
   "generatorVersion": "3.1.0-63.1.beta"
 }

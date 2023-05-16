@@ -22,7 +22,7 @@ class TypographyScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               const M3Space.large(),
-              _body(),
+              Expanded(child: _body()),
             ],
           ),
         ),

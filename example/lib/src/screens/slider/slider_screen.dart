@@ -19,7 +19,8 @@ class _SliderScreenState extends State<SliderScreen> {
   @override
   Widget build(BuildContext context) {
     if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
-      return CustomContentHeaderWeb(title: 'M3 Slider', child: _body());
+      return CustomContentHeaderWeb(
+          title: 'M3 Slider', child: Expanded(child: _body()));
     }
 
     return Scaffold(
@@ -30,81 +31,83 @@ class _SliderScreenState extends State<SliderScreen> {
     );
   }
 
-  Column _body() {
-    return Column(
-      children: [
-        M3Card(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const M3Text.titleLarge(text: 'M3 Slider'),
-            M3Slider(
-                value: val1.toDouble(),
-                min: 0.0,
-                max: 1.0,
-                onChanged: (double newValue) =>
-                    setState(() => val1 = newValue)),
-            Center(
-              child: M3Text.bodyMedium(
-                  text: 'Slider value: ${val1.toStringAsFixed(2)}'),
-            )
-          ],
-        )),
-        const M3Space.medium(),
-        M3Card(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const M3Text.titleLarge(text: 'M3 Slider Primary'),
-            M3Slider.primary(
-                value: val2.toDouble(),
-                min: 0.0,
-                max: 330.0,
-                onChanged: (double newValue) =>
-                    setState(() => val2 = newValue)),
-            Center(
-              child: M3Text.bodyMedium(
-                  text: 'Slider value: ${val2.toStringAsFixed(2)}'),
-            )
-          ],
-        )),
-        const M3Space.medium(),
-        M3Card(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const M3Text.titleLarge(text: 'M3 Slider Secondary'),
-            M3Slider.secondary(
-                value: val3.toDouble(),
-                min: 0.0,
-                max: 330.0,
-                onChanged: (double newValue) =>
-                    setState(() => val3 = newValue)),
-            Center(
-              child: M3Text.bodyMedium(
-                  text: 'Slider value: ${val2.toStringAsFixed(2)}'),
-            )
-          ],
-        )),
-        const M3Space.medium(),
-        M3Card(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const M3Text.titleLarge(text: 'M3 Slider tertiary'),
-            M3Slider.tertiary(
-                value: val4.toDouble(),
-                min: 0.0,
-                max: 45.0,
-                onChanged: (double newValue) =>
-                    setState(() => val4 = newValue)),
-            Center(
-              child: M3Text.bodyMedium(
-                  text: 'Slider value: ${val4.toStringAsFixed(2)}'),
-            )
-          ],
-        ))
-      ],
+  Widget _body() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          M3Card(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const M3Text.titleLarge(text: 'M3 Slider'),
+              M3Slider(
+                  value: val1.toDouble(),
+                  min: 0.0,
+                  max: 1.0,
+                  onChanged: (double newValue) =>
+                      setState(() => val1 = newValue)),
+              Center(
+                child: M3Text.bodyMedium(
+                    text: 'Slider value: ${val1.toStringAsFixed(2)}'),
+              )
+            ],
+          )),
+          const M3Space.medium(),
+          M3Card(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const M3Text.titleLarge(text: 'M3 Slider Primary'),
+              M3Slider.primary(
+                  value: val2.toDouble(),
+                  min: 0.0,
+                  max: 330.0,
+                  onChanged: (double newValue) =>
+                      setState(() => val2 = newValue)),
+              Center(
+                child: M3Text.bodyMedium(
+                    text: 'Slider value: ${val2.toStringAsFixed(2)}'),
+              )
+            ],
+          )),
+          const M3Space.medium(),
+          M3Card(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const M3Text.titleLarge(text: 'M3 Slider Secondary'),
+              M3Slider.secondary(
+                  value: val3.toDouble(),
+                  min: 0.0,
+                  max: 330.0,
+                  onChanged: (double newValue) =>
+                      setState(() => val3 = newValue)),
+              Center(
+                child: M3Text.bodyMedium(
+                    text: 'Slider value: ${val2.toStringAsFixed(2)}'),
+              )
+            ],
+          )),
+          const M3Space.medium(),
+          M3Card(
+              child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const M3Text.titleLarge(text: 'M3 Slider tertiary'),
+              M3Slider.tertiary(
+                  value: val4.toDouble(),
+                  min: 0.0,
+                  max: 45.0,
+                  onChanged: (double newValue) =>
+                      setState(() => val4 = newValue)),
+              Center(
+                child: M3Text.bodyMedium(
+                    text: 'Slider value: ${val4.toStringAsFixed(2)}'),
+              )
+            ],
+          ))
+        ],
+      ),
     );
   }
 }
