@@ -98,7 +98,7 @@ class _MyAppState extends State<MyApp> {
 - This package have many components principle with Material 3 design like Buttons,CheckBox,Slider,Typography,Progress,DatePicker....
 - Let's try it
 
-## M3 Typography
+## 1. M3 Typography
 
 #### Constructors
 
