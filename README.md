@@ -413,3 +413,66 @@ M3CheckBox
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1_dark.png" width="500"/> <br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2_dark.png" width="500"/> |
 
+
+
+
+
+
+## **6. M3 Dialogs**
+
+#### **Constructors**
+
+- **M3Dialog.showBasicDialog**
+    ```dart
+    M3Dialog.showDialog
+    ```
+  - **`context`**: A required parameter of type BuildContext that represents the build context of the widget tree.
+  - **`title`**: An optional parameter of type String that represents the title of the dialog.
+  - **`content`**: An optional parameter of type String that represents the content of the dialog.
+  - **`actions`**: An optional parameter of type List<Widget> that represents the actions that can be performed in the dialog.
+  - **`child`**: An optional parameter of type Widget that represents the child widget of the dialog.
+
+
+- **M3Dialog.showIconsDialog**
+    ```dart
+    M3Dialog.showIconsDialog
+    ```
+  - **`icon`**: A required parameter of type IconData that represents the icon to be displayed in the dialog.
+  - **`context`**: A required parameter of type BuildContext that represents the build context of the widget tree.
+  - **`title`**: An optional parameter of type String that represents the title of the dialog.
+  - **`content`**: An optional parameter of type String that represents the content of the dialog.
+  - **`actions`**: An optional parameter of type List<Widget> that represents the actions that can be performed in the dialog.
+  - **`child`**: An optional parameter of type Widget that represents the child widget of the dialog.
+
+#### **Usage**
+
+- **M3 Basic Dialog**:
+
+    ```dart
+    M3Dialog.showBasicDialog(
+        context: context,
+        title: DialogPalette.title,
+        content: DialogPalette.content,
+        actions: actions,
+  );
+    ```
+
+- **M3 Dialog With Icon**:
+
+    ```dart
+    M3Dialog.showIconsDialog(
+        context: context,
+        title: DialogPalette.title,
+        content: DialogPalette.content,
+        actions: actions,
+        icon: Icons.info_outline_rounded,
+  );
+
+    ```
+
+  
+
+| Light                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Dark                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_1.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_2.png" width="500"/><br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_3.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_4.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_1_dark.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_2_dark.png" width="500"/><br/><br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_3_dark.png" width="500"/>  <br/><br/><img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Dialogs_4_dark.png" width="500"/> |
+
