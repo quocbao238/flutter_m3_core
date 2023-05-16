@@ -125,9 +125,90 @@ M3Text.displayLarge(
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png) | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png) |
 
-2. M3 Typography
+2. M3 Buttons
 
-| Theme | Mobile                                                                                                                                         |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Light | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png), ![Image 2](path/to/light_image_2.png)     |
-| Dark  | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png), ![Image 2](path/to/dark_image_2.png) |
+#### Constructors
+
+- M3Button
+
+```dart
+M3Button, M3Button.filled, M3Button.filledTonal,
+M3Button.filledTertiary, M3Button.outline, M3Button.text
+```
+
+- M3ButtonWithIcon
+
+```dart
+M3ButtonWithIcon, M3ButtonWithIcon.filled
+M3ButtonWithIcon.filledTonal, M3ButtonWithIcon.outline
+M3ButtonWithIcon.text
+```
+
+- M3ErrorButton
+
+```dart
+M3ErrorButton, M3ErrorButton.filled
+M3ErrorButton.filledTonal, M3ErrorButton.outline
+M3ErrorButton.text
+```
+
+- M3IconButton
+
+```dart
+M3IconButton, M3IconButton.filled
+M3IconButton.filledTonal, M3IconButton.outline
+M3IconButton.text
+```
+
+#### Usage
+
+- M3 Button
+
+```dart
+M3Button(
+  text: 'Click me',
+  onPressed: () {
+    // Handle button press
+  },
+)
+```
+
+- M3ButtonWithIcon
+
+```dart
+M3ButtonWithIcon(
+  text: 'Submit',
+  icon: Icons.check,
+  onPressed: () {
+    // Handle button press
+  },
+)
+```
+
+- M3ErrorButton
+
+```dart
+M3ErrorButton(
+  text: 'This is error button',
+  onPressed: () {
+    // Handle button press
+  },
+)
+```
+
+- M3IconButton
+
+```dart
+M3IconButton(
+      icon: Icons.add,
+      onPressed: () {
+        // Handle button press
+      },
+    ),
+
+```
+
+| Theme | Mobile                                                                                                                                             |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Light | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png), ![Image 2](path/to/m3_Buttons_2.png)           |
+| Dark  | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png), ![Image 2](path/to/m3_Buttons_2_dark.png) |
