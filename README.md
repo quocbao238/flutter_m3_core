@@ -99,8 +99,19 @@ class _MyAppState extends State<MyApp> {
 
 | Theme | Mobile |
 |-------|--------|
-| Light | ![Image 1](path/to/light_image_1.png), ![Image 2](path/to/light_image_2.png) |
-| Dark  | ![Image 1](path/to/dark_image_1.png), ![Image 2](path/to/dark_image_2.png) |
+| Light | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png)|
+| Dark  | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png) |
+
+
+2. M3 Typography
+
+
+| Theme | Mobile |
+|-------|--------|
+| Light | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography.png), ![Image 2](path/to/light_image_2.png) |
+| Dark  | ![Image 1](https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Typography_dark.png), ![Image 2](path/to/dark_image_2.png) |
+
+
 
 
 
