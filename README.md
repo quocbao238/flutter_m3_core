@@ -254,3 +254,62 @@ M3Badge(
 
 
 
+
+
+## **4. M3CheckBox**
+
+#### **Constructors**
+
+```dart
+M3CheckBox
+```
+
+- key (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
+- value (required): The current value of the checkbox.
+- onChanged (optional): A callback function that is called when the checkbox value is changed by the user. It takes a single argument of type bool that represents the new value of the checkbox.
+- isError (optional): A flag indicating whether the checkbox should be displayed in an error state.
+- tristate (optional): A flag indicating whether the checkbox should support a third indeterminate state.
+
+#### **Usage**
+
+- Basic usage:
+
+```dart
+M3CheckBox(
+    value: true,
+    onChanged: (newValue) {
+    // Handle the checkbox value change here
+    },
+)
+```
+
+- Checkbox with error state:
+
+```dart
+M3CheckBox(
+    value: false,
+    isError: true,
+    onChanged: (newValue) {
+    // Handle the checkbox value change here
+    },
+)
+```
+
+- Checkbox with tristate support:
+
+```dart
+M3CheckBox(
+    value: null,
+    tristate: true,
+    onChanged: (newValue) {
+    // Handle the checkbox value change here
+    },
+)
+```
+
+
+| Light                                                                                               | Dark                                                                                                                |
+| --------------------------------------------------------------------------------------------------- |---------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_CheckBox.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_CheckBox_dark.png" width="500"/> |
+
+
