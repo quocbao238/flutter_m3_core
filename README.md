@@ -851,3 +851,53 @@ M3Switch(
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Switch.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Switch_dark.png" width="500"/> |
 
+
+
+## **12. M3 Input**
+
+#### **Constructors**
+
+  ```dart
+  M3Input()
+  M3Input.outline()
+  ```
+
+  - **`controller`** (optional): The TextEditingController for the input field.
+  - **`enabled`** (optional): Whether the input field is enabled or disabled. If not provided, it defaults to true.
+  - **`disableBackground`** (optional): Whether to disable the background of the input field. If true, the background will be transparent. If not provided, it defaults to false.
+  - **`labelText`** (optional): The label text for the input field.
+  - **`filled`** (optional): Whether to display a filled background for the input field. If not provided, it defaults to false.
+  - **`supportingText`** (optional): Additional supporting text for the input field.
+  - **`prefixWidget`** (optional): A widget to display as a prefix for the input field.
+  - **`suffixWidget`** (optional): A widget to display as a suffix for the input field.
+  - **`prefixIconData`** (optional): The icon data for the prefix icon.
+  - **`suffixIconData`** (optional): The icon data for the suffix icon.
+  - **`errorText`** (optional): The error text to display for the input field.
+
+
+
+#### **Usage**
+
+
+- **M3Input**
+  ```dart
+  M3Input(
+    controller: TextEditingController(text: 'Input'),
+    labelText: 'Label',
+    supportingText: 'Supporting Text',
+  )
+  ```
+
+- **M3Input.outline**
+  ```dart
+    M3Input.outline(
+        controller: TextEditingController(text: 'Input'),
+        labelText: 'Label',
+        supportingText: 'Supporting Text',
+    )
+  ```
+  
+| Light                                                                                                                                                                                                                                                                                                                                                           | Dark                                                                                                                                                                                                                                                                                                                                                                           |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input.png" width="500"/> <br/> <br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input_1.png" width="500"/> <br/> <br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input_dark.png" width="500"/> <br/> <br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input_dark_2.png" width="500"/> <br/> <br/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Input_dark_3.png" width="500"/> |
+
