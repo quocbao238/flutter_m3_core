@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
       mobile: MobileView(),
       tablet: TabletView(),
       desktop: DesktopView(),
-      web: DesktopView(),
+      another: DesktopView(),
     );
   }
 }

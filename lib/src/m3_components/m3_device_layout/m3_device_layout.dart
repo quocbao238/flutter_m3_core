@@ -8,13 +8,13 @@ final class M3LayoutView extends StatelessWidget {
   final Widget mobile;
   final Widget desktop;
   final Widget tablet;
-  final Widget web;
+  final Widget another;
   const M3LayoutView({
     super.key,
     this.mobile = const _M3EmptyWidget(deviceEmpty: "Mobile"),
     this.desktop = const _M3EmptyWidget(deviceEmpty: "Desktop"),
     this.tablet = const _M3EmptyWidget(deviceEmpty: "Tablet"),
-    this.web = const _M3EmptyWidget(deviceEmpty: "Web"),
+    this.another = const _M3EmptyWidget(deviceEmpty: "Another"),
   });
 
   @override
@@ -24,7 +24,7 @@ final class M3LayoutView extends StatelessWidget {
               M3DeviceType.tablet => tablet,
               M3DeviceType.desktop => desktop,
               M3DeviceType.mobile => mobile,
-              M3DeviceType.web => web,
+              M3DeviceType.another => another,
             });
   }
 }

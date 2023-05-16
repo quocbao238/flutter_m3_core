@@ -960,5 +960,5 @@ M3Switch(
 [win32-link]: win32-link
 [android-link]: android-link
 [deb-link]: deb-link
-[web-link]: web-link
+[web-link]: https://quocbao238.github.io/flutter_m3_core_webview/#/
 [mac-link]: mac-link

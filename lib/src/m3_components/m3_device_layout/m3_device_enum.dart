@@ -1,10 +1,10 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:ui';
+import 'package:flutter/foundation.dart';
 import 'package:logger/logger.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
 
-enum M3DeviceType { tablet, mobile, desktop, web }
+enum M3DeviceType { tablet, mobile, desktop, another }
 
 final class M3DeviceService {
   static M3DeviceType deviceType = M3DeviceType.mobile;
@@ -14,9 +14,10 @@ final class M3DeviceService {
         printer:
             PrettyPrinter(methodCount: 0, colors: false, printEmojis: true));
 
-    if (kIsWeb) {
-      logger.d('Current Device is Web', '[ M3_core ]');
-      return deviceType = M3DeviceType.web;
+    if (defaultTargetPlatform != TargetPlatform.android &&
+        defaultTargetPlatform != TargetPlatform.iOS) {
+      logger.d('Current Device is another', '[ M3_core ]');
+      return deviceType = M3DeviceType.another;
     }
 
     var pixelRatio = window.devicePixelRatio;
@@ -43,5 +44,5 @@ final class M3DeviceService {
 
   static isDesktop() => deviceType == M3DeviceType.desktop;
 
-  static isWeb() => deviceType == M3DeviceType.web;
+  static isWeb() => deviceType == M3DeviceType.another;
 }
