@@ -87,14 +87,45 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-# 👨‍💻 Usage Material 3 Components
+# 👨‍💻 Material 3 Components
 - This package have many components principle with Material 3 design like Buttons,CheckBox,Slider,Typography,Progress,DatePicker....
 - Let's try it
 
-
-## Screen shot Mobile
-
 1. M3 Typography
+
+### M3Text
+The M3Text class is a customizable Flutter widget that simplifies the process of styling text with various Material 3 typography styles. It allows you to easily display text with different font sizes, weights, colors, alignments, and line limits.
+### Constructors
+The M3Text class provides several constructors for different typography styles:
+```
+M3Text.displayLarge
+M3Text.displayMedium
+M3Text.displaySmall
+M3Text.headlineLarge
+M3Text.headlineMedium
+M3Text.headlineSmall
+M3Text.titleLarge
+M3Text.titleMedium
+M3Text.titleSmall
+M3Text.labelLarge
+M3Text.labelMedium
+M3Text.labelSmall
+M3Text.bodyLarge
+M3Text.bodyMedium
+M3Text.bodySmall
+```
+Each constructor accepts parameters such as text, textAlign, fontWeight, color, maxLines, overflow, and isFlexible to customize the appearance and behavior of the text.
+### Usage
+To use the M3Text widget, simply create an instance with the desired typography style and provide the necessary parameters. For example:
+
+```
+M3Text.displayLarge(
+  text: 'Welcome',
+  textAlign: TextAlign.center,
+)
+```
+
+| 
 
 
 | Light | Dark |
