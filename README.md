@@ -785,10 +785,10 @@ M3FloatingActionButton.secondary(), M3FloatingActionButton.tertiary()
   M3Slider.secondary()
   M3Slider.tertiary()
   ```
-- **`value`**: The current value of the slider.
-- **`min`**: The minimum value of the slider.
-- **`max`**: The maximum value of the slider.
-- **`onChanged`**: A callback function that is called when the value of the slider changes.
+  - **`value`**: The current value of the slider.
+  - **`min`**: The minimum value of the slider.
+  - **`max`**: The maximum value of the slider.
+  - **`onChanged`**: A callback function that is called when the value of the slider changes.
 
 
 
@@ -810,4 +810,44 @@ M3Slider(
 | Light                                                                                                                                                                                                                                      | Dark                                                                                                                                                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Slider.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Slider_dark.png" width="500"/> |
+
+
+
+## **11. M3 Switch**
+
+#### **Constructors**
+
+- **M3LinearProgressIndicator**
+
+  ```dart
+  M3Switch()
+  M3Switch.primary()
+  M3Switch.adaptive()
+  M3Switch.tertiary()
+  ```
+  
+  - **`key`** (optional): Controls the widget's identity.
+  - **`value`**: The current value of the switch.
+  - **`onChanged`**: A callback function that is called when the value of the switch changes. The function should take a bool parameter representing the new value.
+  - **`selectedIcon`** (optional): The icon to display when the switch is in the selected state.
+  -  **`normalIcon`** (optional): The icon to display when the switch is in the normal state
+
+
+
+#### **Usage**
+
+```dart
+M3Switch(
+  value: value, // The current value of the switch
+  onChanged: (bool value) {
+  // Callback function to handle value changes
+  // Update the value and perform any desired actions
+  },
+  // Additional customization properties
+)
+```
+
+| Light                                                                                                                                                                                                                                      | Dark                                                                                                              |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Switch.png" width="500"/>  | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Switch_dark.png" width="500"/> |
 
