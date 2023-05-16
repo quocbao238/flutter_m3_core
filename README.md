@@ -108,8 +108,14 @@ M3Text.headlineMedium, M3Text.headlineSmall, M3Text.titleLarge, M3Text.titleMedi
 M3Text.titleSmall, M3Text.labelLarge, M3Text.labelMedium, M3Text.labelSmall, 
 M3Text.bodyLarge, M3Text.bodyMedium, M3Text.bodySmall
 ```
+- **`text`** (required): A string representing the text to be displayed.
+- **`textAlign`** (optional): An enum value representing the horizontal alignment of the text. It defaults to TextAlign.center.
+- **`fontWeight`** (optional): A FontWeight enum value representing the weight of the font used to display the text. It defaults to FontWeight.normal.
+- **`color`** (optional): A Color value representing the color of the text. It defaults to the color defined in the M3TextStyle enum for the specific style of the M3Text widget.
+- **`maxLines`** (optional): An integer representing the maximum number of lines to be displayed. If not specified, it defaults to displaying all available lines.
+- **`overflow`** (optional): An enum value representing how to handle overflow when the text exceeds the available space. It defaults to TextOverflow.clip.
+- **`isFlexible`** (optional): A boolean value indicating whether the text should be able to wrap to multiple lines if necessary. It defaults to true.
 
-Each constructor accepts parameters such as text, textAlign, fontWeight, color, maxLines, overflow, and isFlexible to customize the appearance and behavior of the text.
 
 #### **Usage**
 
@@ -117,8 +123,8 @@ To use the M3Text widget, simply create an instance with the desired typography 
 
 ```dart
 M3Text.displayLarge(
-text: 'Welcome',
-textAlign: TextAlign.center,
+    text: 'Welcome',
+    textAlign: TextAlign.center,
 )
 ```
 
@@ -138,6 +144,13 @@ textAlign: TextAlign.center,
 M3Button, M3Button.filled, M3Button.filledTonal,
 M3Button.filledTertiary, M3Button.outline, M3Button.text
 ```
+- **`text`**: A string that represents the text displayed on the button. Either text or child must not be null.
+- **`child`**: A widget that represents the child element displayed on the button. Either text or child must not be null.
+- **`onPressed`**: A callback function that is called when the button is pressed.
+- **`backgroundColor`**: A Color object that determines the background color of the button.
+- **`foregroundColor`**: A Color object that determines the text and icon color of the button.
+- **`fixedSize`**: A Size object that determines the size of the button. It can be used to create fixed-size buttons. If not specified, the button will adjust to its content.
+
 
 - M3ButtonWithIcon
 
@@ -211,9 +224,9 @@ M3IconButton(
 
 ```
 
-| Light                                                                                                                                                                                                                           | Dark                                                                                                     |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| -------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png" width="500"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png" width="500"/>,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png" width="500"/> |
+| Light                                                                                                                                                                                                                           | Dark                                                                                                                                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_1_dark.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Buttons_2_dark.png" width="500"/> |
 
 
 
@@ -227,10 +240,10 @@ M3IconButton(
 M3Badge
 ```
 
-- key (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
-- child (optional): The child widget to display within the badge. Either child or iconData must be provided.
-- count (required): The count value to display within the badge.
-- iconData (optional): The icon data to display within the badge. Either child or iconData must be provided.
+- **`key`** (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
+- **`child`** (optional): The child widget to display within the badge. Either child or iconData must be provided.
+- **`count`** (required): The count value to display within the badge.
+- **`iconData`** (optional): The icon data to display within the badge. Either child or iconData must be provided.
 
 #### **Usage**
 
@@ -267,11 +280,11 @@ M3Badge(
 M3CheckBox
 ```
 
-- key (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
-- value (required): The current value of the checkbox.
-- onChanged (optional): A callback function that is called when the checkbox value is changed by the user. It takes a single argument of type bool that represents the new value of the checkbox.
-- isError (optional): A flag indicating whether the checkbox should be displayed in an error state.
-- tristate (optional): A flag indicating whether the checkbox should support a third indeterminate state.
+- **`key`** (optional): An identifier for the widget. Use it to provide a key to this widget if necessary.
+- **`value`** (required): The current value of the checkbox.
+- **`onChanged`** (optional): A callback function that is called when the checkbox value is changed by the user. It takes a single argument of type bool that represents the new value of the checkbox.
+- **`isError`** (optional): A flag indicating whether the checkbox should be displayed in an error state.
+- **`tristate`** (optional): A flag indicating whether the checkbox should support a third indeterminate state.
 
 #### **Usage**
 
@@ -321,18 +334,35 @@ M3CheckBox(
 
 #### **Constructors**
 
+- **M3InputChip**
 ```dart
 M3InputChip, M3InputChip.filled, M3InputChip.filledTonal
 M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
 ```
 
-- leading (optional): A widget to display as the leading icon in the chip.
-- deleteIcon (optional): A widget to display as the delete icon in the chip.
-- onDeleted (optional): A callback function that is called when the delete icon is pressed. Use it to handle chip deletion.
-- isEnable (optional): A flag indicating whether the chip is enabled or disabled. Disabled chips cannot be interacted with.
-- backgroundColor (optional): The background color of the chip.
-- foregroundColor (optional): The foreground color of the chip, which affects the text and icon colors.
-- onPressed (optional): A callback function that is called when the chip is pressed. Use it to handle chip press events.
+- **`leading`** (optional): A widget to display as the leading icon in the chip.
+- **`deleteIcon`** (optional): A widget to display as the delete icon in the chip.
+- **`onDeleted`** (optional): A callback function that is called when the delete icon is pressed. Use it to handle chip deletion.
+- **`onPressed`** (optional): A callback function that is called when the chip is pressed. Use it to handle chip press events.
+- **`isEnable`** (optional): A flag indicating whether the chip is enabled or disabled. Disabled chips cannot be interacted with.
+- **`backgroundColor`** (optional): The background color of the chip.
+- **`foregroundColor`** (optional): The foreground color of the chip, which affects the text and icon colors.
+
+- **M3FilterChip**
+```dart
+M3FilterChip, M3FilterChip.filled, M3FilterChip.filledTonal
+```
+
+- **`text`**: the text label to display inside the chip
+- **`selected`**: a boolean value indicating whether the chip is currently selected or not
+- **`onSelected`**: a callback function that is called when the chip is selected or unselected
+- **`isEnabled`**: a boolean value indicating whether the chip is enabled or not
+- **`backgroundColor`**: the background color of the chip
+- **`foregroundColor`**: the foreground (text) color of the chip
+- **`leadingIcon`**: an optional icon to display at the beginning of the chip label
+
+
+
 
 #### **Usage**
 
@@ -359,7 +389,7 @@ M3FilterChip(
 ),
 ```
 
-| Light                                                                                                                                                                                                                        | Dark                                                                                                                                                                                                                                   |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1.png" width="500"/> ,<img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1_dark.png" width="500"/>, <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2_dark.png" width="500"/> |
+| Light                                                                                                                                                                                                                       | Dark                                                                                                                                                                                                                                  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2.png" width="500"/> | <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_1_dark.png" width="500"/> <img src="https://github.com/quocbao238/flutter_m3_core/blob/main/images/mobile/m3_Chips_2_dark.png" width="500"/> |
 
