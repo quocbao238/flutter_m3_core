@@ -958,7 +958,7 @@ M3Switch(
 
 <!-- Variables/Text References -->
 [win32-link]: win32-link
-[android-link]: android-link
+[android-link]: https://raw.githubusercontent.com/quocbao238/flutter_m3_core/main/download/app-profile.apk
 [deb-link]: deb-link
 [web-link]: https://quocbao238.github.io/flutter_m3_core_webview/#/
-[mac-link]: mac-link
+[mac-link]: https://raw.githubusercontent.com/quocbao238/flutter_m3_core/main/download/flutter_m3_core.dmg
