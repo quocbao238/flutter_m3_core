@@ -15,36 +15,34 @@ class _SwitchScreenState extends State<SwitchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if ( M3ViewService.isDesktop()) {
-      return CustomContentHeaderWeb(title: 'M3 Switch', child:Expanded(child: _body()));
+    if (M3ViewService.isDesktop()) {
+      return CustomContentHeaderWeb(
+          title: 'M3 Switch', child: Expanded(child: _body()));
     }
     return Scaffold(
       appBar: const CustomAppBar(title: 'Switch Screen'),
-      body: M3Padding.medium(
-        child: _body(),
-      ),
+      body: M3Padding.medium(child: _body()),
     );
   }
 
-  ListView _body() {
-    return ListView(
-      shrinkWrap: true,
-      children: const [
-        M3Switchs(normalIcon: Icons.close, selectedIcon: Icons.check),
-        M3Space.medium(),
-        M3SwitchPrimary(normalIcon: Icons.close, selectedIcon: Icons.check),
-        M3Space.medium(),
-        M3SwitchTertiary(normalIcon: Icons.close, selectedIcon: Icons.check),
-        M3Space.medium(),
-        M3SwtichAdaptive(),
-      ],
-    );
-  }
+  Widget _body() => ListView(
+        shrinkWrap: true,
+        children: const [
+          M3Switchs(normalIcon: Icons.close, selectedIcon: Icons.check),
+          M3Space.medium(),
+          M3SwitchPrimary(normalIcon: Icons.close, selectedIcon: Icons.check),
+          M3Space.medium(),
+          M3SwitchTertiary(normalIcon: Icons.close, selectedIcon: Icons.check),
+          M3Space.medium(),
+          M3SwitchAdaptive(),
+        ],
+      );
 }
 
 class M3SwitchTertiary extends StatelessWidget {
   final IconData? normalIcon;
   final IconData? selectedIcon;
+
   const M3SwitchTertiary({super.key, this.normalIcon, this.selectedIcon});
 
   @override
@@ -61,7 +59,12 @@ class M3SwitchTertiary extends StatelessWidget {
         ),
         Row(
           children: [
-            Expanded(child: M3Switch.tertiary(value: false, onChanged: (v) {})),
+            Expanded(
+              child: M3Switch.tertiary(
+                value: false,
+                onChanged: (v) {},
+              ),
+            ),
             const Expanded(
                 child: M3Switch.tertiary(value: false, onChanged: null)),
             Expanded(child: M3Switch.tertiary(value: true, onChanged: (v) {})),
@@ -120,6 +123,7 @@ class M3SwitchTertiary extends StatelessWidget {
 class M3SwitchPrimary extends StatelessWidget {
   final IconData? normalIcon;
   final IconData? selectedIcon;
+
   const M3SwitchPrimary({super.key, this.normalIcon, this.selectedIcon});
 
   @override
@@ -141,7 +145,8 @@ class M3SwitchPrimary extends StatelessWidget {
               Expanded(
                   child: M3Switch.primary(value: false, onChanged: (v) {})),
               const Expanded(
-                  child: M3Switch.primary(value: false, onChanged: null)),
+                child: M3Switch.primary(value: false, onChanged: null),
+              ),
               Expanded(child: M3Switch.primary(value: true, onChanged: (v) {})),
               const Expanded(
                   child: M3Switch.primary(value: true, onChanged: null)),
@@ -194,8 +199,8 @@ class M3SwitchPrimary extends StatelessWidget {
   }
 }
 
-class M3SwtichAdaptive extends StatelessWidget {
-  const M3SwtichAdaptive({super.key});
+class M3SwitchAdaptive extends StatelessWidget {
+  const M3SwitchAdaptive({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -233,6 +238,7 @@ class M3SwtichAdaptive extends StatelessWidget {
 class M3Switchs extends StatelessWidget {
   final IconData? normalIcon;
   final IconData? selectedIcon;
+
   const M3Switchs({super.key, this.normalIcon, this.selectedIcon});
 
   @override
