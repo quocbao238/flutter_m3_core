@@ -3,8 +3,6 @@ import 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enu
 export 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 // check is web
 import 'package:flutter/foundation.dart' show kIsWeb;
-// M3 Device Layout use MediaQuery size to check
-// Return empty widget if device type not match
 
 // Import Platform
 import 'dart:io' show Platform;
