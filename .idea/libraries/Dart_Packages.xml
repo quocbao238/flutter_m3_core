@@ -2,40 +2,10 @@
   <library name="Dart Packages" type="DartPackagesLibraryType">
     <properties>
       <option name="packageNameToDirsMap">
-        <entry key="_fe_analyzer_shared">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-58.0.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="analyzer">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-5.10.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="analyzer_plugin">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer_plugin-0.11.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="args">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.4.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="async">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.10.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/async-2.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -43,7 +13,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -51,36 +20,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="characters">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.2.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/characters-1.2.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="checked_yaml">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="ci">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/ci-0.1.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="cli_util">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/cli_util-0.4.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.3.0/lib" />
             </list>
           </value>
         </entry>
@@ -88,37 +34,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/clock-1.1.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/clock-1.1.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="collection">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.17.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.17.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/collection-1.17.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="convert">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="coverage">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/coverage-1.6.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="crypto">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -129,39 +51,10 @@
             </list>
           </value>
         </entry>
-        <entry key="custom_lint">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="custom_lint_builder">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="custom_lint_core">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="dart_style">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.0/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="dynamic_color">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.6.5/lib" />
             </list>
           </value>
         </entry>
@@ -169,7 +62,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
             </list>
           </value>
         </entry>
@@ -177,15 +69,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/fake_async-1.3.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/fake_async-1.3.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="ffi">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/ffi-2.0.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/ffi-2.0.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/ffi-2.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -193,7 +83,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/file-6.1.4/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/file-6.1.4/lib" />
             </list>
           </value>
         </entry>
@@ -201,7 +90,6 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -209,7 +97,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -217,7 +104,6 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
@@ -225,72 +111,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_web_plugins/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter_web_plugins/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="freezed_annotation">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/freezed_annotation-2.2.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="frontend_server_client">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/frontend_server_client-3.2.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="glob">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/glob-2.1.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="hotreloader">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/hotreloader-3.0.6/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="http_multi_server">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="http_parser">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="io">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/io-1.0.4/lib" />
             </list>
           </value>
         </entry>
         <entry key="js">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.5/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.7/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/js-0.6.5/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="json_annotation">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -298,23 +125,21 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.1.0/lib" />
             </list>
           </value>
         </entry>
-        <entry key="logging">
+        <entry key="logger">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.1.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/logger-1.3.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="matcher">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.15/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib" />
             </list>
           </value>
         </entry>
@@ -322,23 +147,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="meta">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.8.0/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.9.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/meta-1.8.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="mime">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -346,30 +161,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="node_preamble">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/node_preamble-2.0.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="package_config">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/package_config-2.1.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="path">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.2/lib" />
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.3/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path-1.8.2/lib" />
             </list>
           </value>
         </entry>
@@ -377,7 +175,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
             </list>
           </value>
         </entry>
@@ -385,15 +182,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6/lib" />
             </list>
           </value>
         </entry>
         <entry key="path_provider_windows">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.5/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.5/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.6/lib" />
             </list>
           </value>
         </entry>
@@ -401,7 +196,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/platform-3.1.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/platform-3.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -409,14 +203,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="pool">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pool-1.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -424,7 +210,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/process-4.2.4/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/process-4.2.4/lib" />
             </list>
           </value>
         </entry>
@@ -432,52 +217,27 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="pub_semver">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pub_semver-2.1.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="pubspec_parse">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pubspec_parse-1.2.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="rxdart">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
             </list>
           </value>
         </entry>
         <entry key="shared_preferences">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.1.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences-2.1.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.1.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="shared_preferences_android">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.2/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.2/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.4/lib" />
             </list>
           </value>
         </entry>
         <entry key="shared_preferences_foundation">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.2/lib" />
             </list>
           </value>
         </entry>
@@ -485,7 +245,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.2.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -493,7 +252,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.2.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -501,7 +259,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_web-2.1.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_web-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -509,35 +266,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.2.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.2.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="shelf">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="shelf_packages_handler">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="shelf_static">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_static-1.1.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="shelf_web_socket">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -545,21 +273,6 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/bin/cache/pkg/sky_engine/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="source_map_stack_trace">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="source_maps">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_maps-0.10.12/lib" />
             </list>
           </value>
         </entry>
@@ -567,8 +280,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.9.1/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/source_span-1.9.1/lib" />
             </list>
           </value>
         </entry>
@@ -576,7 +287,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stack_trace-1.11.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/stack_trace-1.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -584,14 +294,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stream_channel-2.1.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/stream_channel-2.1.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="stream_transform">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
             </list>
           </value>
         </entry>
@@ -599,7 +301,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -607,44 +308,13 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="test">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.24.2/lib" />
             </list>
           </value>
         </entry>
         <entry key="test_api">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.5.2/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="test_core">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.5.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="typed_data">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/typed_data-1.3.1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="uuid">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-3.0.7/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -652,50 +322,20 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
             </list>
           </value>
         </entry>
         <entry key="very_good_analysis">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/very_good_analysis-4.0.0+1/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="vm_service">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-11.3.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="watcher">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/watcher-1.0.2/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="web_socket_channel">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="webkit_inspection_protocol">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webkit_inspection_protocol-1.2.0/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/very_good_analysis-4.0.0+1/lib" />
             </list>
           </value>
         </entry>
         <entry key="win32">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-3.1.4/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/win32-3.1.4/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/win32-4.1.4/lib" />
             </list>
           </value>
         </entry>
@@ -703,168 +343,62 @@
           <value>
             <list>
               <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0/lib" />
-              <option value="$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="yaml">
-          <value>
-            <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.1/lib" />
             </list>
           </value>
         </entry>
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-58.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer-5.10.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/analyzer_plugin-0.11.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/args-2.4.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/async-2.11.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.2.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/checked_yaml-2.0.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ci-0.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cli_util-0.4.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/characters-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/clock-1.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.17.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/collection-1.17.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/convert-3.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/coverage-1.6.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/crypto-3.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint-0.3.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_builder-0.3.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/custom_lint_core-0.3.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dart_style-2.3.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/dynamic_color-1.6.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/fake_async-1.3.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ffi-2.0.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/ffi-2.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/file-6.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/freezed_annotation-2.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/frontend_server_client-3.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/glob-2.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/hotreloader-3.0.6/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_multi_server-3.2.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/io-1.0.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/js-0.6.7/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/json_annotation-4.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logging-1.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/lints-2.1.0/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/logger-1.3.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/matcher-0.12.15/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.8.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.9.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/node_preamble-2.0.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/package_config-2.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.8.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.5/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/platform-3.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pool-1.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/process-4.2.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pub_semver-2.1.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pubspec_parse-1.2.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/rxdart-0.27.7/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.1.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences-2.1.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_web-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf-1.4.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_static-1.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shelf_web_socket-1.0.3/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_maps-0.10.12/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.9.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stack_trace-1.11.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stream_channel-2.1.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stream_transform-2.1.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.24.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.5.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.5.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/typed_data-1.3.1/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/uuid-3.0.7/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-11.3.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/watcher-1.0.2/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/webkit_inspection_protocol-1.2.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-3.1.4/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/very_good_analysis-4.0.0+1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/win32-4.1.4/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/yaml-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../sdk/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter/lib" />
       <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_test/lib" />
       <root url="file://$PROJECT_DIR$/../../../sdk/flutter/packages/flutter_web_plugins/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/async-2.10.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/auto_size_text-3.0.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/characters-1.2.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/clock-1.1.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/collection-1.17.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/dynamic_color-1.6.3/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/equatable-2.0.5/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/fake_async-1.3.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/ffi-2.0.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/file-6.1.4/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/js-0.6.5/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/lints-2.0.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/matcher-0.12.13/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/meta-1.8.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path-1.8.2/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.10/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.5/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/platform-3.1.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/process-4.2.4/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/provider-6.0.5/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences-2.1.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_android-2.1.2/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.2.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_web-2.1.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/source_span-1.9.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/stack_trace-1.11.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/stream_channel-2.1.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/test_api-0.4.16/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/vector_math-2.1.4/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/very_good_analysis-4.0.0+1/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/win32-3.1.4/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter_test/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../macbook/Documents/development/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

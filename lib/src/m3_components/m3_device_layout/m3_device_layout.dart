@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
 export 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enum.dart';
-
+// check is web
+import 'package:flutter/foundation.dart' show kIsWeb;
 // M3 Device Layout use MediaQuery size to check
 // Return empty widget if device type not match
 
@@ -24,7 +25,7 @@ final class M3ViewLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     M3ViewType m3ViewType = M3ViewService.m3ViewType;
-    if(!Platform.isAndroid && !Platform.isIOS){
+    if(kIsWeb || (!Platform.isAndroid && !Platform.isIOS)){
       m3ViewType = M3ViewService.getViewType(context);
     }
     return OrientationBuilder(
