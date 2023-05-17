@@ -14,8 +14,7 @@ base class M3CircularProgressIndicator extends CircularProgressIndicator {
       super.valueColor,
       super.strokeWidth,
       super.semanticsLabel,
-      super.semanticsValue,
-      super.strokeCap})
+      super.semanticsValue})
       : _type = M3ProgressType.surface;
 
   const M3CircularProgressIndicator.primary(
@@ -27,8 +26,7 @@ base class M3CircularProgressIndicator extends CircularProgressIndicator {
       super.valueColor,
       super.strokeWidth,
       super.semanticsLabel,
-      super.semanticsValue,
-      super.strokeCap})
+      super.semanticsValue})
       : _type = M3ProgressType.primary;
 
   const M3CircularProgressIndicator.secondary(
@@ -40,8 +38,7 @@ base class M3CircularProgressIndicator extends CircularProgressIndicator {
       super.valueColor,
       super.strokeWidth,
       super.semanticsLabel,
-      super.semanticsValue,
-      super.strokeCap})
+      super.semanticsValue})
       : _type = M3ProgressType.secondary;
 
   const M3CircularProgressIndicator.tertiary(
@@ -53,8 +50,7 @@ base class M3CircularProgressIndicator extends CircularProgressIndicator {
       super.valueColor,
       super.strokeWidth,
       super.semanticsLabel,
-      super.semanticsValue,
-      super.strokeCap})
+      super.semanticsValue})
       : _type = M3ProgressType.tertiary;
 
   @override
@@ -75,7 +71,6 @@ class _M3CircularProgressIndicatorState
         valueColor: widget.valueColor,
         strokeWidth: widget.strokeWidth,
         semanticsLabel: widget.semanticsLabel,
-        semanticsValue: widget.semanticsValue,
-        strokeCap: widget.strokeCap);
+        semanticsValue: widget.semanticsValue);
   }
 }
