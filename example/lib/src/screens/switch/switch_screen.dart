@@ -28,7 +28,7 @@ class _SwitchScreenState extends State<SwitchScreen> {
   Widget _body() => ListView(
         shrinkWrap: true,
         children: const [
-          M3Switchs(normalIcon: Icons.close, selectedIcon: Icons.check),
+          LstSwitch(normalIcon: Icons.close, selectedIcon: Icons.check),
           M3Space.medium(),
           M3SwitchPrimary(normalIcon: Icons.close, selectedIcon: Icons.check),
           M3Space.medium(),
@@ -210,10 +210,9 @@ class M3SwitchAdaptive extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const M3Padding(
-            padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
-            child: M3Text.titleLarge(
-                text: 'M3 Switch Adaptive', fontWeight: FontWeight.bold),
-          ),
+              padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
+              child: M3Text.titleLarge(
+                  text: 'M3 Switch Adaptive', fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -225,8 +224,7 @@ class M3SwitchAdaptive extends StatelessWidget {
               Expanded(
                   child: M3Switch.adaptive(value: true, onChanged: (v) {})),
               const Expanded(
-                child: M3Switch.adaptive(value: true, onChanged: null),
-              ),
+                  child: M3Switch.adaptive(value: true, onChanged: null)),
             ],
           ),
         ],
@@ -235,11 +233,11 @@ class M3SwitchAdaptive extends StatelessWidget {
   }
 }
 
-class M3Switchs extends StatelessWidget {
+class LstSwitch extends StatelessWidget {
   final IconData? normalIcon;
   final IconData? selectedIcon;
 
-  const M3Switchs({super.key, this.normalIcon, this.selectedIcon});
+  const LstSwitch({super.key, this.normalIcon, this.selectedIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -249,10 +247,9 @@ class M3Switchs extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const M3Padding(
-            padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
-            child: M3Text.titleLarge(
-                text: 'M3 Switch', fontWeight: FontWeight.bold),
-          ),
+              padding: M3EdgeInsets.only(bottom: M3Spacing.medium),
+              child: M3Text.titleLarge(
+                  text: 'M3 Switch', fontWeight: FontWeight.bold)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -274,32 +271,28 @@ class M3Switchs extends StatelessWidget {
             children: [
               Expanded(
                   child: M3Switch(
-                value: false,
-                onChanged: (v) {},
-                normalIcon: normalIcon,
-                selectedIcon: selectedIcon,
-              )),
+                      value: false,
+                      onChanged: (v) {},
+                      normalIcon: normalIcon,
+                      selectedIcon: selectedIcon)),
               Expanded(
                   child: M3Switch(
-                value: false,
-                onChanged: null,
-                normalIcon: normalIcon,
-                selectedIcon: selectedIcon,
-              )),
+                      value: false,
+                      onChanged: null,
+                      normalIcon: normalIcon,
+                      selectedIcon: selectedIcon)),
               Expanded(
                   child: M3Switch(
-                value: true,
-                onChanged: (v) {},
-                normalIcon: normalIcon,
-                selectedIcon: selectedIcon,
-              )),
+                      value: true,
+                      onChanged: (v) {},
+                      normalIcon: normalIcon,
+                      selectedIcon: selectedIcon)),
               Expanded(
                   child: M3Switch(
-                value: true,
-                onChanged: null,
-                normalIcon: normalIcon,
-                selectedIcon: selectedIcon,
-              )),
+                      value: true,
+                      onChanged: null,
+                      normalIcon: normalIcon,
+                      selectedIcon: selectedIcon)),
             ],
           ),
         ],
