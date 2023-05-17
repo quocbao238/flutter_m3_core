@@ -17,7 +17,7 @@ class ButtonScreen extends StatefulWidget {
 class _ButtonScreenState extends State<ButtonScreen> {
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if (M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(
           title: 'M3 Buttons', child: Expanded(child: _body()));
     }

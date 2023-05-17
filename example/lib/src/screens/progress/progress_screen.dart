@@ -8,7 +8,7 @@ class ProgressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(
           title: 'M3 Progress Indicator',
           child: Expanded(child: _body(context)));

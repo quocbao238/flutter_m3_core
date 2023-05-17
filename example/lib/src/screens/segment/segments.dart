@@ -30,7 +30,7 @@ class SegmentedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(
           title: 'Segmented Button', child: _body(context));
     }

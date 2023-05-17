@@ -18,7 +18,7 @@ class _SliderScreenState extends State<SliderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if (M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(
           title: 'M3 Slider', child: Expanded(child: _body()));
     }

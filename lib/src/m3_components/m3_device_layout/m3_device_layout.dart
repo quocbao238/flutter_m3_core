@@ -4,27 +4,34 @@ export 'package:flutter_m3_core/src/m3_components/m3_device_layout/m3_device_enu
 
 // M3 Device Layout use MediaQuery size to check
 // Return empty widget if device type not match
-final class M3LayoutView extends StatelessWidget {
+
+// Import Platform
+import 'dart:io' show Platform;
+
+
+
+final class M3ViewLayout extends StatelessWidget {
   final Widget mobile;
   final Widget desktop;
   final Widget tablet;
-  final Widget another;
-  const M3LayoutView({
+  const M3ViewLayout({
     super.key,
     this.mobile = const _M3EmptyWidget(deviceEmpty: "Mobile"),
     this.desktop = const _M3EmptyWidget(deviceEmpty: "Desktop"),
     this.tablet = const _M3EmptyWidget(deviceEmpty: "Tablet"),
-    this.another = const _M3EmptyWidget(deviceEmpty: "Another"),
   });
 
   @override
   Widget build(BuildContext context) {
+    M3ViewType m3ViewType = M3ViewService.m3ViewType;
+    if(!Platform.isAndroid && !Platform.isIOS){
+      m3ViewType = M3ViewService.getViewType(context);
+    }
     return OrientationBuilder(
-        builder: (context, orientation) => switch (M3DeviceService.deviceType) {
-              M3DeviceType.tablet => tablet,
-              M3DeviceType.desktop => desktop,
-              M3DeviceType.mobile => mobile,
-              M3DeviceType.another => another,
+        builder: (context, orientation) => switch (m3ViewType) {
+              M3ViewType.tablet => tablet,
+              M3ViewType.desktop => desktop,
+              M3ViewType.mobile => mobile,
             });
   }
 }

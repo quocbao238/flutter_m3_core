@@ -6,7 +6,7 @@ class TypographyScreen extends StatelessWidget {
   const TypographyScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return M3Padding(
         padding: const M3EdgeInsets.symmetric(
             vertical: M3Spacing.large, horizontal: M3Spacing.medium),
@@ -31,7 +31,7 @@ class TypographyScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 Typography'),
-      body: _body(),
+      body: M3Padding.medium(child: _body()),
     );
   }
 

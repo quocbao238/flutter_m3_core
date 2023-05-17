@@ -10,13 +10,13 @@ class SnackBarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(title: 'SnackBar', child: _body(context));
     }
 
     return Scaffold(
       appBar: const CustomAppBar(title: 'SnackBar'),
-      body: _body(context),
+      body: _body(context)
     );
   }
 
@@ -94,8 +94,10 @@ class SnackBarScreen extends StatelessWidget {
         : SnackBarAction(label: label, onPressed: onPressed!);
 
     ScaffoldMessenger.of(context).showSnackBar(
+
       SnackBar(
-          content: Text(content), action: action, showCloseIcon: showCloseIcon),
+          content: Text(content),
+          action: action, showCloseIcon: showCloseIcon),
     );
   }
 }

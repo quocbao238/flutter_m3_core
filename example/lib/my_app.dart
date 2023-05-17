@@ -44,11 +44,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const M3LayoutView(
+    return const M3ViewLayout(
       mobile: MobileView(),
       tablet: TabletView(),
       desktop: DesktopView(),
-      another: DesktopView(),
     );
   }
 }

@@ -12,23 +12,26 @@ class FabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(
-          title: 'M3 FloatingActionButton', child: Expanded(child: _body()));
+          title: 'M3 FloatingActionButton', child: Expanded(child: _body(context)));
     }
     return Scaffold(
       appBar: const CustomAppBar(title: 'M3 FloatingActionButton'),
       body: M3Padding.medium(
-        child: _body(),
+        child: _body(context),
       ),
     );
   }
 
-  Widget _body() => const SingleChildScrollView(
-        child: Wrap(
-          spacing: 10,
-          runSpacing: 10,
-          children: [SmallFab(), NormalFab(), LargeFab(), ExtendFab()],
+  Widget _body(context) =>  SingleChildScrollView(
+        child: SizedBox(
+         width: MediaQuery.of(context).size.width,
+          child: const Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [SmallFab(), NormalFab(), LargeFab(), ExtendFab()],
+          ),
         ),
       );
 }

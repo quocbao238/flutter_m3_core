@@ -23,7 +23,6 @@ final class M3ThemeManager extends ChangeNotifier {
   M3ThemeManager({required Color m3BaseColors, bool? automationDayNight}) {
     _themeBaseColors = m3BaseColors;
     _enableAutomationDayNight = automationDayNight ?? false;
-    M3DeviceService.init();
     _listenDayNightTime();
   }
 
@@ -42,8 +41,10 @@ final class M3ThemeManager extends ChangeNotifier {
     });
   }
 
-  Future<M3ThemeMode> prefsThemMode() async =>
-      await M3ThemePrefs.getCurrentThemeMode();
+  Future<M3ThemeMode> prefsThemMode(BuildContext context) async {
+    M3ViewService.getViewType(context);
+    return await M3ThemePrefs.getCurrentThemeMode();
+  }
 
   Future<void> toggleThemeMode({bool isAuto = false}) async {
     // Disable automation day night if user change theme mode
@@ -76,7 +77,7 @@ final class M3ThemeManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  M3DeviceType getCurrentDevice() => M3DeviceService.deviceType;
+  M3ViewType getCurrentDevice() => M3ViewService.m3ViewType;
 
   Color get getBaseColors => _themeBaseColors;
 

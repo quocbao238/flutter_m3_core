@@ -15,8 +15,8 @@ class _SwitchScreenState extends State<SwitchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
-      return CustomContentHeaderWeb(title: 'M3 Switch', child: _body());
+    if ( M3ViewService.isDesktop()) {
+      return CustomContentHeaderWeb(title: 'M3 Switch', child:Expanded(child: _body()));
     }
     return Scaffold(
       appBar: const CustomAppBar(title: 'Switch Screen'),

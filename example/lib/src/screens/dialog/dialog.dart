@@ -10,7 +10,7 @@ class DialogScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (M3DeviceService.isDesktop() || M3DeviceService.isWeb()) {
+    if ( M3ViewService.isDesktop()) {
       return CustomContentHeaderWeb(title: 'M3 Dialogs', child: _body(context));
     }
 

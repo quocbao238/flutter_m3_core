@@ -24,7 +24,7 @@ final class M3ThemeProvider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: m3ThemeManager.prefsThemMode(),
+        future: m3ThemeManager.prefsThemMode(context),
         builder: (context, snapshot) {
           if (snapshot.hasData == false) return const SizedBox.shrink();
           return ListenableProvider<M3ThemeManager>(
@@ -63,6 +63,6 @@ final class M3ThemeProvider extends StatelessWidget {
       Provider.of<M3ThemeManager>(context, listen: false)
           .changeM3Color(newM3BaseColor);
 
-  static M3DeviceType getCurrentDevice(BuildContext context) =>
+  static M3ViewType getCurrentDevice(BuildContext context) =>
       Provider.of<M3ThemeManager>(context, listen: false).getCurrentDevice();
 }
