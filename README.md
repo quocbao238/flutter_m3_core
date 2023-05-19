@@ -21,7 +21,11 @@
 Add the following to your pubspec.yaml file:
 ```yaml
 dependencies:
-  flutter_m3_core: ~
+  flutter_m3_core:
+    git: 
+      url: https://github.com/quocbao238/flutter_m3_core
+      ref: v1.0.0
+    
 ```
 
 # 💻 Import in your project
