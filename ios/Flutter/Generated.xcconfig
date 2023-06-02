@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/Users/baobui/Documents/sdk/flutter
-FLUTTER_APPLICATION_PATH=/Users/baobui/Documents/Bao/ninja_core/Ninja_Core
+FLUTTER_ROOT=/Users/macbook/Documents/development/flutter
+FLUTTER_APPLICATION_PATH=/Users/macbook/Documents/Baobui/Flutter/Ninja_Core
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build

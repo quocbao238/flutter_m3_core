@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Ninja_Core.iml" filepath="$PROJECT_DIR$/.idea/Ninja_Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flutter_m3_core.iml" filepath="$PROJECT_DIR$/.idea/flutter_m3_core.iml" />
     </modules>
   </component>
 </project>

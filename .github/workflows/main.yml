@@ -59,16 +59,17 @@ jobs:
         run: sudo apt-get install g++-9
 
 
-      - name: Set up CMake
-        working-directory: example
-        run: sudo apt-get install cmake
-
+      - name: Set up C++ compiler and Make
+        run: |
+          sudo apt-get install g++-9
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 100
+          sudo apt-get install make
 
       - name: Create linux build
         working-directory: example
-        run: flutter build linux --profile
+        run: flutter build linux --release
 
-#      - name: Move linux install to download folder
+          #      - name: Move linux install to download folder
 #        run: mv example/build/linux/release/bundle download/linux
 
 
