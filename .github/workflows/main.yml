@@ -28,7 +28,7 @@ jobs:
         run:  flutter pub get || true
       - name: Create android APK
         working-directory: example
-        run: flutter build apk --release
+        run: flutter build apk --debug
       - name: Create web build
         working-directory: example
         run: flutter build web --release
