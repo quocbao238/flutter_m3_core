@@ -46,7 +46,11 @@ jobs:
       - working-directory: example
         run: flutter create .
 
-#      - name: Create android APK
+      - name: Install required packages
+        run: sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev pkg-config
+
+
+          #      - name: Create android APK
 #        working-directory: example
 #        run: flutter build apk --profile
 #
