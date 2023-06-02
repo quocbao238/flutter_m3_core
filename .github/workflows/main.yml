@@ -24,4 +24,4 @@ jobs:
       - name : Resolving dependencies in ./example...
         run: cd example && flutter pub get
       - name: Install dependencies
-        run: cd .. && flutter pub get
+        run: cd ../ && flutter pub getc
