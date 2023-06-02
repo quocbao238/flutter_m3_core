@@ -1,5 +1,5 @@
-# Support build dmg macos
-name: Macos Release
+# Support build window
+name: Window Release
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  Macos Release:
-    runs-on: macos-latest
+    Window Release:
+      runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
@@ -32,16 +32,10 @@ jobs:
 
       - name: Start release build
         working-directory: example
-        run: flutter build macos --release
-
-
-      - name: Install app-dmg & Create dmg file
-        working-directory: example
-        run: npm install -g appdmg && appdmg installers/dmg_creator/config.json installers/dmg_creator/flutter_m3.dmg
-
+        run: flutter build windows --release
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: Macos - Release
-          path: example/installers/dmg_creator/flutter_m3.dmg
+          name: Window - Release
+          path: example/build/outputs/windows/Release/example.exe

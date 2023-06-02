@@ -1,5 +1,5 @@
 {
-  "title": "FlutterM3Core App",
+  "title": "Flutter M3 App",
   "icon": "../../assets/flutter_m3_core.icns",
   "contents": [
     { "x": 448, "y": 344, "type": "link", "path": "/Applications" },
