@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Checkout code
+      - name: Checkout out source code
         uses: actions/checkout@v3
 
       - name: Install Flutter
@@ -16,12 +16,39 @@ jobs:
         with:
           flutter-version: '3.10.2'
           channel: 'stable'
+
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
-      - name: Resolves dependencies in example app
+
+      - name: Install dependencies example app
         working-directory: example
         run: flutter pub get
+
       - name: Install dependencies
         run:  flutter pub get || true
+      - name: Create android APK
+        working-directory: example
+        run: flutter build apk --release
+      - name: Create web build
+        working-directory: example
+        run: flutter build web --release
+
+
+      - name: Move apk to Download folder
+        run: mv example/build/app/outputs/flutter-apk/app-release.apk download/app-release.apk
+
+#      - name: Commit web build to https://github.com/quocbao238/flutter_m3_core_webview
+#          run: |
+#            git config --global user.name "quocbao238"
+#            git config --global user.email "
+#            git add .
+#            git commit -m "Update web build"
+#            git push origin main
+#            |
+
+
+
+
+
 
 
