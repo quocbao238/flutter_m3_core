@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-
 jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -22,7 +20,7 @@ jobs:
       #Resolving dependencies in ./example...
       #Got dependencies in ./example.
       - name : Resolving dependencies in ./example...
-        run: flutter pub get;
+        run: flutter pub get
 
 #      - name: Install dependencies
 #        run: |
