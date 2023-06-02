@@ -68,9 +68,6 @@ jobs:
         working-directory: example
         run: flutter build linux --profile
 
-
-
-
 #      - name: Move linux install to download folder
 #        run: mv example/build/linux/release/bundle download/linux
 
