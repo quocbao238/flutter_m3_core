@@ -17,6 +17,9 @@ jobs:
           flutter-version: '3.10.2'
           channel: 'stable'
 
+      - name: Check Flutter version
+        run: flutter doctor
+
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
 
