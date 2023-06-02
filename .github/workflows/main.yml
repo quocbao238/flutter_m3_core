@@ -21,6 +21,11 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
+      - name: Update Gradle version
+        run: |
+            sed -i 's/distributionUrl=https\:\/\/services.gradle.org\/distributions\/gradle-.*/distributionUrl=https\:\/\/services.gradle.org\/distributions\/gradle-7.2.0-bin.zip/' ./example/android/gradle/wrapper/gradle-wrapper.properties
+
+
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -39,9 +44,11 @@ jobs:
 
       - name: Install dependencies
         run:  flutter pub get || true
+
       - name: Create android APK
         working-directory: example
-        run: flutter build apk --debug
+        run: flutter build apk --profile
+
       - name: Create web build
         working-directory: example
         run: flutter build web --release
