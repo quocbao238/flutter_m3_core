@@ -54,6 +54,14 @@ jobs:
 #        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
 
+      - name: Set up C++ compiler
+        run: sudo apt-get install g++-9
+
+      - name: Set up CMake
+        run: |
+          export CXX=/usr/bin/g++-9  # Replace with the actual compiler path
+          cmake .
+
       - name: Create linux build
         working-directory: example
         run: flutter build linux --profile
