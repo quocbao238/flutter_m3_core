@@ -12,7 +12,7 @@ jobs:
       - name: Checkout out source code
         uses: actions/checkout@v3
 
-      - name: Install java
+      - name: Install Java
         uses: actions/setup-java@v2
         with:
           java-version: '18'
@@ -27,11 +27,9 @@ jobs:
           flutter-version: '3.10.2'
           channel: 'stable'
 
-      - name: Check Flutter version
-        run: flutter doctor --verbose
+      - name: Check Flutter Version
+        run: flutter doctor --verbose & flutter --disable-telemetry
 
-      - name: Disable reporting of telemetry
-        run: flutter --disable-telemetry
 
       - name: Install dependencies example app
         working-directory: example
@@ -42,18 +40,18 @@ jobs:
 
       - name: Create android APK
         working-directory: example
-        run: flutter build apk --profile
+        run: flutter build apk --profile && mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 #
-      - name: Move apk to Download folder
-        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
+#      - name: Move apk to Download folder
+#        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
       - name: Create ubuntu build
         working-directory: example
-        run: flutter build linux --release
+        run: flutter build linux --release && mv example/build/linux/release/bundle download/linux
 
-      - name: Move linux install to download folder
-        run: mv example/build/linux/release/bundle download/linux
-          
+#      - name: Move linux install to download folder
+#        run: mv example/build/linux/release/bundle download/linux
+
 
 
 #      - name: Create web build
