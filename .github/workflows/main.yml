@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run:  flutter clean
 
-      - run: flutter pub get
+      - run: flutter pub get || true
 
       - working-directory: example
         run: flutter create .
