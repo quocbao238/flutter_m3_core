@@ -29,7 +29,7 @@ jobs:
           channel: 'stable'
           cache: true
       - name: Get dependencies
-        run: flutter --disable-telemetry && flutter pub get
+        run: flutter --disable-telemetry && flutter pub get || true
       - name: Get dependencies example app
         working-directory: example
         run: flutter pub get
