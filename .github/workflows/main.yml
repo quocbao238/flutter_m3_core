@@ -6,6 +6,7 @@ on:
       - main
 jobs:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,14 +18,5 @@ jobs:
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
 
-      #Resolving dependencies in ./example...
-      #Got dependencies in ./example.
       - name : Resolving dependencies in ./example...
         run: flutter pub get
-
-#      - name: Install dependencies
-#        run: |
-#          set -e;
-#          pwd;
-#          cd ./../;
-#          flutter pub get;
