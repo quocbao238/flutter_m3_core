@@ -7,8 +7,6 @@ on:
 jobs:
 
     runs-on: macos-latest
-    # failure-notify:
-    stop-on-failure: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
