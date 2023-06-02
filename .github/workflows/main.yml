@@ -5,8 +5,10 @@ on:
     branches:
       - main
 jobs:
-  build:
+
     runs-on: macos-latest
+    # failure-notify:
+    stop-on-failure: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,11 +24,11 @@ jobs:
       #Resolving dependencies in ./example...
       #Got dependencies in ./example.
       - name : Resolving dependencies in ./example...
-        run: cd example && flutter pub get
+        run: flutter pub get;
 
-      - name: Install dependencies
-        run: |
-          set -e;
-          pwd;
-          cd ./../;
-          flutter pub get;
+#      - name: Install dependencies
+#        run: |
+#          set -e;
+#          pwd;
+#          cd ./../;
+#          flutter pub get;
