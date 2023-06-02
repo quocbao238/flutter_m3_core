@@ -4,9 +4,9 @@ name: Android Release
 on:
   # 2
   push:
-    branches: [ "devMaster" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "devMaster" ]
+    branches: [ "main" ]
 
   # 3
   workflow_dispatch:
