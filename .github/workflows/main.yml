@@ -58,6 +58,9 @@ jobs:
         working-directory: example
         run: sudo apt-get install g++-9
 
+      - name: Install Ninja
+        run: sudo apt-get install ninja-build
+
 
       - name: Set up C++ compiler and Make
         run: |
