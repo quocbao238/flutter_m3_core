@@ -35,4 +35,5 @@ jobs:
         run: flutter pub get
 
       - name: Start release build
+        working-directory: example
         run: flutter build appbundle
