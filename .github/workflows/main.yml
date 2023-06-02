@@ -18,6 +18,12 @@ jobs:
           java-version: '19.0.2'
           distribution: 'adopt'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Build SampleApplication
+        run: ./gradlew --no-daemon build
+
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -25,7 +31,7 @@ jobs:
           channel: 'stable'
 
       - name: Check Flutter version
-        run: flutter doctor
+        run: flutter doctor --verbose
 
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
