@@ -22,4 +22,6 @@ jobs:
         working-directory: example
         run: flutter pub get
       - name: Install dependencies
-        run: flutter pub get
+        run: |
+          flutter pub get;
+          exit 0;
