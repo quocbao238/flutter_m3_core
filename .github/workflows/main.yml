@@ -1,3 +1,8 @@
+
+## check commit have "Build" to run Flutter Workflow
+
+
+
 name: Flutter Workflow
 
 on:
@@ -6,6 +11,7 @@ on:
       - main
 jobs:
   build:
+    if: "!contains(github.event.head_commit.message, 'build')"
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -47,7 +53,7 @@ jobs:
 
       - name: Create ubuntu build
         working-directory: example
-        run: flutter build linux --release && mv example/build/linux/release/bundle download/linux
+        run: flutter create . && flutter build linux --release && mv example/build/linux/release/bundle download/linux
 
 #      - name: Move linux install to download folder
 #        run: mv example/build/linux/release/bundle download/linux
