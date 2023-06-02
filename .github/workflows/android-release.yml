@@ -29,10 +29,10 @@ jobs:
           channel: 'stable'
           cache: true
       - name: Get dependencies
-        run: flutter pub get
+        run: flutter --disable-telemetry && flutter pub get
       - name: Get dependencies example app
         working-directory: example
         run: flutter pub get
-        
+
       - name: Start release build
         run: flutter build appbundle
