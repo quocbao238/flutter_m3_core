@@ -55,13 +55,14 @@ jobs:
 
 
       - name: Set up C++ compiler
+        working-directory: example
         run: sudo apt-get install g++-9
 
+
       - name: Set up CMake
-        run: |
-          export CXX=/usr/bin/g++-9
-          cd flutter_m3_core  # Change to the correct source directory
-          cmake .
+        working-directory: example
+        run: sudo apt-get install cmake
+
 
       - name: Create linux build
         working-directory: example
