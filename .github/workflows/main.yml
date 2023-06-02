@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '19.0.2'
+          distribution: 'adopt'
 
 
       - name: Check Flutter version
