@@ -1,8 +1,3 @@
-
-## check commit have "Build" to run Flutter Workflow
-
-
-
 name: Flutter Workflow
 
 on:
@@ -11,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'build')"
+    if:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -44,16 +39,22 @@ jobs:
       - name: Install dependencies
         run:  flutter pub get || true
 
-      - name: Create android APK
+      - name: Init Multi Platform
         working-directory: example
-        run: flutter build apk --profile
+        run: flutter create .
 
-      - name: Move apk to Download folder
-        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
+#      - name: Create android APK
+#        working-directory: example
+#        run: flutter build apk --profile
+#
+#      - name: Move apk to Download folder
+#        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
-      - name: Create ubuntu build
+
+      - name: Create linux build
         working-directory: example
-        run: flutter create . && flutter build linux --release;
+        run: flutter build linux --profile
+
 
 
 
