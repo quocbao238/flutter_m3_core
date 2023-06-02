@@ -51,13 +51,15 @@ jobs:
         working-directory: example
         run: flutter build web --release
 
-      - name: Commit web to https://github.com/quocbao238/flutter_m3_core_webview
-        uses: EndBug/add-and-commit@v7
-        with:
-          add: 'example/build/web'
-          author_name: Quoc Bao
-          author_email: 'baobondev@gmail.com'
-          message: 'Update web build'
+      - name: Commit folder example/build/web to https://github.com/quocbao238/flutter_m3_core_webview
+        run: |
+          git config --global user.email "
+          git config --global user.name "quocbao238"
+          git add example/build/web
+          git commit -m "Update web build"
+          git push origin main
+          
+
 
 
 
