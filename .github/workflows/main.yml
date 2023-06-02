@@ -59,7 +59,8 @@ jobs:
 
       - name: Set up CMake
         run: |
-          export CXX=/usr/bin/g++-9  # Replace with the actual compiler path
+          export CXX=/usr/bin/g++-9
+          cd flutter_m3_core  # Change to the correct source directory
           cmake .
 
       - name: Create linux build
