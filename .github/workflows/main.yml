@@ -21,11 +21,6 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
 
-      - name: Update Gradle version
-        run: |
-            sed -i 's/distributionUrl=https\:\/\/services.gradle.org\/distributions\/gradle-.*/distributionUrl=https\:\/\/services.gradle.org\/distributions\/gradle-7.2.0-bin.zip/' ./example/android/gradle/wrapper/gradle-wrapper.properties
-
-
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -45,26 +40,25 @@ jobs:
       - name: Install dependencies
         run:  flutter pub get || true
 
-      - name: Create android APK
-        working-directory: example
-        run: flutter build apk --profile
+#      - name: Create android APK
+#        working-directory: example
+#        run: flutter build apk --profile
+#
+#      - name: Move apk to Download folder
+#        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
       - name: Create web build
         working-directory: example
         run: flutter build web --release
 
+      - name: Commit web to https://github.com/quocbao238/flutter_m3_core_webview
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: 'example/build/web'
+          author_name: Quoc Bao
+          author_email: 'baobondev@gmail.com'
+          message: 'Update web build'
 
-      - name: Move apk to Download folder
-        run: mv example/build/app/outputs/flutter-apk/app-release.apk download/app-release.apk
-
-#      - name: Commit web build to https://github.com/quocbao238/flutter_m3_core_webview
-#          run: |
-#            git config --global user.name "quocbao238"
-#            git config --global user.email "
-#            git add .
-#            git commit -m "Update web build"
-#            git push origin main
-#            |
 
 
 
