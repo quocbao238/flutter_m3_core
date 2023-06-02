@@ -38,3 +38,10 @@ jobs:
       - name: Start release build
         working-directory: example
         run: flutter build apk --release
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: example
+          path: example/build/app/outputs/apk/release/app-release.apk
+          
