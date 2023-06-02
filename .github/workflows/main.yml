@@ -5,11 +5,12 @@ on:
     branches:
       - main
 jobs:
-    runs-on: ubuntu-latest
-
+  build:
+    runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -17,6 +18,5 @@ jobs:
           channel: 'stable'
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
-
-      - name : Resolving dependencies in ./example...
+      - name: Install dependencies
         run: flutter pub get
