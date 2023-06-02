@@ -40,29 +40,38 @@ jobs:
       - name: Install dependencies
         run:  flutter pub get || true
 
-#      - name: Create android APK
-#        working-directory: example
-#        run: flutter build apk --profile
-#
-#      - name: Move apk to Download folder
-#        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
-
-      - name: Create web build
+      - name: Create android APK
         working-directory: example
-        run: flutter build web --release
+        run: flutter build apk --profile
+#
+      - name: Move apk to Download folder
+        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
-      - name: Commit folder example/build/web to https://github.com/quocbao238/flutter_m3_core_webview
-        run: |
-          set -e
-          git config --global user.email "baobondev@gmail.com"
-          git config --global user.name "baobui"
-          git clone https://github.com/quocbao238/flutter_m3_core_webview
-          cd flutter_m3_core_webview
-          git rm -rf *
-          cp -r ../example/build/web/* .
-          git add .
-          git commit -m "Update web build"
-          git push origin main
+      - name: Create ubuntu build
+        working-directory: example
+        run: flutter build linux --release
+
+      - name: Move linux install to download folder
+        run: mv example/build/linux/release/bundle download/linux
+          
+
+
+#      - name: Create web build
+#        working-directory: example
+#        run: flutter build web --release
+#
+#      - name: Commit folder example/build/web to https://github.com/quocbao238/flutter_m3_core_webview
+#        run: |
+#          set -e
+#          git config --global user.email "baobondev@gmail.com"
+#          git config --global user.name "baobui"
+#          git clone https://github.com/quocbao238/flutter_m3_core_webview
+#          cd flutter_m3_core_webview
+#          git rm -rf *
+#          cp -r ../example/build/web/* .
+#          git add .
+#          git commit -m "Update web build"
+#          git push origin main
           
           
 
