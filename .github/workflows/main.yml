@@ -53,11 +53,18 @@ jobs:
 
       - name: Commit folder example/build/web to https://github.com/quocbao238/flutter_m3_core_webview
         run: |
-          git config --global user.email "
-          git config --global user.name "quocbao238"
-          git add example/build/web
+          
+          git config --global user.email "baobondev@gmail.com"
+          git config --global user.name "baobui"
+          git clone https://github.com/quocbao238/flutter_m3_core_webview
+          cd flutter_m3_core_webview
+          git checkout -b main
+          git rm -rf *
+          cp -r ../example/build/web/* .
+          git add .
           git commit -m "Update web build"
           git push origin main
+          
           
 
 
