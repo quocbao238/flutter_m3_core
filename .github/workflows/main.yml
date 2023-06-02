@@ -46,14 +46,16 @@ jobs:
 
       - name: Create android APK
         working-directory: example
-        run: flutter build apk --profile && mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
-#
-#      - name: Move apk to Download folder
-#        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
+        run: flutter build apk --profile
+
+      - name: Move apk to Download folder
+        run: mv example/build/app/outputs/flutter-apk/app-profile.apk download/app-profile.apk
 
       - name: Create ubuntu build
         working-directory: example
-        run: flutter create . && flutter build linux --release && mv example/build/linux/release/bundle download/linux
+        run: flutter create . && flutter build linux --release;
+
+
 
 #      - name: Move linux install to download folder
 #        run: mv example/build/linux/release/bundle download/linux
