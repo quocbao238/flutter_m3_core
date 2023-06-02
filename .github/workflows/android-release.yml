@@ -22,10 +22,13 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: "12.x"
+          cache: 'gradle'
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: "3.10.2"
           channel: 'stable'
+          cache: true
       - name: Get dependencies
         run: flutter pub get
       - name: Start release build
