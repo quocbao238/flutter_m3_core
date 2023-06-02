@@ -18,5 +18,10 @@ jobs:
           channel: 'stable'
       - name: Disable reporting of telemetry
         run: flutter --disable-telemetry
+
+      #Resolving dependencies in ./example...
+      #Got dependencies in ./example.
+      - name : Resolving dependencies in ./example...
+        run: cd example && flutter pub get
       - name: Install dependencies
-        run: flutter pub get
+        run: cd .. && flutter pub get
