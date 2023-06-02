@@ -18,6 +18,7 @@ jobs:
         with:
           java-version: '18'
           distribution: 'adopt'
+          cache: gradle
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
@@ -27,6 +28,7 @@ jobs:
         with:
           flutter-version: '3.10.2'
           channel: 'stable'
+          cache: 'flutter'
 
       - name: Check Flutter Version
         run: flutter doctor --verbose & flutter --disable-telemetry
@@ -34,10 +36,10 @@ jobs:
 
       - name: Install dependencies example app
         working-directory: example
-        run: flutter pub get
+        run: flutter clean && flutter pub get
 
       - name: Install dependencies
-        run:  flutter pub get || true
+        run:  flutter clean && flutter pub get|| true
 
       - name: Init Multi Platform
         working-directory: example
