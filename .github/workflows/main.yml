@@ -39,10 +39,11 @@ jobs:
         run: flutter clean && flutter pub get
 
       - name: Install dependencies
-        run:  flutter clean && flutter pub get|| true
+        run:  flutter clean
 
-      - name: Init Multi Platform
-        working-directory: example
+      - run: flutter pub get
+
+      - working-directory: example
         run: flutter create .
 
 #      - name: Create android APK
