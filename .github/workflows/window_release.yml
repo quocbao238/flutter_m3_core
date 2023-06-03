@@ -27,7 +27,8 @@ jobs:
 
       - name: Get dependencies example app
         working-directory: example
-        run: flutter pub get
+        run: flutter pub get && flutter create --platforms=windows .
+
 
       - name: Install NSIS
         run: choco install nsis -y # If using Chocolatey, or use an alternative method to install NSIS
