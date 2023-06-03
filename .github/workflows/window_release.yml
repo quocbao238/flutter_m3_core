@@ -39,7 +39,7 @@ jobs:
 
       - name: Rename name file "example.exe" to "flutter_m3.exe
         working-directory: example
-        run: mv example/build/windows/runner/Release/example.exe example/build/windows/runner/Release/flutter_m3.exe
+        run: mv build/windows/runner/Release/example.exe mv build/windows/runner/Release/flutter_m3.exe
       #
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
