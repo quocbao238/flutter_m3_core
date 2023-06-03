@@ -1,4 +1,4 @@
-name: Window Installer 
+name: Window Installer
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Get dependencies example app
         working-directory: example
-        run: flutter pub get```
+        run: flutter pub get
 
       - name: Install NSIS
         run: choco install nsis -y # If using Chocolatey, or use an alternative method to install NSIS
