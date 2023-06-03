@@ -1,5 +1,4 @@
-# Support build window
-name: Window Release
+name: Window Installer 
 
 on:
   push:
@@ -28,14 +27,34 @@ jobs:
 
       - name: Get dependencies example app
         working-directory: example
-        run: flutter pub get
+        run: flutter pub get```
 
-      - name: Start release build
+      - name: Install NSIS
+        run: choco install nsis -y # If using Chocolatey, or use an alternative method to install NSIS
+
+      - name: Create Installer
+        run: |
+            set -e
+            cp path/to/your/app.exe app.exe
+            cp path/to/your/installer.nsi installer.nsi
+            makensis installer.nsi
+        
+
+      - name: Start build
         working-directory: example
-        run: flutter build windows --release
+        run: flutter build windows
 
-      - name: Upload a Build Artifact
+      - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: Window - Release
-          path: example/build/outputs/windows/Release/example.exe
+          name: app
+          path: |
+                build/windows/ 
+                app.exe
+                FlutterM3Core.exe
+#
+#      - name: Upload a Build Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: Window - Release
+#          path: example/build/outputs/windows/Release/example.exe
