@@ -37,26 +37,12 @@ jobs:
         working-directory: example
         run: flutter build windows
 
-
-      - name: Create Installer
-        run: |
-          set -e
-          cp path/to/your/app.exe app.exe
-          cp path/to/your/installer.nsi installer.nsi
-          makensis installer.nsi
-        
-
-      - name: Archive artifacts
+      - name: Change name file example/build\windows\runner\Release\example.exe -> flutter_m3.exe
+        working-directory: example
+        run: mv build/windows/runner/Release/example.exe  build/windows/runner/Release/flutter_m3.exe
+      #
+      - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: app
-          path: |
-                build/windows/ 
-                app.exe
-                FlutterM3Core.exe
-#
-#      - name: Upload a Build Artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: Window - Release
-#          path: example/build/outputs/windows/Release/example.exe
+          name: Window - Release
+          path: mv example/build/windows/runner/Release/flutter_m3.exe
