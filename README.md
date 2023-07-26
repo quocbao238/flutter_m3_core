@@ -10,10 +10,8 @@
 
 | Platform      | Package/Installation Method                                                                                                                                                                                                                 |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Web           | [<img width='54' height ='54' alt='Web View' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/720px-Google_Chrome_icon_%28February_2022%29.svg.png'/>][web-link] <br/> View in web |
-| Android       | [<img width='220' alt='Android Download' src='https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png'/>][android-link]                                                                      |
-| Debian/Ubuntu | [<img width='220' alt='Linux Debian/Ubuntu Download' src='https://user-images.githubusercontent.com/61944859/169097994-e92aff78-fd75-4c93-b6e4-f072a4b5a7ed.png'/>][deb-link]                                                               |
-| Windows       | [<img width='220' alt='Windows Download' src='https://get.todoist.help/hc/article_attachments/4403191721234/WindowsButton.svg'/>][win32-link]                                                                                               |
+| Web           | [<img width='220' alt='Web View' src='https://raw.githubusercontent.com/quocbao238/flutter_m3_core/main/images/view_in_web.png'/>][web-link] |
+| Android       | [<img width='220' alt='Android Download' src='https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png'/>][android-link]                                                                      
 | MacOS         | [<img width='220' alt='MacOS Download' src='https://reachify.io/wp-content/uploads/2018/09/mac-download-button-1.png'/>][mac-link]                                                                                                          
 
 
