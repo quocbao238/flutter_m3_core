@@ -22,7 +22,7 @@ dependencies:
   flutter_m3_core:
     git: 
       url: https://github.com/quocbao238/flutter_m3_core
-      ref: main
+      ref: v1.0.1
     
 ```
 
