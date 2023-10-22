@@ -5,8 +5,8 @@ import 'package:flutter_m3_core/src/m3_theme/m3_theme_manager.dart';
 import 'package:provider/provider.dart';
 import 'm3_color_builder.dart';
 
-typedef M3Builder = Widget Function(BuildContext context, ThemeData themeData,
-    ThemeData darkTheme, ThemeMode themeMode);
+typedef M3Builder = Widget Function(
+    BuildContext context, ThemeData themeData, ThemeData darkTheme, ThemeMode themeMode);
 
 final class M3ThemeProvider extends StatelessWidget {
   final M3ThemeManager m3ThemeManager;
@@ -17,9 +17,7 @@ final class M3ThemeProvider extends StatelessWidget {
   /// M3ThemeProvider is provider for theme
   /// "m3ThemeManager" is M3ThemeManager
   /// "builder" is call back builder
-  const M3ThemeProvider(
-      {Key? key, required this.m3ThemeManager, required this.m3Builder})
-      : super(key: key);
+  const M3ThemeProvider({Key? key, required this.m3ThemeManager, required this.m3Builder}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +30,13 @@ final class M3ThemeProvider extends StatelessWidget {
             child: Consumer<M3ThemeManager>(
               builder: (context, m3ThemeManager, child) {
                 return DynamicColorBuilder(
-                  builder:
-                      (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
-                    final themes = M3ColorBuilder.generateColor(lightDynamic,
-                        darkDynamic, m3ThemeManager.getBaseColors);
+                  builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
+                    final themes =
+                        M3ColorBuilder.generateColor(lightDynamic, darkDynamic, m3ThemeManager.getBaseColors);
                     return AnimatedBuilder(
                         animation: m3ThemeManager,
                         builder: (context, child) => m3Builder(
-                            context,
-                            themes['lightTheme']!,
-                            themes['darkTheme']!,
-                            m3ThemeManager.getThemeMode));
+                            context, themes['lightTheme']!, themes['darkTheme']!, m3ThemeManager.getThemeMode));
                   },
                 );
               },
@@ -51,17 +45,13 @@ final class M3ThemeProvider extends StatelessWidget {
         });
   }
 
-  static toggleTheme(BuildContext context) =>
-      Provider.of<M3ThemeManager>(context, listen: false).toggleThemeMode();
+  static toggleTheme(BuildContext context) => Provider.of<M3ThemeManager>(context, listen: false).toggleThemeMode();
 
   static ThemeMode getThemeMode(BuildContext context) =>
-      Theme.of(context).brightness == Brightness.light
-          ? ThemeMode.light
-          : ThemeMode.dark;
+      Theme.of(context).brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark;
 
   static changeM3Color(BuildContext context, Color newM3BaseColor) =>
-      Provider.of<M3ThemeManager>(context, listen: false)
-          .changeM3Color(newM3BaseColor);
+      Provider.of<M3ThemeManager>(context, listen: false).changeM3Color(newM3BaseColor);
 
   static M3ViewType getCurrentDevice(BuildContext context) =>
       Provider.of<M3ThemeManager>(context, listen: false).getCurrentDevice();

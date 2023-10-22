@@ -33,7 +33,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/collection-1.17.1",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/collection-1.17.2",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -92,12 +92,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "js",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/js-0.6.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "lints",
       "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/lints-2.0.1",
       "packageUri": "lib/",
@@ -111,15 +105,15 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/matcher-0.12.15",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/matcher-0.12.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/material_color_utilities-0.2.0",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0",
       "packageUri": "lib/",
-      "languageVersion": "2.13"
+      "languageVersion": "2.17"
     },
     {
       "name": "meta",
@@ -231,9 +225,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/source_span-1.9.1",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.18"
     },
     {
       "name": "stack_trace",
@@ -261,7 +255,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/test_api-0.5.1",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/test_api-0.6.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -276,6 +270,12 @@
       "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/very_good_analysis-4.0.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dev/web-0.1.4-beta",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "win32",
@@ -296,7 +296,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-06-02T03:25:07.734886Z",
+  "generated": "2023-10-22T05:08:36.499387Z",
   "generator": "pub",
-  "generatorVersion": "3.0.1"
+  "generatorVersion": "3.1.3"
 }

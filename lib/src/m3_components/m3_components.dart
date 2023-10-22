@@ -16,3 +16,4 @@ export 'package:flutter_m3_core/src/m3_components/m3_progress_indicator/m3_progr
 export 'package:flutter_m3_core/src/m3_components/m3_slider/m3_slider.dart';
 export 'package:flutter_m3_core/src/m3_components/m3_switch/m3_switch.dart';
 export 'package:flutter_m3_core/src/m3_components/m3_input/m3_input.dart';
+export 'package:flutter_m3_core/src/m3_components/m3_appbar/m3_appbar.dart';

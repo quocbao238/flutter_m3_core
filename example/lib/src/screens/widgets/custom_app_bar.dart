@@ -28,9 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             padding: const M3EdgeInsets.symmetric(horizontal: M3Spacing.small),
             child: M3Button(
               onPressed: () => M3ThemeProvider.toggleTheme(context),
-              child: Icon(Theme.of(context).brightness == Brightness.light
-                  ? Icons.dark_mode
-                  : Icons.light_mode),
+              child: Icon(Theme.of(context).brightness == Brightness.light ? Icons.dark_mode : Icons.light_mode),
             ),
           ),
       ],
@@ -64,32 +62,25 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   M3Padding(
                     padding: const M3EdgeInsets.only(left: M3Spacing.small),
                     child: M3ButtonWithIcon.outline(
-                        icon: Icons.close,
-                        onPressed: () => Navigator.of(ctx).pop(),
-                        text: 'Close'),
+                        icon: Icons.close, onPressed: () => Navigator.of(ctx).pop(), text: 'Close'),
                   ),
                 ],
               ),
               Expanded(
                 child: M3Padding(
-                  padding:
-                      const M3EdgeInsets.symmetric(vertical: M3Spacing.medium),
+                  padding: const M3EdgeInsets.symmetric(vertical: M3Spacing.medium),
                   child: OrientationBuilder(builder: (context, orientation) {
-                    final int crossAxisCount =
-                        orientation == Orientation.portrait ? 4 : 10;
+                    final int crossAxisCount = orientation == Orientation.portrait ? 4 : 10;
 
                     return GridView(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: crossAxisCount,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10),
+                          crossAxisCount: crossAxisCount, crossAxisSpacing: 10, mainAxisSpacing: 10),
                       children: listPaletteColor.entries
                           .map(
                             (e) => M3Button(
                                 text: '',
                                 backgroundColor: e.value,
-                                onPressed: () => M3ThemeProvider.changeM3Color(
-                                    buildContext, e.value)),
+                                onPressed: () => M3ThemeProvider.changeM3Color(buildContext, e.value)),
                           )
                           .toList(),
                     );
